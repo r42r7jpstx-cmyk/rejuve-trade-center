@@ -4,21 +4,34 @@
   <meta charset="UTF-8" />
   <title>Rejuve Trade Center | Medical & Aesthetic Device Importer</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Rejuve Trade Center is a US-based importer and distributor of FDA-compliant medical and aesthetic devices, serving clinics and healthcare providers nationwide.">
-  <meta name="keywords" content="Rejuve Trade Center, medical devices, aesthetic equipment, FDA compliant importer, US medical trade">
-  <meta name="author" content="Rejuve Trade Center">
-
-  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Rejuve Trade Center">
-  <meta property="og:description" content="US-based medical & aesthetic device importer focused on compliance, quality, and long-term partnerships.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="US-based importer of FDA-compliant medical and aesthetic devices.">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- 最关键的修复：保证导航在最上层 -->
+  <style>
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero {
+      position: relative;
+      background: url('hero.jpg') center/cover no-repeat;
+      min-height: 90vh;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -35,7 +48,7 @@
 </nav>
 
 <!-- Hero -->
-<header class="hero" style="background-image:url('assets/images/hero.jpg')">
+<header class="hero">
   <div class="overlay">
     <h1>Rejuve Trade Center</h1>
     <p class="subtitle">Medical & Aesthetic Device Importer</p>
@@ -43,118 +56,76 @@
   </div>
 </header>
 
-<!-- About -->
 <section class="section" id="about">
   <h2>About Us</h2>
   <p>
-    Rejuve Trade Center is a United States–based trading company specializing in the
-    import and distribution of professional medical and aesthetic devices. We work
-    with manufacturers and suppliers worldwide to deliver compliant, reliable, and
-    clinically relevant technologies to healthcare providers.
-  </p>
-  <p>
-    Our operations are built on regulatory awareness, supply chain transparency, and
-    a long-term commitment to quality. We serve clinics, distributors, and medical
-    institutions seeking dependable equipment for modern healthcare and aesthetic
-    applications.
+    Rejuve Trade Center is a US-based trading company specializing in the import and
+    distribution of professional medical and aesthetic devices.
   </p>
 </section>
 
-<!-- Products -->
 <section class="section gray" id="products">
   <h2>Product Categories</h2>
-
   <div class="grid">
     <div class="card">
-      <img src="assets/images/medical1.jpg" alt="Medical Devices">
+      <img src="medical1.jpg" alt="Medical Devices">
       <h3>Medical Devices</h3>
-      <p>
-        Diagnostic and monitoring equipment including digital blood pressure monitors,
-        glucose testing systems, ECG devices, oxygen concentrators, and respiratory
-        support solutions for clinical use.
-      </p>
+      <p>Diagnostic and monitoring equipment for clinical use.</p>
     </div>
 
     <div class="card">
-      <img src="assets/images/aesthetic1.jpg" alt="Aesthetic Devices">
-      <h3>Aesthetic & Beauty Devices</h3>
-      <p>
-        Non-invasive and minimally invasive aesthetic technologies such as laser
-        systems, radiofrequency devices, IPL platforms, microneedling equipment, and
-        body contouring solutions.
-      </p>
+      <img src="aesthetic1.jpg" alt="Aesthetic Devices">
+      <h3>Aesthetic Devices</h3>
+      <p>Laser, RF, IPL, and non-invasive beauty technologies.</p>
     </div>
 
     <div class="card">
-      <img src="assets/images/medical2.jpg" alt="Imaging Equipment">
-      <h3>Imaging & Treatment Systems</h3>
-      <p>
-        Ultrasound, microwave, and radiofrequency-based systems designed for skin
-        tightening, therapeutic treatments, and professional clinical applications.
-      </p>
+      <img src="medical2.jpg" alt="Imaging Equipment">
+      <h3>Imaging & Treatment</h3>
+      <p>Ultrasound and radiofrequency treatment systems.</p>
     </div>
   </div>
 </section>
 
-<!-- Philosophy -->
 <section class="section" id="philosophy">
   <h2>Our Philosophy</h2>
   <p>
-    We believe that medical and aesthetic technologies must be safe, compliant, and
-    purpose-driven. Our role as an importer is not only to move products across
-    borders, but to ensure that every device entering the market meets regulatory
-    standards and real clinical needs.
-  </p>
-  <p>
-    Rejuve Trade Center prioritizes long-term partnerships over short-term volume.
-    We focus on responsible sourcing, clear documentation, and sustainable business
-    practices that support both suppliers and healthcare providers.
+    We prioritize compliance, long-term partnerships, and responsible global trade
+    in the medical and aesthetic device industry.
   </p>
 </section>
 
-<!-- Compliance -->
 <section class="section gray" id="compliance">
   <h2>Compliance & Quality</h2>
   <div class="split">
-    <img src="assets/images/compliance.jpg" alt="Compliance and Quality">
+    <img src="compliance.jpg" alt="Compliance">
     <p>
-      Compliance is central to our operations. We coordinate closely with
-      manufacturers to ensure all imported devices align with FDA requirements and
-      applicable US regulations. Our quality approach emphasizes documentation,
-      traceability, and ongoing regulatory awareness.
+      All products are sourced and imported in alignment with FDA regulations
+      and applicable US standards.
     </p>
   </div>
 </section>
 
-<!-- Founder -->
 <section class="section gray" id="founder">
   <h2>Founder</h2>
   <div class="split">
-    <img src="assets/images/founder.jpg" alt="Founder">
+    <img src="founder.jpg" alt="Founder">
     <p>
       <strong>Lee Beina</strong><br>
-      Founder & Managing Partner<br><br>
-      With a background in international trade and a strong focus on healthcare
-      compliance, Lee leads Rejuve Trade Center with a commitment to integrity,
-      operational discipline, and sustainable growth within the US medical and
-      aesthetic device market.
+      Founder & Managing Partner
     </p>
   </div>
 </section>
 
-<!-- Contact -->
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-  <div class="contact">
-    <p><strong>Email:</strong> mialee5201314@gmail.com</p>
-    <p><strong>Phone:</strong> +1 (254) 214-9136</p>
-    <p><strong>Office:</strong> Dallas Business District, Dallas, Texas, USA</p>
-  </div>
-  <img class="city" src="assets/images/dallas.jpg" alt="Dallas Office">
+  <p>Email: mialee5201314@gmail.com</p>
+  <p>Phone: +1 (254) 214-9136</p>
+  <img src="dallas.jpg" alt="Dallas Office">
 </section>
 
 <footer>
-  <p>© 2026 Rejuve Trade Center. All rights reserved.</p>
+  <p>© 2026 Rejuve Trade Center</p>
 </footer>
 
 <script src="script.js"></script>
