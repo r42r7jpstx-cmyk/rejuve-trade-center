@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rejuve Trade Center | Medical & Aesthetic Device Importer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Rejuve Trade Center is a Dallas-based importer of FDA-compliant medical and aesthetic devices, serving clinics and healthcare providers across the United States.">
+  <meta name="keywords" content="Rejuve Trade Center, medical devices, aesthetic equipment, FDA compliant importer, Dallas medical trade">
+  <meta name="author" content="Rejuve Trade Center">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rejuve Trade Center">
+  <meta property="og:description" content="US-based medical & aesthetic device importer focused on quality, compliance, and innovation.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="overlay">
+    <h1>Rejuve Trade Center</h1>
+    <p class="subtitle">US-Based Medical & Aesthetic Device Importer</p>
+    <p class="tagline">FDA-Compliant · Global Sourcing · Trusted Quality</p>
+  </div>
+</header>
+
+<section class="section">
+  <h2>About Us</h2>
+  <p>
+    Rejuve Trade Center (回春贸易中心) is a Dallas-based trading company specializing in the import
+    and distribution of high-quality medical and aesthetic devices. We focus on compliant,
+    innovative, and non-invasive technologies that support modern healthcare and beauty practices.
+  </p>
+</section>
+
+<section class="section gray">
+  <h2>Our Product Categories</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="assets/images/medical1.jpg" alt="Medical Devices">
+      <h3>Medical Devices</h3>
+      <p>Diagnostic & monitoring equipment including digital blood pressure monitors, glucose meters,
+        ECG systems, oxygen concentrators, and respiratory support devices.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/aesthetic1.jpg" alt="Aesthetic Devices">
+      <h3>Aesthetic & Beauty Devices</h3>
+      <p>Laser systems, RF devices, microneedling equipment, IPL technology, and non-invasive body
+        contouring solutions.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/medical2.jpg" alt="Imaging Equipment">
+      <h3>Imaging & Treatment</h3>
+      <p>Ultrasound, microwave, and radiofrequency systems for skin tightening, therapy, and clinical
+        treatment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Compliance & Quality</h2>
+  <div class="split">
+    <img src="assets/images/compliance.jpg" alt="Compliance">
+    <p>
+      Compliance is at the core of our operations. We work closely with manufacturers to ensure
+      all imported devices meet FDA standards and applicable US regulations. Our focus is on
+      safety, reliability, and long-term partnerships.
+    </p>
+  </div>
+</section>
+
+<section class="section gray">
+  <h2>Founder</h2>
+  <div class="split">
+    <img src="assets/images/founder.jpg" alt="Founder Lee Beina">
+    <p>
+      <strong>Lee · Beina</strong><br>
+      Founder & Managing Partner<br><br>
+      With a strong focus on healthcare innovation and international trade, Lee leads Rejuve Trade
+      Center with a commitment to integrity, compliance, and sustainable growth in the US medical
+      and aesthetic device market.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <p><strong>Email:</strong> mialee5201314@gmail.com</p>
+    <p><strong>Phone:</strong> +1 (254) 214-9136</p>
+    <p><strong>Office:</strong> Dallas Business District, Dallas, Texas, USA</p>
+  </div>
+  <img class="city" src="assets/images/dallas.jpg" alt="Dallas Office">
+</section>
+
+<footer>
+  <p>© 2026 Rejuve Trade Center. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
