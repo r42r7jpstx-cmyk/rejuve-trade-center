@@ -4,17 +4,26 @@
   <meta charset="UTF-8" />
   <title>Rejuve Trade Center | Medical & Aesthetic Device Importer</title>
 
-  <!-- SEO -->
   <meta name="description" content="Rejuve Trade Center is a US-based international trading company specializing in FDA-compliant medical and aesthetic devices.">
-  <meta name="keywords" content="medical devices, aesthetic equipment, FDA importer, Rejuve Trade Center">
+  <meta name="keywords" content="medical devices, aesthetic equipment, FDA importer, international medical trade">
   <meta name="author" content="Rejuve Trade Center">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- NAV & HERO FIX -->
   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      letter-spacing: 0.1px;
+    }
+
+    /* NAV */
     .navbar {
       position: sticky;
       top: 0;
@@ -22,19 +31,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 48px;
-      background: rgba(10, 15, 30, 0.75);
+      padding: 16px 56px;
+      background: rgba(8,12,24,0.85);
       backdrop-filter: blur(10px);
     }
 
     .nav-logo {
-      font-weight: 800;
+      font-weight: 700;
       font-size: 18px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
 
     .nav-links a {
-      margin-left: 20px;
+      margin-left: 22px;
       text-decoration: none;
       font-size: 14px;
       color: #e5e7eb;
@@ -44,19 +53,106 @@
       color: #60a5fa;
     }
 
+    /* HERO */
     .hero {
-      min-height: 90vh;
+      position: relative;
+      height: 100vh;
       background: url('hero.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
     }
 
-    .overlay {
-      background: rgba(0,0,0,0.45);
-      padding: 80px 40px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
       max-width: 900px;
+      padding: 0 32px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #d1d5db;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 0 32px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 28px;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin: 18px 0 10px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #9ca3af;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .split img {
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    footer {
+      padding: 60px 32px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
     }
   </style>
 </head>
@@ -67,168 +163,140 @@
 <nav class="navbar">
   <div class="nav-logo">Rejuve Trade Center</div>
   <div class="nav-links">
+    <a href="#founder">Founder</a>
     <a href="#about">About</a>
     <a href="#products">Products</a>
+    <a href="#logistics">Logistics</a>
     <a href="#philosophy">Philosophy</a>
-    <a href="#compliance">Compliance</a>
-    <a href="#founder">Founder</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
-  <div class="overlay">
+  <div class="hero-content">
     <h1>Rejuve Trade Center</h1>
-    <p class="subtitle">Medical & Aesthetic Device International Trading</p>
-    <p class="tagline">FDA Compliance · Global Sourcing · Long-Term Partnerships</p>
+    <p>
+      Medical & Aesthetic Device International Trading<br>
+      FDA Compliance · Global Sourcing · Long-Term Partnerships
+    </p>
   </div>
 </header>
 
+<!-- FOUNDER -->
+<section id="founder">
+  <h2>Founder & Management</h2>
+  <div class="split">
+    <img src="founder.jpg" alt="Founder">
+    <p>
+      <strong>Lee Beina</strong><br><br>
+      Bachelor of Economics, University of California, Berkeley.<br><br>
+      Early professional experience includes a finance-related internship at
+      Citibank, providing exposure to global banking operations, market analysis,
+      and financial reporting. This background established a strong foundation in
+      international markets and risk-aware commercial execution, later applied to
+      international medical and aesthetic device trade.
+    </p>
+  </div>
+</section>
+
 <!-- ABOUT -->
-<section class="section" id="about">
+<section id="about">
   <h2>About Rejuve Trade Center</h2>
   <p>
     Rejuve Trade Center is a United States–based international trading company
     specializing in the import and distribution of professional medical and
     aesthetic devices. We support clinics, distributors, and healthcare providers
-    by sourcing compliant, reliable, and clinically relevant equipment from
-    global manufacturers.
-  </p>
-  <p>
-    Our operations emphasize regulatory awareness, transparent supply chains,
-    and practical market execution. We focus on long-term value rather than
-    short-term volume, ensuring stability for both suppliers and customers.
+    through compliant sourcing, transparent supply chains, and reliable trade
+    execution.
   </p>
 </section>
 
 <!-- PRODUCTS -->
-<section class="section gray" id="products">
+<section id="products">
   <h2>Product Portfolio</h2>
 
   <div class="grid">
+
     <div class="card">
-      <img src="medical1.jpg">
-      <h3>Medical & Diagnostic Devices</h3>
+      <img src="thermage.jpg" alt="Radiofrequency Skin Tightening Device">
+      <h3>Radiofrequency Skin Tightening Systems</h3>
       <p>
-        Diagnostic and monitoring equipment including digital blood pressure
-        monitors, glucose meters, ECG systems, pulse oximeters, and home-care
-        monitoring solutions widely used in clinics and outpatient settings.
+        Advanced monopolar radiofrequency systems designed for non-invasive skin
+        tightening and contouring. These devices deliver controlled thermal energy
+        to deeper dermal layers, stimulating collagen remodeling and improving skin
+        firmness. Widely used in aesthetic clinics for facial and body treatments.
       </p>
     </div>
 
     <div class="card">
-      <img src="aesthetic1.jpg">
-      <h3>Aesthetic Laser & Energy-Based Devices</h3>
-      <p>
-        Laser systems for hair removal, pigmentation treatment, and skin
-        rejuvenation, as well as IPL and energy-based platforms with sustained
-        demand in aesthetic markets.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="medical2.jpg">
-      <h3>Imaging & Treatment Systems</h3>
-      <p>
-        Ultrasound, microwave, and radiofrequency systems designed for skin
-        tightening, body contouring, and therapeutic applications in professional
-        clinical environments.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="aesthetic2.jpg">
+      <img src="microneedling.jpg" alt="Microneedling Device">
       <h3>Microneedling & Regenerative Devices</h3>
       <p>
-        Microneedling systems and PRP-related devices widely used for anti-aging,
-        skin repair, and minimally invasive aesthetic treatments.
+        Microneedling systems and PRP-related devices commonly used for skin
+        rejuvenation, anti-aging treatments, and tissue repair. These minimally
+        invasive technologies are widely adopted in aesthetic and dermatology
+        practices.
       </p>
     </div>
 
     <div class="card">
-      <img src="medical1.jpg">
-      <h3>Respiratory & Life Support Equipment</h3>
-      <p>
-        Ventilators, oxygen concentrators, and portable oxygen solutions supporting
-        respiratory care, home healthcare, and increased global health awareness.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="medical2.jpg">
+      <img src="dental.jpg" alt="Dental Aesthetic Equipment">
       <h3>Dental & Oral Aesthetic Equipment</h3>
       <p>
-        Teeth whitening systems and oral aesthetic devices serving a growing
-        segment within the broader medical beauty market.
+        Dental aesthetic devices including teeth whitening systems and oral cosmetic
+        equipment, supporting a growing segment within the medical aesthetics
+        market.
       </p>
     </div>
+
+  </div>
+</section>
+
+<!-- LOGISTICS -->
+<section id="logistics">
+  <h2>Global Logistics & Trade Operations</h2>
+  <div class="split">
+    <img src="logistics.jpg" alt="Global Logistics">
+    <p>
+      Rejuve Trade Center operates with a strong focus on international logistics
+      and trade coordination. We manage cross-border sourcing, shipping, and
+      documentation processes to ensure timely delivery and regulatory alignment
+      across international markets.
+      <br><br>
+      Our logistics capabilities support reliable execution, risk control, and
+      long-term cooperation with global manufacturing partners.
+    </p>
   </div>
 </section>
 
 <!-- PHILOSOPHY -->
-<section class="section" id="philosophy">
+<section id="philosophy">
   <h2>Our Philosophy</h2>
   <p>
-    We believe medical and aesthetic devices must be safe, compliant, and aligned
-    with real clinical needs. As an importer, our responsibility extends beyond
-    logistics — it includes regulatory coordination, documentation integrity, and
-    responsible market entry.
+    We prioritize safety, regulatory compliance, and long-term value creation.
+    Market trends increasingly favor minimally invasive, non-invasive, efficient,
+    and portable devices. Our sourcing strategy aligns with these developments while
+    maintaining strict FDA compliance.
   </p>
-  <p>
-    Market demand increasingly favors minimally invasive, non-invasive, efficient,
-    and portable technologies. We align our sourcing strategy with these trends
-    while maintaining strict compliance with US regulatory standards.
-  </p>
-</section>
-
-<!-- COMPLIANCE -->
-<section class="section gray" id="compliance">
-  <h2>Compliance & Regulatory Standards</h2>
-  <div class="split">
-    <img src="compliance.jpg">
-    <p>
-      Compliance is central to Rejuve Trade Center’s operations. We work closely
-      with manufacturing partners to ensure imported devices meet FDA requirements
-      and applicable US regulations. Our processes emphasize traceability, risk
-      awareness, and long-term regulatory alignment.
-    </p>
-  </div>
-</section>
-
-<!-- FOUNDER -->
-<section class="section gray" id="founder">
-  <h2>Founder & Management</h2>
-  <div class="split">
-    <img src="founder.jpg">
-    <p>
-      <strong>Lee Beina</strong><br>
-      Founder & Managing Partner<br><br>
-      Lee holds a Bachelor’s degree in Economics from the University of California,
-      Berkeley. Early professional experience includes a finance-related internship
-      at Citibank, providing exposure to global banking operations, market analysis,
-      and financial reporting.
-      <br><br>
-      This background laid the foundation for a career in international trade and
-      commercial operations, with a strong focus on compliance, risk management,
-      and sustainable growth within the medical and aesthetic device sector.
-    </p>
-  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
+<section id="contact">
   <h2>Contact</h2>
-  <p><strong>Email:</strong> mialee5201314@gmail.com</p>
-  <p><strong>Phone:</strong> +1 (254) 214-9136</p>
-  <p><strong>Office:</strong> Dallas, Texas, United States</p>
-  <img src="dallas.jpg">
+  <p>
+    Rejuve Trade Center Inc.<br>
+    500 North Akard Street, Suite 2500<br>
+    Dallas, TX 75201<br>
+    United States<br><br>
+    Email: mialee5201314@gmail.com<br>
+    Phone: +1 (254) 214-9136
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Rejuve Trade Center. All rights reserved.</p>
+  © 2026 Rejuve Trade Center. All rights reserved.
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
