@@ -35,7 +35,7 @@ h1{
   font-weight:600;
   letter-spacing:.4px;
   margin-bottom:28px;
-  color:#111;
+  color:#fff;
 }
 
 h2{
@@ -90,11 +90,14 @@ nav a::after{
 
 nav a:hover::after{width:100%}
 
-/* ===== HERO ===== */
+/* ===== HERO (背景图恢复) ===== */
 .hero{
   min-height:90vh;
   display:flex;
   align-items:center;
+  background:
+    linear-gradient(rgba(10,37,64,.55), rgba(10,37,64,.55)),
+    url('hero.jpg') center/cover no-repeat;
 }
 
 .hero-inner{
@@ -106,6 +109,7 @@ nav a:hover::after{width:100%}
 .hero p{
   max-width:640px;
   font-size:17px;
+  color:#eaeaea;
 }
 
 /* ===== FOUNDER (交叉排版) ===== */
