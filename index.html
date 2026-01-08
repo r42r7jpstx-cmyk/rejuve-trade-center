@@ -30,6 +30,14 @@ body{
   padding:120px 20px;
 }
 
+h1{
+  font-size:54px;
+  font-weight:600;
+  letter-spacing:.4px;
+  margin-bottom:28px;
+  color:#111;
+}
+
 h2{
   font-size:32px;
   color:var(--primary);
@@ -38,27 +46,16 @@ h2{
 
 p{
   color:var(--gray);
-  font-size:15.5px;
+  font-size:15.8px;
   margin-bottom:18px;
 }
 
-/* ===== BRAND (方案 A：只保留 Logo) ===== */
-.brand{
-  text-align:center;
-  padding:160px 20px 100px;
-}
-
-.brand img{
-  max-width:520px;
-}
-
-/* ===== NAV ===== */
+/* ===== NAV (Sticky) ===== */
 nav{
   position:sticky;
   top:0;
   background:#fff;
-  z-index:30;
-  border-top:1px solid #eee;
+  z-index:100;
   border-bottom:1px solid #eee;
 }
 
@@ -67,7 +64,7 @@ nav ul{
   margin:auto;
   display:flex;
   justify-content:center;
-  gap:44px;
+  gap:46px;
   padding:18px 20px;
   list-style:none;
 }
@@ -95,54 +92,49 @@ nav a:hover::after{width:100%}
 
 /* ===== HERO ===== */
 .hero{
-  height:100svh;
-  background:
-    linear-gradient(rgba(10,37,64,.55),rgba(10,37,64,.55)),
-    url('hero.jpg') center/cover no-repeat;
+  min-height:90vh;
   display:flex;
   align-items:center;
 }
 
-.hero-content{
+.hero-inner{
   max-width:var(--max-width);
   margin:auto;
   padding:0 20px;
-  color:#fff;
-}
-
-.hero h2{
-  font-size:44px;
-  margin-bottom:20px;
 }
 
 .hero p{
-  max-width:720px;
-  font-size:16.5px;
-  color:#eaeaea;
+  max-width:640px;
+  font-size:17px;
 }
 
 /* ===== FOUNDER (交叉排版) ===== */
 .founder-block{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:70px;
+  gap:80px;
   align-items:center;
-  margin-bottom:120px;
-}
-
-.founder-block.reverse{
-  grid-template-columns:1fr 1fr;
+  margin-bottom:140px;
 }
 
 .founder-block img{
   width:100%;
-  border-radius:20px;
+  border-radius:22px;
+}
+
+.founder-block.reverse{
+  direction:rtl;
+}
+
+.founder-block.reverse > *{
+  direction:ltr;
 }
 
 @media(max-width:900px){
   .founder-block,
   .founder-block.reverse{
     grid-template-columns:1fr;
+    direction:ltr;
   }
 }
 
@@ -150,23 +142,23 @@ nav a:hover::after{width:100%}
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:34px;
+  gap:36px;
 }
 
 .product{
   background:var(--light);
-  border-radius:20px;
+  border-radius:22px;
   overflow:hidden;
 }
 
 .product img{
   width:100%;
-  height:220px;
+  height:230px;
   object-fit:cover;
 }
 
 .product .info{
-  padding:24px;
+  padding:26px;
 }
 
 .product h3{
@@ -184,13 +176,13 @@ nav a:hover::after{width:100%}
 .image-section{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:70px;
   align-items:center;
 }
 
 .image-section img{
   width:100%;
-  border-radius:20px;
+  border-radius:22px;
 }
 
 @media(max-width:900px){
@@ -201,7 +193,7 @@ nav a:hover::after{width:100%}
 footer{
   background:#0a2540;
   color:#fff;
-  padding:80px 20px;
+  padding:100px 20px;
 }
 
 .footer-inner{
@@ -209,11 +201,17 @@ footer{
   margin:auto;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:48px;
+  gap:60px;
+  align-items:center;
+}
+
+footer img{
+  max-width:220px;
+  margin-bottom:20px;
 }
 
 footer h3{
-  margin-bottom:16px;
+  margin-bottom:14px;
   font-size:16px;
 }
 
@@ -231,15 +229,10 @@ footer p{
 
 <body>
 
-<!-- BRAND -->
-<section class="brand">
-  <img src="images/logo.png" alt="Rejuve Trade Center Logo">
-</section>
-
 <!-- NAV -->
 <nav>
   <ul>
-    <li><a href="#hero">Vision</a></li>
+    <li><a href="#hero">Home</a></li>
     <li><a href="#founder">Founder</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#compliance">Compliance</a></li>
@@ -249,12 +242,13 @@ footer p{
 
 <!-- HERO -->
 <section id="hero" class="hero">
-  <div class="hero-content">
-    <h2>Advancing Global Medical Aesthetics</h2>
+  <div class="hero-inner">
+    <h1>Rejuve Trade Center</h1>
     <p>
-      Rejuve Trade Center delivers professional medical aesthetic technologies
-      that balance clinical safety, treatment effectiveness, and global
-      regulatory compliance for clinics and medical institutions worldwide.
+      Rejuve Trade Center is a global medical aesthetics and trade-focused
+      organization dedicated to delivering professional aesthetic technologies,
+      supporting clinics and medical institutions with compliant, reliable, and
+      execution-driven solutions across international markets.
     </p>
   </div>
 </section>
@@ -262,47 +256,41 @@ footer p{
 <!-- FOUNDER -->
 <section id="founder" class="container">
 
-  <!-- Block 1 -->
   <div class="founder-block">
     <img src="images/founder-portrait.jpg">
     <div>
       <h2>Founder & Professional Background</h2>
       <p>
         The founder earned a Bachelor’s degree in Economics from the University
-        of California, Berkeley in 2004. During academic studies, a solid
-        foundation was established in economic theory, analytical thinking, and
-        structured problem-solving, supported by active participation in
-        academic and social initiatives.
+        of California, Berkeley in 2004, building a solid foundation in economic
+        analysis, structured problem-solving, and professional communication.
       </p>
       <p>
         Following graduation, the founder completed an internship at Citibank,
-        gaining first-hand exposure to global financial operations, market
-        analysis, financial reporting, and client-oriented services. This
-        experience provided practical insight into international banking
-        systems and institutional workflows.
+        gaining hands-on exposure to global financial operations, market
+        analysis, financial reporting, and institutional workflows.
       </p>
     </div>
   </div>
 
-  <!-- Block 2 -->
   <div class="founder-block reverse">
+    <img src="images/founder-portrait-2.jpg">
     <div>
       <p>
         In 2007, the founder returned to Shanghai and joined Shanghai Huayi
         Group, focusing on project management and market-oriented operations.
-        Key responsibilities included market research, client development,
+        Responsibilities included market research, client development,
         project coordination, progress tracking, cross-functional
         communication, risk management, documentation control, and quality
         assurance.
       </p>
       <p>
         This combination of international education, financial industry
-        exposure, and hands-on project management experience laid a strong
+        exposure, and hands-on project execution established a disciplined
         foundation for long-term engagement in international trade, commercial
         operations, and cross-border business development.
       </p>
     </div>
-    <img src="images/founder-portrait-2.jpg">
   </div>
 
 </section>
@@ -312,13 +300,13 @@ footer p{
   <h2>Our Products</h2>
   <div class="products">
 
-    <div class="product"><img src="thermage.jpg"><div class="info"><h3>Radiofrequency Skin Tightening</h3><p>Non-invasive systems designed to improve skin elasticity and firmness.</p></div></div>
-    <div class="product"><img src="microneedling.jpg"><div class="info"><h3>Microneedling Systems</h3><p>Precision devices supporting collagen regeneration and skin renewal.</p></div></div>
-    <div class="product"><img src="laser.jpg"><div class="info"><h3>Laser Aesthetic Devices</h3><p>Advanced platforms for pigmentation treatment and skin resurfacing.</p></div></div>
+    <div class="product"><img src="thermage.jpg"><div class="info"><h3>Radiofrequency Skin Tightening</h3><p>Non-invasive systems improving skin elasticity and firmness.</p></div></div>
+    <div class="product"><img src="microneedling.jpg"><div class="info"><h3>Microneedling Systems</h3><p>Precision devices supporting collagen regeneration.</p></div></div>
+    <div class="product"><img src="laser.jpg"><div class="info"><h3>Laser Aesthetic Devices</h3><p>Advanced platforms for pigmentation treatment.</p></div></div>
     <div class="product"><img src="body-contouring.jpg"><div class="info"><h3>Body Contouring Systems</h3><p>Non-surgical technologies targeting localized fat reduction.</p></div></div>
-    <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><h3>Skin Rejuvenation Devices</h3><p>Anti-aging solutions improving tone, texture, and vitality.</p></div></div>
-    <div class="product"><img src="dental.jpg"><div class="info"><h3>Dental Aesthetic Equipment</h3><p>Professional systems for cosmetic and restorative procedures.</p></div></div>
-    <div class="product"><img src="diagnostic.jpg"><div class="info"><h3>Post-Treatment Care Devices</h3><p>Supportive devices enhancing recovery and comfort.</p></div></div>
+    <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><h3>Skin Rejuvenation Devices</h3><p>Anti-aging solutions improving tone and texture.</p></div></div>
+    <div class="product"><img src="dental.jpg"><div class="info"><h3>Dental Aesthetic Equipment</h3><p>Professional systems for cosmetic procedures.</p></div></div>
+    <div class="product"><img src="diagnostic.jpg"><div class="info"><h3>Post-Treatment Care Devices</h3><p>Supportive devices enhancing recovery.</p></div></div>
     <div class="product"><img src="respiratory.jpg"><div class="info"><h3>Clinical Support Devices</h3><p>Auxiliary devices supporting clinical environments.</p></div></div>
 
   </div>
@@ -354,7 +342,7 @@ footer p{
 <footer>
   <div class="footer-inner">
     <div>
-      <h3>Rejuve Trade Center</h3>
+      <img src="images/logo.png" alt="Rejuve Trade Center Logo">
       <p>
         1910 Pacific Ave, Suite 17100<br>
         Dallas, TX 75201, United States
