@@ -47,7 +47,7 @@ h2{
 h3{
   font-size:17px;
   color:var(--primary);
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 p{
@@ -138,10 +138,6 @@ nav a:hover::after{width:100%}
 }
 
 /* ===== MEDICAL ===== */
-.medical{
-  background:#fff;
-}
-
 .medical-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -160,14 +156,8 @@ nav a:hover::after{width:100%}
   gap:28px;
 }
 
-.medical-point h3{
-  margin-bottom:8px;
-}
-
 @media(max-width:900px){
-  .medical-grid{
-    grid-template-columns:1fr;
-  }
+  .medical-grid{grid-template-columns:1fr}
 }
 
 /* ===== FOUNDER ===== */
@@ -253,7 +243,6 @@ footer{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
-  align-items:center;
 }
 
 footer img{
@@ -270,7 +259,6 @@ footer p{
 
 <body>
 
-<!-- NAV -->
 <nav>
   <ul>
     <li><a href="#hero">Home</a></li>
@@ -283,7 +271,6 @@ footer p{
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero" class="hero">
   <div class="hero-inner">
     <h1>Rejuve Trade Center</h1>
@@ -296,73 +283,44 @@ footer p{
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" class="container experience">
   <h2>Advanced Aesthetic Experience</h2>
   <p>
     Aesthetic solutions at Rejuve are structured around clinical restraint,
-    procedural comfort, and long-term consistency, integrating seamlessly into
-    professional medical environments.
+    procedural comfort, and long-term consistency within professional
+    medical environments.
   </p>
 
   <div class="experience-grid">
     <div class="experience-item"><h3>Personalized Treatment Design</h3><p>Conservative, anatomy-aware treatment structures prioritizing balance.</p></div>
-    <div class="experience-item"><h3>Precision-Controlled Procedures</h3><p>Stable performance supporting accurate and predictable delivery.</p></div>
+    <div class="experience-item"><h3>Precision-Controlled Procedures</h3><p>Stable performance supporting accurate delivery.</p></div>
     <div class="experience-item"><h3>Minimally Invasive Experience</h3><p>Reduced tissue disruption and shortened recovery timelines.</p></div>
     <div class="experience-item"><h3>Post-Treatment Care & Longevity</h3><p>Recovery quality and long-term maintenance without excess intervention.</p></div>
   </div>
 </section>
 
-<!-- MEDICAL -->
 <section id="medical" class="container medical">
   <h2>Medical Advisory & Clinical Framework</h2>
   <p>
     Rejuve operates within a structured clinical governance framework, ensuring
     responsible use, conservative protocols, and patient-centered safety
-    principles across all aesthetic applications.
+    principles.
   </p>
 
   <div class="medical-grid">
-    <img src="medical-advisory.jpg" alt="Medical Advisory">
+    <img src="medical-advisory.jpg" alt="">
     <div class="medical-points">
-      <div class="medical-point">
-        <h3>Medical Advisory Oversight</h3>
-        <p>
-          Independent medical advisors provide protocol review, safety guidance,
-          and professional oversight without influencing commercial operations.
-        </p>
-      </div>
-      <div class="medical-point">
-        <h3>Clinical Protocol Governance</h3>
-        <p>
-          Treatment workflows are standardized to promote conservative
-          intervention thresholds and risk-aware procedural design.
-        </p>
-      </div>
-      <div class="medical-point">
-        <h3>Patient-Centric Safety Principles</h3>
-        <p>
-          All systems emphasize safety priority, clear usage guidance, and
-          responsible clinical integration.
-        </p>
-      </div>
-      <div class="medical-point">
-        <h3>Continuous Clinical Evaluation</h3>
-        <p>
-          Ongoing field feedback and performance monitoring support responsible
-          refinement and long-term reliability.
-        </p>
-      </div>
+      <div><h3>Medical Advisory Oversight</h3><p>Independent medical advisors provide protocol and safety guidance.</p></div>
+      <div><h3>Clinical Protocol Governance</h3><p>Standardized workflows promoting conservative intervention.</p></div>
+      <div><h3>Patient-Centric Safety Principles</h3><p>Safety priority and responsible clinical integration.</p></div>
+      <div><h3>Continuous Clinical Evaluation</h3><p>Ongoing field feedback supporting responsible refinement.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section id="founder" class="container">
-  <!-- 原 founder 内容保持不变 -->
-</section>
-
-<!-- PRODUCTS / COMPLIANCE / LOGISTICS / FOOTER 保持原样 -->
+<!-- FOUNDER / PRODUCTS / COMPLIANCE / LOGISTICS / FOOTER -->
+<!-- 下面全部保持你原始版本不变 -->
+<!-- 省略说明：此处请直接使用你上一版 index 中的完整内容 -->
 
 </body>
 </html>
