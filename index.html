@@ -1,434 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rejuve Trade Center</title>
+  <meta charset="UTF-8" />
+  <title>Rejuve Trade Center | Global Medical & Aesthetics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-:root{
-  --max-width:1280px;
-  --text-width:760px;
-  --primary:#0a2540;
-  --dark:#0c1622;
-  --dark-soft:#111c2a;
-  --gray:#7a8699;
-  --light:#f4f6f9;
-}
+  <style>
+    :root {
+      --bg-main:#0b0d10;
+      --bg-section:#11141a;
+      --bg-footer:#090b0e;
+      --text-main:#e8ebf0;
+      --text-muted:#9aa1ac;
+      --accent:#6fa8ff;
+      --border-soft:rgba(255,255,255,0.08);
+    }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-  line-height:1.75;
-  color:#111;
-  background:#fff;
-}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg-main);
+      color:var(--text-main);
+      line-height:1.65;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
 
-/* ===== GLOBAL ===== */
-.container{
-  max-width:var(--max-width);
-  margin:auto;
-  padding:120px 20px;
-}
-.text-column{max-width:var(--text-width)}
-h1{font-size:56px;color:#fff;margin-bottom:22px}
-h2{font-size:34px;color:var(--primary);margin-bottom:18px}
-h3{
-  font-size:13px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--gray);
-  margin-bottom:14px;
-}
-p{
-  font-size:16px;
-  color:#444;
-  margin-bottom:18px;
-}
+    /* NAV */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      height:72px;
+      background:rgba(10,12,15,.85);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border-soft);
+      z-index:1000;
+    }
+    .nav-inner{
+      max-width:1200px;
+      margin:auto;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 32px;
+    }
+    .nav-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:600;
+      letter-spacing:.4px;
+    }
+    .nav-brand img{height:36px}
+    .nav-links a{
+      margin-left:26px;
+      font-size:14px;
+      color:var(--text-muted);
+    }
+    .nav-links a:hover{color:var(--text-main)}
 
-/* ===== NAV ===== */
-nav{
-  position:sticky;
-  top:0;
-  background:#fff;
-  border-bottom:1px solid rgba(0,0,0,.06);
-  z-index:100;
-}
-nav ul{
-  list-style:none;
-  margin:0;
-  padding:18px 20px;
-  display:flex;
-  justify-content:center;
-  gap:42px;
-}
-nav a{
-  position:relative;
-  text-decoration:none;
-  color:#111;
-  font-size:13px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-nav a::after{
-  content:'';
-  position:absolute;
-  left:50%;
-  bottom:-8px;
-  width:0;
-  height:1px;
-  background:var(--primary);
-  transition:.35s ease;
-  transform:translateX(-50%);
-}
-nav a:hover::after{width:100%}
+    /* HERO */
+    header{
+      height:100vh;
+      background:url("hero.jpg") center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      padding:0 24px;
+    }
+    .hero-content{
+      max-width:780px;
+      margin-left:8%;
+    }
+    .hero-content h hookup}
+    .hero-content h1{
+      font-size:48px;
+      font-weight:500;
+      margin-bottom:22px;
+    }
+    .hero-content p{
+      font-size:18px;
+      color:var(--text-muted);
+      max-width:620px;
+    }
 
-/* ===== HERO ===== */
-.hero{
-  position:relative;
-  min-height:92vh;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  background:var(--dark);
-}
-.hero video{
-  position:absolute;
-  top:50%;left:50%;
-  width:100%;height:100%;
-  object-fit:cover;
-  transform:translate(-50%,-50%);
-  z-index:1;
-}
-.hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    rgba(12,22,34,.65),
-    rgba(12,22,34,.85)
-  );
-  z-index:2;
-}
-.hero-inner{
-  position:relative;
-  z-index:3;
-  max-width:var(--max-width);
-  margin:auto;
-  padding:0 20px;
-}
-.hero p{
-  color:#e5e7eb;
-  max-width:680px;
-  font-size:18px;
-}
+    section{
+      padding:120px 24px;
+      background:var(--bg-section);
+    }
+    .container{
+      max-width:1100px;
+      margin:auto;
+    }
+    section h2{
+      font-size:32px;
+      font-weight:500;
+      margin-bottom:20px;
+    }
+    section p{
+      color:var(--text-muted);
+      max-width:820px;
+    }
 
-/* ===== BLOCK ===== */
-.block{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-}
-.block img{
-  width:100%;
-  border-radius:22px;
-}
+    /* FOUNDER */
+    .founder{
+      display:grid;
+      grid-template-columns:1fr 1.2fr;
+      gap:60px;
+      align-items:center;
+    }
+    .founder-images img{
+      border-radius:14px;
+      margin-bottom:18px;
+    }
 
-/* ===== DARK SECTION ===== */
-.section-dark{
-  background:var(--dark-soft);
-  color:#e5e7eb;
-}
-.section-dark h2{color:#fff}
-.section-dark p{color:#cbd5e1}
+    /* PRODUCTS */
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:32px;
+      margin-top:48px;
+    }
+    .product-card{
+      background:#0f1217;
+      border:1px solid var(--border-soft);
+      border-radius:14px;
+      overflow:hidden;
+      transition:.3s;
+    }
+    .product-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(255,255,255,.15);
+    }
+    .product-card img{height:180px;width:100%;object-fit:cover}
+    .product-card div{padding:22px}
+    .product-card h3{font-size:18px;margin-bottom:10px}
+    .product-card p{font-size:14px;color:var(--text-muted)}
 
-/* ===== PRODUCTS ===== */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:36px;
-}
-.product{
-  background:var(--light);
-  border-radius:22px;
-  overflow:hidden;
-}
-.product img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-}
-.product .info{
-  padding:26px;
-}
-.product .tag{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:#7a8699;
-  margin-bottom:10px;
-}
-.product h4{
-  font-size:17px;
-  color:var(--primary);
-  margin-bottom:8px;
-}
+    /* COMPLIANCE */
+    .compliance{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+    .compliance img{border-radius:16px}
 
-/* ===== FOOTER ===== */
-footer{
-  position:relative;
-  background:#0c1622;
-  color:#cbd5e1;
-  padding:120px 20px 90px;
-  overflow:hidden;
-}
+    /* LOGISTICS */
+    .logistics{
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
 
-/* Logo Seal */
-.footer-logo-seal{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%) rotate(-10deg);
-  width:420px;
-  opacity:.08;
-  pointer-events:none;
-  z-index:1;
+    /* FOOTER */
+    footer{
+      background:var(--bg-footer);
+      border-top:1px solid var(--border-soft);
+      padding:80px 24px 40px;
+    }
+    .footer-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      gap:48px;
+    }
+    .footer-brand img{width:160px;margin-bottom:18px}
+    .footer-brand p{font-size:14px;color:var(--text-muted)}
+    .footer-info h4{font-size:15px;margin-bottom:12px}
+    .footer-info p{font-size:14px;color:var(--text-muted);margin-bottom:6px}
+    .footer-map iframe{
+      width:100%;
+      height:180px;
+      border:none;
+      border-radius:12px;
+      filter:grayscale(100%) contrast(1.1);
+    }
+    .footer-bottom{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid var(--border-soft);
+      text-align:center;
+      font-size:13px;
+      color:var(--text-muted);
+    }
 
-  /* 白底弱化处理（若非透明 PNG） */
-  mix-blend-mode:screen;
-  filter:grayscale(100%) contrast(120%);
-}
-
-.footer-inner{
-  position:relative;
-  z-index:2;
-  max-width:var(--max-width);
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:60px;
-  align-items:flex-start;
-}
-
-.footer-info{
-  font-size:14px;
-  line-height:1.7;
-  color:#cbd5e1;
-}
-
-.footer-map iframe{
-  width:100%;
-  height:160px;
-  border:0;
-  border-radius:14px;
-  opacity:.9;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:900px){
-  h1{font-size:38px}
-  h2{font-size:28px}
-  .container{padding:80px 16px}
-  .block{grid-template-columns:1fr}
-  .products{grid-template-columns:1fr}
-
-  nav ul{
-    gap:22px;
-    flex-wrap:wrap;
-  }
-
-  .hero video{display:none}
-  .hero{
-    background:
-      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
-      url('hero.jpg') center/cover no-repeat;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr;
-    gap:32px;
-    text-align:center;
-  }
-
-  .footer-logo-seal{
-    width:300px;
-  }
-}
-</style>
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .founder,.compliance,.logistics{grid-template-columns:1fr}
+      .hero-content h1{font-size:36px}
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#founder">Founder</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#clinical">Clinical</a></li>
-<li><a href="#compliance">Compliance</a></li>
-</ul>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="logo1.png" alt="Rejuve Logo">
+      Rejuve Trade Center
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#founder">Founder</a>
+      <a href="#products">Products</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-<video autoplay muted loop playsinline preload="auto">
-  <source src="hero-video.mp4" type="video/mp4">
-</video>
-<div class="hero-inner">
-<h1>Rejuve Trade Center</h1>
-<p>
-A U.S.-based medical aesthetics and clinical technology organization supporting
-professional institutions through structured evaluation, regulatory alignment,
-and long-term operational execution.
-</p>
-</div>
+<header>
+  <div class="hero-content">
+    <h1>Global Medical & Aesthetic Innovation</h1>
+    <p>
+      Rejuve Trade Center operates at the intersection of clinical science,
+      aesthetic technology, and global medical distribution.
+    </p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2>Company Overview</h2>
+    <p>
+      Rejuve Trade Center is a global platform specializing in advanced medical
+      and aesthetic technologies. We focus on sourcing, evaluating, and
+      distributing clinically validated devices that meet international
+      regulatory and quality standards.
+    </p>
+  </div>
 </section>
 
-<!-- COMPANY -->
-<section class="container">
-<div class="text-column">
-<h3>Company Overview</h3>
-<h2>Structured Medical Trade With Long-Term Orientation</h2>
-<p>
-Rejuve Trade Center operates across medical aesthetics, clinical technology,
-and international trade. We focus on structured product classification,
-regulatory alignment, and operational execution rather than short-term
-distribution or promotional activity.
-</p>
-<p>
-Our role is to support professional institutions by delivering systems that
-have been reviewed, contextualized, and deployed within compliant and
-sustainable operational frameworks.
-</p>
-</div>
+<section id="founder">
+  <div class="container founder">
+    <div class="founder-images">
+      <img src="images/founder-portrait.jpg">
+      <img src="images/founder-portrait-2.jpg">
+    </div>
+    <div>
+      <h2>Founder</h2>
+      <p>
+        The founder of Rejuve brings a multidisciplinary background spanning
+        economics, finance, and international medical trade. Educated in the
+        United States and experienced in global markets, the leadership vision
+        is grounded in responsibility, compliance, and long-term value creation.
+      </p>
+      <p>
+        Rejuve was established to bridge the gap between innovative medical
+        technology and real-world clinical application, ensuring safety,
+        transparency, and sustainable growth.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- FOUNDER -->
-<section id="founder" class="container">
-<div class="block">
-<img src="images/founder-portrait.jpg">
-<div class="text-column">
-<h3>Founder</h3>
-<h2>Professional Background & Execution Discipline</h2>
-<p>
-The founder earned a Bachelor’s degree in Economics from the University of
-California, Berkeley in 2004, establishing a foundation in analytical thinking,
-structured decision-making, and professional communication.
-</p>
-<p>
-Early professional experience at Citibank provided exposure to global financial
-operations, institutional workflows, and disciplined execution environments.
-</p>
-</div>
-</div>
-
-<div class="block" style="margin-top:90px">
-<div class="text-column">
-<p>
-In 2007, the founder joined Shanghai Huayi Group, focusing on project
-coordination, cross-functional collaboration, and market-oriented execution
-within large organizational structures.
-</p>
-<p>
-This experience continues to shape Rejuve’s operational philosophy, emphasizing
-risk control, long-term coordination, and sustainable cross-border development.
-</p>
-</div>
-<img src="images/founder-portrait-2.jpg">
-</div>
+<section id="products">
+  <div class="container">
+    <h2>Product Portfolio</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="laser.jpg"><div><h3>Energy-Based Systems</h3><p>Advanced laser and RF solutions for aesthetic and therapeutic applications.</p></div></div>
+      <div class="product-card"><img src="microneedling.jpg"><div><h3>Microneedling Devices</h3><p>Precision-controlled systems designed for skin regeneration and rejuvenation.</p></div></div>
+      <div class="product-card"><img src="body-contouring.jpg"><div><h3>Body Contouring</h3><p>Non-invasive body shaping technologies supported by clinical studies.</p></div></div>
+      <div class="product-card"><img src="dental.jpg"><div><h3>Dental Technologies</h3><p>Professional-grade dental devices for modern clinical environments.</p></div></div>
+      <div class="product-card"><img src="diagnostic.jpg"><div><h3>Diagnostic Equipment</h3><p>Reliable diagnostic systems designed for accuracy and consistency.</p></div></div>
+      <div class="product-card"><img src="respiratory.jpg"><div><h3>Respiratory Care</h3><p>Medical-grade respiratory solutions supporting patient safety.</p></div></div>
+    </div>
+  </div>
 </section>
 
-<!-- PRODUCTS -->
-<section id="products" class="container">
-<div class="text-column">
-<h3>Product Portfolio</h3>
-<h2>Classified Medical & Aesthetic Systems</h2>
-<p>
-Our product portfolio is organized by clinical context and system category.
-Each system is evaluated based on application environment, regulatory
-requirements, and operational compatibility.
-</p>
-</div>
-
-<div class="products">
-<div class="product"><img src="thermage.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Radiofrequency Skin Tightening</h4><p>Non-invasive platforms designed for professional skin tightening applications.</p></div></div>
-<div class="product"><img src="microneedling.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Microneedling Systems</h4><p>Precision devices supporting controlled collagen stimulation procedures.</p></div></div>
-<div class="product"><img src="laser.jpg"><div class="info"><div class="tag">Aesthetic / Clinical</div><h4>Laser Devices</h4><p>Advanced platforms for aesthetic and dermatological treatment environments.</p></div></div>
-<div class="product"><img src="body-contouring.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Body Contouring Systems</h4><p>Non-surgical technologies supporting body contouring workflows.</p></div></div>
-<div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Skin Rejuvenation Devices</h4><p>Systems designed to improve skin tone, texture, and aging signs.</p></div></div>
-<div class="product"><img src="dental.jpg"><div class="info"><div class="tag">Clinical Equipment</div><h4>Dental Aesthetic Equipment</h4><p>Professional systems supporting cosmetic dental procedures.</p></div></div>
-<div class="product"><img src="diagnostic.jpg"><div class="info"><div class="tag">Post-Treatment Support</div><h4>Post-Treatment Care Devices</h4><p>Supportive devices designed for recovery and follow-up environments.</p></div></div>
-<div class="product"><img src="respiratory.jpg"><div class="info"><div class="tag">Clinical Support</div><h4>Clinical Support Devices</h4><p>Auxiliary equipment supporting clinical treatment settings.</p></div></div>
-</div>
+<section id="compliance">
+  <div class="container compliance">
+    <div>
+      <h2>Regulatory & Compliance</h2>
+      <p>
+        Rejuve adheres to international regulatory frameworks including FDA,
+        CE, and ISO quality systems. Our internal review process emphasizes
+        documentation integrity, clinical validation, and post-market
+        surveillance.
+      </p>
+    </div>
+    <img src="compliance.jpg">
+  </div>
 </section>
 
-<!-- CLINICAL -->
-<section id="clinical" class="container section-dark">
-<div class="block">
-<img src="clinical-review.jpg">
-<div class="text-column">
-<h3>Clinical Review</h3>
-<h2>Evaluation Before Deployment</h2>
-<p>
-All systems undergo structured clinical review and technical validation prior to
-market deployment. Evaluation criteria emphasize safety, reproducibility, and
-real-world clinical compatibility.
-</p>
-<p>
-This process ensures alignment with professional practice standards and
-regulatory expectations across diverse treatment environments.
-</p>
-</div>
-</div>
+<section>
+  <div class="container logistics">
+    <img src="logistics.jpg">
+    <div>
+      <h2>Global Logistics & Distribution</h2>
+      <p>
+        With logistics hubs across key global regions, Rejuve ensures efficient
+        distribution, regulatory alignment, and localized support for partners
+        worldwide.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- COMPLIANCE -->
-<section id="compliance" class="container section-dark">
-<div class="block">
-<div class="text-column">
-<h3>Compliance</h3>
-<h2>Regulatory Alignment & Responsibility</h2>
-<p>
-All products distributed by Rejuve Trade Center comply with FDA, CE, and
-applicable international medical regulatory standards.
-</p>
-<p>
-Compliance is treated as a foundational responsibility rather than a procedural
-requirement, informing product selection and deployment decisions.
-</p>
-</div>
-<img src="compliance.jpg">
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-<img src="images/logo.png" class="footer-logo-seal" alt="Rejuve Logo">
-
-<div class="footer-inner">
-
-<div class="footer-info">
-<p>
-Rejuve Trade Center<br>
-1910 Pacific Ave, Suite 17100<br>
-Dallas, TX 75201, United States<br><br>
-Email: mialee5201314@gmail.com<br>
-Phone: +1 254-214-9136
-</p>
-</div>
-
-<div class="footer-map">
-<iframe
-src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
-
-</div>
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo1.png">
+      <p>Global Medical & Aesthetic Trade Platform</p>
+    </div>
+    <div class="footer-info">
+      <h4>Contact</h4>
+      <p>Email: contact@rejuvetrade.com</p>
+      <p>Location: United States</p>
+    </div>
+    <div class="footer-map">
+      <iframe src="https://www.google.com/maps?q=United%20States&output=embed"></iframe>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Rejuve Trade Center. All rights reserved.
+  </div>
 </footer>
 
 </body>
