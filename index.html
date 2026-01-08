@@ -41,7 +41,8 @@ nav a{text-decoration:none;color:#111;font-size:14.5px}
 
 /* HERO */
 .hero{
-  position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden
+  position:relative;min-height:92vh;
+  display:flex;align-items:center;overflow:hidden
 }
 .hero video{
   position:absolute;top:50%;left:50%;
@@ -54,19 +55,26 @@ nav a{text-decoration:none;color:#111;font-size:14.5px}
 }
 .hero-inner{
   position:relative;z-index:3;
-  max-width:var(--max-width);margin:auto;padding:0 20px
+  max-width:var(--max-width);
+  margin:auto;padding:0 20px
 }
-.hero p{color:#eaeaea;max-width:640px;font-size:17px}
+.hero p{
+  color:#eaeaea;
+  max-width:640px;
+  font-size:17px
+}
 
 /* BLOCK */
 .block{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:70px;align-items:center
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center
 }
-.block img{width:100%;border-radius:22px}
-
-/* FOUNDER */
-.founder{margin-bottom:140px}
+.block img{
+  width:100%;
+  border-radius:22px
+}
 
 /* PRODUCTS */
 .products{
@@ -76,20 +84,48 @@ nav a{text-decoration:none;color:#111;font-size:14.5px}
 }
 .product{
   background:var(--light);
-  border-radius:22px;overflow:hidden
+  border-radius:22px;
+  overflow:hidden
 }
-.product img{width:100%;height:230px;object-fit:cover}
+.product img{
+  width:100%;
+  height:230px;
+  object-fit:cover
+}
 .product .info{padding:26px}
-.product h3{font-size:17px;color:var(--primary)}
+.product h3{
+  font-size:17px;
+  color:var(--primary)
+}
 
 /* FOOTER */
-footer{background:#0a2540;color:#fff;padding:100px 20px}
+footer{
+  background:#0a2540;
+  color:#fff;
+  padding:100px 20px
+}
 .footer-inner{
   max-width:var(--max-width);
   margin:auto;
-  display:grid;grid-template-columns:1fr 1fr;gap:60px
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:flex-start
 }
-footer p{color:#d1d5db;font-size:14px}
+.footer-logo img{
+  max-width:200px;
+  margin-bottom:24px
+}
+.footer-logo p{
+  color:#d1d5db;
+  font-size:14px
+}
+.footer-map iframe{
+  width:100%;
+  height:260px;
+  border:0;
+  border-radius:16px
+}
 
 /* MOBILE */
 @media(max-width:900px){
@@ -98,13 +134,20 @@ footer p{color:#d1d5db;font-size:14px}
   .container{padding:80px 16px}
   .block{grid-template-columns:1fr}
   .products{grid-template-columns:1fr}
+
   .hero video{display:none}
   .hero{
     background:
-    linear-gradient(rgba(10,37,64,.55),rgba(10,37,64,.55)),
-    url('hero.jpg') center/cover no-repeat
+      linear-gradient(rgba(10,37,64,.55),rgba(10,37,64,.55)),
+      url('hero.jpg') center/cover no-repeat
   }
-  .footer-inner{grid-template-columns:1fr;text-align:center}
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center
+  }
+  .footer-map iframe{height:220px}
 }
 </style>
 </head>
@@ -124,7 +167,7 @@ footer p{color:#d1d5db;font-size:14px}
 <!-- HERO -->
 <section id="hero" class="hero">
 <video autoplay muted loop playsinline preload="auto">
-<source src="hero-video.mp4" type="video/mp4">
+  <source src="hero-video.mp4" type="video/mp4">
 </video>
 <div class="hero-inner">
 <h1>Rejuve Trade Center</h1>
@@ -135,7 +178,7 @@ professionally reviewed, compliant, and execution-driven solutions worldwide.
 </div>
 </section>
 
-<!-- COMPANY INTRO -->
+<!-- COMPANY -->
 <section class="container">
 <h2>Company Overview</h2>
 <p>
@@ -146,21 +189,19 @@ institutions with structured, compliant, and execution-oriented solutions.
 </section>
 
 <!-- FOUNDER -->
-<section id="founder" class="container founder">
-
+<section id="founder" class="container">
 <div class="block">
 <img src="images/founder-portrait.jpg">
 <div>
 <h2>Founder & Professional Background</h2>
 <p>
 The founder earned a Bachelor’s degree in Economics from the University of
-California, Berkeley in 2004, establishing a strong foundation in economic
-analysis, structured thinking, and professional communication.
+California, Berkeley in 2004, establishing a strong foundation in analytical
+thinking and professional execution.
 </p>
 <p>
-Following graduation, the founder completed an internship at Citibank,
-gaining exposure to global financial operations, market analysis, and
-institutional workflows.
+Following graduation, professional experience at Citibank provided exposure
+to global financial operations and institutional workflows.
 </p>
 </div>
 </div>
@@ -169,17 +210,15 @@ institutional workflows.
 <div>
 <p>
 In 2007, the founder returned to Shanghai and joined Shanghai Huayi Group,
-focusing on project management and market-oriented operations.
+focusing on project management and cross-border operational execution.
 </p>
 <p>
-This experience formed a disciplined approach to execution, risk control,
-and cross-border coordination that continues to shape Rejuve’s operational
-philosophy today.
+This experience shaped Rejuve’s disciplined approach to risk control,
+coordination, and long-term international development.
 </p>
 </div>
 <img src="images/founder-portrait-2.jpg">
 </div>
-
 </section>
 
 <!-- PRODUCTS -->
@@ -222,15 +261,31 @@ regulatory standards.
 <img src="compliance.jpg">
 </section>
 
+<!-- FOOTER -->
 <footer>
 <div class="footer-inner">
-<div>
-<p>Dallas, TX · United States</p>
-</div>
-<div>
-<p>Email: mialee5201314@gmail.com</p>
-<p>Phone: +1 254-214-9136</p>
-</div>
+
+  <div class="footer-logo">
+    <img src="images/logo.png" alt="Rejuve Trade Center Logo">
+    <p>
+      Rejuve Trade Center<br>
+      1910 Pacific Ave, Suite 17100<br>
+      Dallas, TX 75201, United States
+    </p>
+    <p>
+      Email: mialee5201314@gmail.com<br>
+      Phone: +1 254-214-9136
+    </p>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
 </div>
 </footer>
 
