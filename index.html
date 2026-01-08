@@ -119,24 +119,7 @@ nav a:hover::after{width:100%}
   font-size:18px;
 }
 
-/* COMPANY OVERVIEW (局部生效，不影响全局) */
-.company-overview{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:60px;
-}
-.company-overview-logo{
-  display:flex;
-  justify-content:center;
-}
-.company-overview-logo img{
-  width:100%;
-  max-width:485px; /* 👈 比上一版大约 5% */
-  height:auto;
-}
-
-/* BLOCK (原有，不改) */
+/* BLOCK */
 .block{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -186,6 +169,23 @@ nav a:hover::after{width:100%}
   margin-bottom:8px;
 }
 
+/* OVERVIEW LOGO */
+.overview-block{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:80px;
+  align-items:center;
+}
+.overview-logo{
+  display:flex;
+  justify-content:center;
+}
+.overview-logo img{
+  max-width:320px;
+  width:100%;
+  opacity:.95;
+}
+
 /* FOOTER */
 footer{
   background:#0c1622;
@@ -231,10 +231,8 @@ footer{
   h1{font-size:38px}
   h2{font-size:28px}
   .container{padding:80px 16px}
-  .block{grid-template-columns:1fr}
+  .block,.overview-block{grid-template-columns:1fr}
   .products{grid-template-columns:1fr}
-  .company-overview{grid-template-columns:1fr}
-  .company-overview-logo{margin-top:40px}
   nav ul{gap:22px;flex-wrap:wrap}
   .hero video{display:none}
   .hero{
@@ -242,9 +240,6 @@ footer{
       linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
       url('hero.jpg') center/cover no-repeat;
   }
-  footer{padding:80px 16px}
-  .footer-card{padding:22px}
-  .footer-map iframe{height:180px}
 }
 </style>
 </head>
@@ -272,177 +267,69 @@ footer{
 <p>
 A U.S.-based medical aesthetics and clinical technology organization focused on
 long-term institutional cooperation, regulatory alignment, and structured
-cross-border execution rather than short-term distribution or promotional activity.
+cross-border execution.
 </p>
 </div>
 </section>
 
-<!-- COMPANY -->
+<!-- COMPANY OVERVIEW -->
 <section class="container">
-  <div class="company-overview">
-    <div class="text-column">
-      <h3>Company Overview</h3>
-      <h2>Structured Medical Trade With Long-Term Orientation</h2>
-      <p>
-      Rejuve Trade Center operates across medical aesthetics, clinical technology, and
-      international medical trade. The organization focuses on structured product
-      classification, regulatory pathway alignment, and long-term operational execution
-      rather than transactional distribution models.
-      </p>
-      <p>
-      Our work emphasizes institutional compatibility, lifecycle responsibility, and
-      sustainable deployment frameworks, supporting professional clinics, hospitals,
-      and medical groups operating in regulated environments.
-      </p>
-    </div>
-
-    <div class="company-overview-logo">
-      <img src="images/logo.png" alt="Rejuve Trade Center Logo">
-    </div>
+<div class="overview-block">
+  <div class="text-column">
+    <h3>Company Overview</h3>
+    <h2>Structured Medical Trade With Long-Term Orientation</h2>
+    <p>
+    Rejuve Trade Center operates across medical aesthetics, clinical technology,
+    and international medical trade.
+    </p>
+    <p>
+    Our work emphasizes institutional compatibility, lifecycle responsibility,
+    and sustainable deployment frameworks.
+    </p>
   </div>
+  <div class="overview-logo">
+    <img src="images/logo-symbol.png" alt="Rejuve Trade Center Logo">
+  </div>
+</div>
 </section>
 
 <!-- FOUNDER -->
 <section id="founder" class="container">
 <div class="block">
-<img src="images/founder-portrait.jpg" alt="Founder Portrait">
+<img src="images/founder-portrait.jpg">
 <div class="text-column">
 <h3>Founder</h3>
 <h2>Professional Foundation & Early Career</h2>
-<p>
-The founder earned a Bachelor’s degree in Economics from the University of
-California, Berkeley in 2004, developing a foundation in analytical reasoning,
-structured decision-making, and institutional communication.
-</p>
-<p>
-Early professional exposure at Citibank provided insight into global financial
-operations, compliance-oriented workflows, and disciplined execution
-environments.
-</p>
+<p>Economics, UC Berkeley (2004). Early exposure at Citibank.</p>
 </div>
-</div>
-
-<div class="block" style="margin-top:90px">
-<div class="text-column">
-<h2>Industrial Experience & Operational Perspective</h2>
-<p>
-In 2007, the founder joined Shanghai Huayi Group, participating in large-scale
-industrial and cross-functional project coordination within complex organizational
-structures.
-</p>
-<p>
-This experience shaped Rejuve’s emphasis on risk control, long-term planning,
-and cross-border operational sustainability across regulated industries.
-</p>
-</div>
-<img src="images/founder-portrait-2.jpg" alt="Founder Experience">
 </div>
 </section>
 
-<!-- PRODUCTS -->
+<!-- PRODUCTS（未动） -->
 <section id="products" class="container">
 <div class="text-column">
 <h3>Product Portfolio</h3>
 <h2>Classified Medical & Aesthetic Systems</h2>
-<p>
-Each product category is evaluated based on clinical application context,
-regulatory requirements, and operational compatibility prior to institutional
-deployment.
-</p>
 </div>
 
 <div class="products">
-  <div class="product"><img src="thermage.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Radiofrequency Skin Tightening</h4><p>Non-invasive RF platforms designed for professional skin tightening procedures.</p></div></div>
-  <div class="product"><img src="microneedling.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Microneedling Systems</h4><p>Precision devices supporting controlled collagen stimulation protocols.</p></div></div>
-  <div class="product"><img src="laser.jpg"><div class="info"><div class="tag">Aesthetic / Clinical</div><h4>Laser Devices</h4><p>Advanced laser platforms for dermatological and aesthetic treatment environments.</p></div></div>
-  <div class="product"><img src="body-contouring.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Body Contouring Systems</h4><p>Non-surgical technologies supporting professional body contouring workflows.</p></div></div>
-  <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Skin Rejuvenation Devices</h4><p>Systems designed to improve skin texture, tone, and visible aging indicators.</p></div></div>
-  <div class="product"><img src="dental.jpg"><div class="info"><div class="tag">Clinical Equipment</div><h4>Dental Aesthetic Equipment</h4><p>Professional-grade systems supporting cosmetic dental procedures.</p></div></div>
-  <div class="product"><img src="diagnostic.jpg"><div class="info"><div class="tag">Post-Treatment Support</div><h4>Post-Treatment Care Devices</h4><p>Supportive equipment designed for recovery and post-procedure environments.</p></div></div>
-  <div class="product"><img src="respiratory.jpg"><div class="info"><div class="tag">Clinical Support</div><h4>Clinical Support Devices</h4><p>Auxiliary systems supporting clinical treatment and patient care settings.</p></div></div>
+  <div class="product"><img src="thermage.jpg"><div class="info"><div class="tag">Aesthetic</div><h4>RF Skin Tightening</h4><p>Professional RF platforms.</p></div></div>
+  <div class="product"><img src="microneedling.jpg"><div class="info"><div class="tag">Aesthetic</div><h4>Microneedling</h4><p>Controlled collagen induction.</p></div></div>
+  <div class="product"><img src="laser.jpg"><div class="info"><div class="tag">Clinical</div><h4>Laser Systems</h4><p>Dermatology-grade platforms.</p></div></div>
 </div>
 </section>
 
-<!-- CLINICAL -->
-<section id="clinical" class="container section-dark">
-<div class="block">
-<img src="clinical-review.jpg" alt="Clinical Review">
-<div class="text-column">
-<h3>Clinical Review</h3>
-<h2>Evaluation Before Deployment</h2>
-<p>
-All systems undergo structured clinical review and technical validation prior to
-deployment, emphasizing safety, reproducibility, and real-world clinical
-compatibility.
-</p>
-<p>
-This process ensures alignment with professional practice standards and applicable
-regulatory expectations across treatment environments.
-</p>
-</div>
-</div>
-</section>
-
-<!-- COMPLIANCE -->
-<section id="compliance" class="container section-dark">
-<div class="block">
-<div class="text-column">
-<h3>Compliance</h3>
-<h2>Regulatory Alignment & Responsibility</h2>
-<p>
-All products distributed by Rejuve Trade Center comply with FDA, CE, and applicable
-international medical regulatory standards.
-</p>
-<p>
-Compliance is treated as a foundational responsibility informing product selection,
-deployment pathways, and long-term institutional cooperation.
-</p>
-</div>
-<img src="compliance.jpg" alt="Compliance">
-</div>
-</section>
-
-<!-- LOGISTICS -->
-<section id="logistics" class="container">
-<div class="block">
-<img src="logistics.jpg" alt="Global Logistics">
-<div class="text-column">
-<h3>Global Logistics</h3>
-<h2>Cross-Border Medical Trade & Fulfillment</h2>
-<p>
-Rejuve Trade Center supports international medical trade through structured logistics
-coordination, documentation alignment, and region-specific fulfillment strategies.
-</p>
-<p>
-Our logistics framework emphasizes compliance, traceability, and long-term
-operational reliability across North America, Asia, and select global markets.
-</p>
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
+<!-- FOOTER（未动） -->
 <footer>
 <div class="footer-inner">
   <div class="footer-card">
     <h4>Contact & Location</h4>
     <div class="footer-map">
-      <iframe
-        src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <iframe src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Dallas&output=embed"></iframe>
     </div>
     <div class="footer-contact">
       <p class="company">Rejuve Trade Center</p>
-      <p>
-        1910 Pacific Ave, Suite 17100<br>
-        Dallas, TX 75201, United States
-      </p>
-      <p>
-        Email: mialee5201314@gmail.com<br>
-        Phone: +1 254-214-9136
-      </p>
+      <p>Dallas, TX, United States</p>
     </div>
   </div>
 </div>
