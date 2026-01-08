@@ -5,20 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rejuve Trade Center</title>
 
-<!-- Open Graph / Social Preview -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rejuve Trade Center">
-<meta property="og:description" content="A U.S.-based medical aesthetics and clinical technology organization focused on structured, compliant, long-term international medical trade.">
-<meta property="og:image" content="https://www.rejuvetradecenter.com/preview.jpg">
-<meta property="og:url" content="https://www.rejuvetradecenter.com/">
-<meta property="og:site_name" content="Rejuve Trade Center">
-
-<!-- Twitter / X Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rejuve Trade Center">
-<meta name="twitter:description" content="Structured medical aesthetics and clinical technology trade with regulatory alignment and global execution.">
-<meta name="twitter:image" content="https://r42r7jpstx-cmyk.github.io/rejuve-trade-center/preview.jpg">
-
 <style>
 :root{
   --max-width:1280px;
@@ -55,6 +41,27 @@ h3{
   margin-bottom:14px;
 }
 p{font-size:16px;color:#444;margin-bottom:18px}
+
+/* BLOCK */
+.block{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+/* COMPANY LOGO */
+.company-logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.company-logo img{
+  width:100%;
+  max-width:420px;   /* 控制放大尺度 */
+  height:auto;
+  opacity:.95;
+}
 
 /* NAV */
 nav{
@@ -133,113 +140,14 @@ nav a:hover::after{width:100%}
   font-size:18px;
 }
 
-/* BLOCK */
-.block{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-}
-.block img{
-  width:100%;
-  border-radius:22px;
-}
-
-/* DARK SECTION */
-.section-dark{
-  background:var(--dark-soft);
-  color:#e5e7eb;
-}
-.section-dark h2{color:#fff}
-.section-dark p{color:#cbd5e1}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:36px;
-}
-.product{
-  background:var(--light);
-  border-radius:22px;
-  overflow:hidden;
-}
-.product img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-}
-.product .info{padding:26px}
-.product .tag{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:#7a8699;
-  margin-bottom:10px;
-}
-.product h4{
-  font-size:17px;
-  color:var(--primary);
-  margin-bottom:8px;
-}
-
-/* FOOTER */
-footer{
-  background:#0c1622;
-  padding:100px 20px;
-}
-.footer-inner{
-  max-width:720px;
-  margin:auto;
-}
-.footer-card{
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:22px;
-  padding:30px;
-  background:rgba(255,255,255,.02);
-}
-.footer-card h4{
-  margin:0 0 18px;
-  font-size:13px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#9fb3c8;
-}
-.footer-map iframe{
-  width:100%;
-  height:210px;
-  border:0;
-  border-radius:16px;
-  margin-bottom:20px;
-}
-.footer-contact{
-  font-size:14px;
-  line-height:1.65;
-  color:#cbd5e1;
-}
-.footer-contact .company{
-  font-weight:600;
-  color:#fff;
-  margin-bottom:6px;
-}
-
 /* MOBILE */
 @media(max-width:900px){
   h1{font-size:38px}
   h2{font-size:28px}
   .container{padding:80px 16px}
   .block{grid-template-columns:1fr}
-  .products{grid-template-columns:1fr}
-  nav ul{gap:22px;flex-wrap:wrap}
-  .hero video{display:none}
-  .hero{
-    background:
-      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
-      url('hero.jpg') center/cover no-repeat;
-  }
-  footer{padding:80px 16px}
-  .footer-card{padding:22px}
-  .footer-map iframe{height:180px}
+  .company-logo{margin-top:40px}
+  .company-logo img{max-width:260px}
 }
 </style>
 </head>
@@ -259,7 +167,7 @@ footer{
 
 <!-- HERO -->
 <section id="hero" class="hero">
-<video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<video autoplay muted loop playsinline preload="auto">
   <source src="hero-video.mp4" type="video/mp4">
 </video>
 <div class="hero-inner">
@@ -274,21 +182,27 @@ cross-border execution rather than short-term distribution or promotional activi
 
 <!-- COMPANY -->
 <section class="container">
-<div class="text-column">
-<h3>Company Overview</h3>
-<h2>Structured Medical Trade With Long-Term Orientation</h2>
-<p>
-Rejuve Trade Center operates across medical aesthetics, clinical technology, and
-international medical trade. The organization focuses on structured product
-classification, regulatory pathway alignment, and long-term operational execution
-rather than transactional distribution models.
-</p>
-<p>
-Our work emphasizes institutional compatibility, lifecycle responsibility, and
-sustainable deployment frameworks, supporting professional clinics, hospitals,
-and medical groups operating in regulated environments.
-</p>
-</div>
+  <div class="block">
+    <div class="text-column">
+      <h3>Company Overview</h3>
+      <h2>Structured Medical Trade With Long-Term Orientation</h2>
+      <p>
+      Rejuve Trade Center operates across medical aesthetics, clinical technology, and
+      international medical trade. The organization focuses on structured product
+      classification, regulatory pathway alignment, and long-term operational execution
+      rather than transactional distribution models.
+      </p>
+      <p>
+      Our work emphasizes institutional compatibility, lifecycle responsibility, and
+      sustainable deployment frameworks, supporting professional clinics, hospitals,
+      and medical groups operating in regulated environments.
+      </p>
+    </div>
+
+    <div class="company-logo">
+      <img src="images/logo-symbol.png" alt="Rejuve Trade Center Logo">
+    </div>
+  </div>
 </section>
 
 <!-- FOUNDER -->
@@ -439,5 +353,6 @@ operational reliability across North America, Asia, and select global markets.
 
 </body>
 </html>
+
 
 
