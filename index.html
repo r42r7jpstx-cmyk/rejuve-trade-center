@@ -19,20 +19,20 @@ body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
   color:#111;
-  line-height:1.6;
+  line-height:1.65;
 }
 
 /* ===== GLOBAL ===== */
 .container{
   max-width:var(--max-width);
   margin:auto;
-  padding:80px 20px;
+  padding:90px 20px;
 }
 
 h2{
-  font-size:32px;
+  font-size:34px;
   color:var(--primary);
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
 p{color:var(--gray);font-size:16px}
@@ -40,23 +40,25 @@ p{color:var(--gray);font-size:16px}
 /* ===== BRAND ===== */
 .brand{
   text-align:center;
-  padding:110px 20px 60px;
+  padding:120px 20px 70px;
 }
 
 .brand img{
-  max-width:300px;
-  margin-bottom:22px;
+  max-width:360px; /* 再次放大 Logo */
+  margin-bottom:26px;
 }
 
 .brand h1{
-  font-size:46px;
-  letter-spacing:1px;
+  font-size:50px;
+  letter-spacing:1.2px;
   color:var(--primary);
   margin:0;
 }
 
 /* ===== NAV ===== */
 nav{
+  position:relative;
+  z-index:10;
   border-top:1px solid #eee;
   border-bottom:1px solid #eee;
 }
@@ -66,7 +68,7 @@ nav ul{
   margin:auto;
   display:flex;
   justify-content:center;
-  gap:38px;
+  gap:40px;
   padding:18px 20px;
   list-style:none;
 }
@@ -79,9 +81,9 @@ nav a{
 
 /* ===== HERO ===== */
 .hero{
+  position:relative; /* 关键修复 */
   background:url('hero.jpg') center/cover no-repeat;
-  height:70vh;
-  min-height:420px;
+  min-height:70vh;
   display:flex;
   align-items:center;
 }
@@ -91,6 +93,7 @@ nav a{
   position:absolute;
   inset:0;
   background:rgba(0,0,0,.35);
+  pointer-events:none; /* 关键修复 */
 }
 
 .hero-content{
@@ -102,14 +105,15 @@ nav a{
 }
 
 .hero h2{
-  font-size:40px;
-  margin-bottom:14px;
+  font-size:42px;
+  margin-bottom:16px;
   color:#fff;
 }
 
 .hero p{
-  max-width:520px;
+  max-width:560px;
   color:#eee;
+  font-size:17px;
 }
 
 /* ===== FOUNDER ===== */
@@ -126,16 +130,14 @@ nav a{
 }
 
 @media(max-width:900px){
-  .founder{
-    grid-template-columns:1fr;
-  }
+  .founder{grid-template-columns:1fr}
 }
 
 /* ===== PRODUCTS ===== */
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  gap:32px;
 }
 
 .product{
@@ -150,10 +152,19 @@ nav a{
   object-fit:cover;
 }
 
+.product .info{
+  padding:20px;
+}
+
 .product h3{
-  padding:18px;
-  font-size:17px;
+  font-size:18px;
   color:var(--primary);
+  margin-bottom:10px;
+}
+
+.product p{
+  font-size:14.5px;
+  color:#555;
 }
 
 /* ===== FOOTER ===== */
@@ -190,10 +201,10 @@ footer{
 <!-- HERO -->
 <section id="hero" class="hero">
   <div class="hero-content">
-    <h2>Advancing Medical Aesthetics</h2>
+    <h2>Advancing Medical Aesthetics Worldwide</h2>
     <p>
-      We focus on professional aesthetic technologies that deliver
-      safe, effective, and clinically trusted results worldwide.
+      We focus on professional medical aesthetic technologies that combine
+      clinical safety, proven effectiveness, and scalable global deployment.
     </p>
   </div>
 </section>
@@ -207,9 +218,9 @@ footer{
   <div>
     <h2>Founder & Vision</h2>
     <p>
-      The founder brings deep experience in global medical aesthetics,
-      clinic operations, and international market development. The
-      company was built with a long-term vision focused on compliance,
+      The founder brings extensive experience across global medical aesthetics,
+      clinic operations, and international market development. The company was
+      built with a long-term vision centered on regulatory compliance, product
       quality, and sustainable global growth.
     </p>
   </div>
@@ -219,9 +230,10 @@ footer{
 <section id="about" class="container">
   <h2>Company Introduction</h2>
   <p>
-    We are a medical aesthetics group delivering professional devices
-    and solutions across skin rejuvenation, body contouring, laser
-    aesthetics, dental applications, and post-treatment care.
+    Medical Aesthetics Group delivers professional aesthetic devices and
+    integrated solutions across skin rejuvenation, body contouring, laser
+    systems, dental aesthetics, and post-treatment care, serving clinics and
+    medical spas worldwide.
   </p>
 </section>
 
@@ -229,12 +241,73 @@ footer{
 <section id="products" class="container">
   <h2>Our Products</h2>
   <div class="products">
-    <div class="product"><img src="thermage.jpg"><h3>Radiofrequency Skin Tightening</h3></div>
-    <div class="product"><img src="microneedling.jpg"><h3>Microneedling Systems</h3></div>
-    <div class="product"><img src="laser.jpg"><h3>Laser Aesthetic Devices</h3></div>
-    <div class="product"><img src="body-contouring.jpg"><h3>Body Contouring Systems</h3></div>
-    <div class="product"><img src="skin-rejuvenation.jpg"><h3>Skin Rejuvenation Devices</h3></div>
-    <div class="product"><img src="dental.jpg"><h3>Dental Aesthetic Equipment</h3></div>
+
+    <div class="product">
+      <img src="thermage.jpg">
+      <div class="info">
+        <h3>Radiofrequency Skin Tightening</h3>
+        <p>Non-invasive skin tightening systems designed to improve elasticity and firmness.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="microneedling.jpg">
+      <div class="info">
+        <h3>Microneedling Systems</h3>
+        <p>Advanced microneedling devices supporting skin renewal and collagen stimulation.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="laser.jpg">
+      <div class="info">
+        <h3>Laser Aesthetic Devices</h3>
+        <p>Precision laser platforms for pigmentation, hair removal, and skin resurfacing.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="body-contouring.jpg">
+      <div class="info">
+        <h3>Body Contouring Systems</h3>
+        <p>Non-surgical body shaping technologies targeting fat reduction and contouring.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="skin-rejuvenation.jpg">
+      <div class="info">
+        <h3>Skin Rejuvenation Devices</h3>
+        <p>Anti-aging solutions designed to restore skin tone, texture, and radiance.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="dental.jpg">
+      <div class="info">
+        <h3>Dental Aesthetic Equipment</h3>
+        <p>Professional dental aesthetic systems supporting cosmetic and restorative procedures.</p>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product">
+      <img src="diagnostic.jpg">
+      <div class="info">
+        <h3>Post-Treatment Care & Recovery Devices</h3>
+        <p>Supportive systems designed to enhance recovery, comfort, and treatment outcomes.</p>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product">
+      <img src="respiratory.jpg">
+      <div class="info">
+        <h3>Clinical Support & Therapy Devices</h3>
+        <p>Auxiliary medical devices supporting clinical environments and patient care workflows.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -242,8 +315,8 @@ footer{
 <section id="compliance" class="container">
   <h2>Compliance</h2>
   <p>
-    All products comply with FDA, CE, and international medical
-    regulatory standards to ensure safety and reliability.
+    All products comply with FDA, CE, and relevant international medical
+    regulatory standards, ensuring safety, reliability, and clinical integrity.
   </p>
 </section>
 
@@ -251,8 +324,8 @@ footer{
 <section id="logistics" class="container">
   <h2>Global Logistics</h2>
   <p>
-    We support global distribution through trusted logistics partners
-    and coordinated international supply chains.
+    We operate with global logistics partners to support efficient distribution,
+    localized delivery, and coordinated after-sales services worldwide.
   </p>
 </section>
 
