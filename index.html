@@ -31,23 +31,17 @@ body{
   margin:auto;
   padding:120px 20px;
 }
-.text-column{
-  max-width:var(--text-width);
-}
+.text-column{max-width:var(--text-width)}
 h1{font-size:56px;color:#fff;margin-bottom:22px}
 h2{font-size:34px;color:var(--primary);margin-bottom:18px}
 h3{
   font-size:13px;
-  letter-spacing:.16em;
+  letter-spacing:.18em;
   text-transform:uppercase;
   color:var(--gray);
   margin-bottom:14px;
 }
-p{
-  font-size:16px;
-  color:#444;
-  margin-bottom:18px;
-}
+p{font-size:16px;color:#444;margin-bottom:18px}
 
 /* ===== NAV ===== */
 nav{
@@ -57,32 +51,30 @@ nav{
   border-bottom:1px solid rgba(0,0,0,.06);
   z-index:100;
 }
-nav ul{
-  list-style:none;
-  margin:0;
+.nav-inner{
+  max-width:var(--max-width);
+  margin:auto;
   padding:18px 20px;
   display:flex;
-  justify-content:center;
   gap:42px;
 }
 nav a{
   position:relative;
   text-decoration:none;
   color:#111;
-  font-size:13px;
-  letter-spacing:.14em;
+  font-size:12px;
+  letter-spacing:.16em;
   text-transform:uppercase;
 }
 nav a::after{
   content:'';
   position:absolute;
-  left:50%;
+  left:0;
   bottom:-8px;
   width:0;
   height:1px;
   background:var(--primary);
   transition:.35s ease;
-  transform:translateX(-50%);
 }
 nav a:hover::after{width:100%}
 
@@ -92,30 +84,25 @@ nav a:hover::after{width:100%}
   min-height:92vh;
   display:flex;
   align-items:center;
-  overflow:hidden;
   background:var(--dark);
+  overflow:hidden;
 }
 .hero video{
   position:absolute;
-  top:50%;left:50%;
-  width:100%;height:100%;
+  inset:0;
+  width:100%;
+  height:100%;
   object-fit:cover;
-  transform:translate(-50%,-50%);
-  z-index:1;
 }
 .hero::after{
   content:'';
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    rgba(12,22,34,.65),
-    rgba(12,22,34,.85)
-  );
-  z-index:2;
+  background:linear-gradient(rgba(12,22,34,.6),rgba(12,22,34,.85));
 }
 .hero-inner{
   position:relative;
-  z-index:3;
+  z-index:2;
   max-width:var(--max-width);
   margin:auto;
   padding:0 20px;
@@ -146,70 +133,51 @@ nav a:hover::after{width:100%}
 .section-dark h2{color:#fff}
 .section-dark p{color:#cbd5e1}
 
-/* ===== PRODUCTS ===== */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:36px;
-}
-.product{
-  background:var(--light);
-  border-radius:22px;
-  overflow:hidden;
-}
-.product img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-}
-.product .info{
-  padding:26px;
-}
-.product .tag{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:#7a8699;
-  margin-bottom:10px;
-}
-.product h4{
-  font-size:17px;
-  color:var(--primary);
-  margin-bottom:8px;
-}
-
 /* ===== FOOTER ===== */
 footer{
+  position:relative;
   background:#0c1622;
   color:#cbd5e1;
-  padding:70px 20px;
+  padding:120px 20px 80px;
+  overflow:hidden;
 }
+
+/* LOGO SEAL */
+.footer-seal{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:420px;
+  opacity:.06;
+  transform:translate(-50%,-50%) rotate(-12deg);
+  pointer-events:none;
+}
+
 .footer-inner{
+  position:relative;
+  z-index:2;
   max-width:var(--max-width);
   margin:auto;
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
-  align-items:flex-start;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
 }
-.footer-brand{
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  padding:22px 24px;
+
+.footer-info h4{
+  font-size:18px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:14px;
 }
-.footer-brand img{
-  max-width:150px;
-  opacity:.85;
-  margin-bottom:16px;
-}
-.footer-brand p{
-  font-size:13.5px;
-  line-height:1.6;
+.footer-info p{
+  font-size:14px;
+  line-height:1.7;
   color:#cbd5e1;
 }
+
 .footer-map iframe{
   width:100%;
-  height:180px;
+  height:160px;
   border:0;
   border-radius:14px;
 }
@@ -220,26 +188,9 @@ footer{
   h2{font-size:28px}
   .container{padding:80px 16px}
   .block{grid-template-columns:1fr}
-  .products{grid-template-columns:1fr}
-
-  nav ul{
-    gap:22px;
-    flex-wrap:wrap;
-  }
-
-  .hero video{display:none}
-  .hero{
-    background:
-      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
-      url('hero.jpg') center/cover no-repeat;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr;
-    gap:32px;
-    text-align:center;
-  }
-  .footer-brand{margin:auto}
+  .nav-inner{flex-wrap:wrap;gap:22px}
+  .footer-inner{grid-template-columns:1fr;text-align:center}
+  .footer-seal{width:300px}
 }
 </style>
 </head>
@@ -247,168 +198,51 @@ footer{
 <body>
 
 <nav>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#founder">Founder</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#clinical">Clinical</a></li>
-<li><a href="#compliance">Compliance</a></li>
-</ul>
+  <div class="nav-inner">
+    <a href="#hero">Home</a>
+    <a href="#founder">Founder</a>
+    <a href="#products">Products</a>
+    <a href="#clinical">Clinical</a>
+    <a href="#compliance">Compliance</a>
+  </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero" class="hero">
-<video autoplay muted loop playsinline preload="auto">
+<video autoplay muted loop playsinline>
   <source src="hero-video.mp4" type="video/mp4">
 </video>
 <div class="hero-inner">
-<h1>Rejuve Trade Center</h1>
-<p>
-A U.S.-based medical aesthetics and clinical technology organization supporting
-professional institutions through structured evaluation, regulatory alignment,
-and long-term operational execution.
-</p>
-</div>
-</section>
-
-<!-- COMPANY -->
-<section class="container">
-<div class="text-column">
-<h3>Company Overview</h3>
-<h2>Structured Medical Trade With Long-Term Orientation</h2>
-<p>
-Rejuve Trade Center operates across medical aesthetics, clinical technology,
-and international trade. We focus on structured product classification,
-regulatory alignment, and operational execution rather than short-term
-distribution or promotional activity.
-</p>
-<p>
-Our role is to support professional institutions by delivering systems that
-have been reviewed, contextualized, and deployed within compliant and
-sustainable operational frameworks.
-</p>
-</div>
-</section>
-
-<!-- FOUNDER -->
-<section id="founder" class="container">
-<div class="block">
-<img src="images/founder-portrait.jpg">
-<div class="text-column">
-<h3>Founder</h3>
-<h2>Professional Background & Execution Discipline</h2>
-<p>
-The founder earned a Bachelor’s degree in Economics from the University of
-California, Berkeley in 2004, establishing a foundation in analytical thinking,
-structured decision-making, and professional communication.
-</p>
-<p>
-Early professional experience at Citibank provided exposure to global financial
-operations, institutional workflows, and disciplined execution environments.
-</p>
-</div>
-</div>
-
-<div class="block" style="margin-top:90px">
-<div class="text-column">
-<p>
-In 2007, the founder joined Shanghai Huayi Group, focusing on project
-coordination, cross-functional collaboration, and market-oriented execution
-within large organizational structures.
-</p>
-<p>
-This experience continues to shape Rejuve’s operational philosophy, emphasizing
-risk control, long-term coordination, and sustainable cross-border development.
-</p>
-</div>
-<img src="images/founder-portrait-2.jpg">
-</div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products" class="container">
-<div class="text-column">
-<h3>Product Portfolio</h3>
-<h2>Classified Medical & Aesthetic Systems</h2>
-<p>
-Our product portfolio is organized by clinical context and system category.
-Each system is evaluated based on application environment, regulatory
-requirements, and operational compatibility.
-</p>
-</div>
-
-<div class="products">
-<div class="product"><img src="thermage.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Radiofrequency Skin Tightening</h4><p>Non-invasive platforms designed for professional skin tightening applications.</p></div></div>
-<div class="product"><img src="microneedling.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Microneedling Systems</h4><p>Precision devices supporting controlled collagen stimulation procedures.</p></div></div>
-<div class="product"><img src="laser.jpg"><div class="info"><div class="tag">Aesthetic / Clinical</div><h4>Laser Devices</h4><p>Advanced platforms for aesthetic and dermatological treatment environments.</p></div></div>
-<div class="product"><img src="body-contouring.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Body Contouring Systems</h4><p>Non-surgical technologies supporting body contouring workflows.</p></div></div>
-<div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Skin Rejuvenation Devices</h4><p>Systems designed to improve skin tone, texture, and aging signs.</p></div></div>
-<div class="product"><img src="dental.jpg"><div class="info"><div class="tag">Clinical Equipment</div><h4>Dental Aesthetic Equipment</h4><p>Professional systems supporting cosmetic dental procedures.</p></div></div>
-<div class="product"><img src="diagnostic.jpg"><div class="info"><div class="tag">Post-Treatment Support</div><h4>Post-Treatment Care Devices</h4><p>Supportive devices designed for recovery and follow-up environments.</p></div></div>
-<div class="product"><img src="respiratory.jpg"><div class="info"><div class="tag">Clinical Support</div><h4>Clinical Support Devices</h4><p>Auxiliary equipment supporting clinical treatment settings.</p></div></div>
-</div>
-</section>
-
-<!-- CLINICAL -->
-<section id="clinical" class="container section-dark">
-<div class="block">
-<img src="clinical-review.jpg">
-<div class="text-column">
-<h3>Clinical Review</h3>
-<h2>Evaluation Before Deployment</h2>
-<p>
-All systems undergo structured clinical review and technical validation prior to
-market deployment. Evaluation criteria emphasize safety, reproducibility, and
-real-world clinical compatibility.
-</p>
-<p>
-This process ensures alignment with professional practice standards and
-regulatory expectations across diverse treatment environments.
-</p>
-</div>
-</div>
-</section>
-
-<!-- COMPLIANCE -->
-<section id="compliance" class="container section-dark">
-<div class="block">
-<div class="text-column">
-<h3>Compliance</h3>
-<h2>Regulatory Alignment & Responsibility</h2>
-<p>
-All products distributed by Rejuve Trade Center comply with FDA, CE, and
-applicable international medical regulatory standards.
-</p>
-<p>
-Compliance is treated as a foundational responsibility rather than a procedural
-requirement, informing product selection and deployment decisions.
-</p>
-</div>
-<img src="compliance.jpg">
+  <h1>Rejuve Trade Center</h1>
+  <p>
+    A U.S.-based medical aesthetics and clinical technology organization supporting
+    professional institutions through structured evaluation, regulatory alignment,
+    and long-term operational execution.
+  </p>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<div class="footer-inner">
-<div class="footer-brand">
-<img src="images/logo.png">
-<p>
-Rejuve Trade Center<br>
-1910 Pacific Ave, Suite 17100<br>
-Dallas, TX 75201, United States<br><br>
-Email: mialee5201314@gmail.com<br>
-Phone: +1 254-214-9136
-</p>
-</div>
+<img src="images/logo.png" class="footer-seal">
 
-<div class="footer-map">
-<iframe
-src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
+<div class="footer-inner">
+  <div class="footer-info">
+    <h4>Rejuve Trade Center</h4>
+    <p>
+      Regulatory & Medical Trade Authority<br><br>
+      1910 Pacific Ave, Suite 17100<br>
+      Dallas, TX 75201, United States<br><br>
+      ✉ mialee5201314@gmail.com<br>
+      ☎ +1 254-214-9136
+    </p>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
 </div>
 </footer>
 
