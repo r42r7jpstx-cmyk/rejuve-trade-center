@@ -16,50 +16,27 @@
       line-height: 1.6;
     }
 
-    /* Header */
     header {
       background: linear-gradient(135deg, #0f172a, #020617);
       color: #ffffff;
-      padding: 40px 10% 110px;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 80px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      height: 42px;
-      width: auto;
-    }
-
-    .brand span {
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 0.4px;
-    }
-
-    .hero {
+      padding: 70px 10% 110px;
       text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
     }
 
-    .hero h1 {
+    .logo img {
+      height: 90px;
+      margin-bottom: 25px;
+    }
+
+    header h1 {
       font-size: 3rem;
       margin-bottom: 20px;
     }
 
-    .hero p {
+    header p {
       font-size: 1.2rem;
+      max-width: 760px;
+      margin: 0 auto;
       color: #cbd5e1;
     }
 
@@ -79,11 +56,11 @@
 
     .section-title p {
       color: #6b7280;
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto;
     }
 
-    /* Products */
+    /* Product grid */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -91,11 +68,11 @@
     }
 
     .product {
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
       background: #fff;
-      transition: transform 0.3s ease;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.08);
+      transition: transform .3s ease;
     }
 
     .product:hover {
@@ -114,44 +91,37 @@
 
     .product-content h3 {
       margin-top: 0;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
     }
 
     .product-content p {
       color: #6b7280;
-      font-size: 0.95rem;
+      font-size: .95rem;
     }
 
     /* Founder */
     .founder {
-      background-color: #f8fafc;
+      background: #f8fafc;
     }
 
     .founder-container {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 60px;
-      align-items: center;
       max-width: 1100px;
       margin: 0 auto;
-    }
-
-    .founder-images {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 70px;
+      align-items: center;
     }
 
-    .founder-images img {
+    .founder-main img {
       width: 100%;
-      border-radius: 14px;
-      object-fit: cover;
-      box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.15);
     }
 
     .founder-text h3 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+      font-size: 1.9rem;
+      margin-bottom: 20px;
     }
 
     .founder-text p {
@@ -159,9 +129,11 @@
       margin-bottom: 18px;
     }
 
-    .founder-highlight {
-      font-weight: 600;
-      color: #0f172a;
+    .founder-sub img {
+      width: 260px;
+      border-radius: 14px;
+      margin-top: 30px;
+      box-shadow: 0 14px 28px rgba(0,0,0,.12);
     }
 
     footer {
@@ -169,15 +141,14 @@
       color: #94a3b8;
       text-align: center;
       padding: 40px 10%;
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
 
     @media (max-width: 900px) {
       .founder-container {
         grid-template-columns: 1fr;
       }
-
-      .hero h1 {
+      header h1 {
         font-size: 2.3rem;
       }
     }
@@ -187,74 +158,68 @@
 <body>
 
 <header>
-  <div class="nav">
-    <div class="brand">
-      <img src="images/logo.png" alt="AI Surgeon Logo">
-      <span>AI Surgeon</span>
-    </div>
+  <div class="logo">
+    <img src="images/logo.png" alt="AI Surgeon Logo">
   </div>
-
-  <div class="hero">
-    <h1>Intelligent Medical & Aesthetic Technology</h1>
-    <p>
-      Advancing precision healthcare through ethical innovation,
-      engineering discipline, and long-term clinical vision.
-    </p>
-  </div>
+  <h1>AI Surgeon</h1>
+  <p>
+    Intelligent medical and aesthetic technology built on engineering rigor,
+    ethical responsibility, and long-term clinical value.
+  </p>
 </header>
 
 <section>
   <div class="section-title">
-    <h2>Our Products</h2>
-    <p>Clinically driven solutions designed for medical, aesthetic, and diagnostic excellence.</p>
+    <h2>Our Product Portfolio</h2>
+    <p>Comprehensive solutions spanning diagnostics, aesthetics, and clinical support.</p>
   </div>
 
   <div class="products">
     <div class="product">
-      <img src="images/diagnostic.jpg" alt="Diagnostic Systems">
+      <img src="diagnostic.jpg">
       <div class="product-content">
         <h3>Diagnostic Imaging Systems</h3>
-        <p>Advanced diagnostic platforms designed to enhance accuracy and clinical confidence.</p>
+        <p>Advanced diagnostic platforms supporting accurate clinical decision-making.</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="images/respiratory.jpg" alt="Respiratory Devices">
+      <img src="respiratory.jpg">
       <div class="product-content">
         <h3>Respiratory Support Devices</h3>
-        <p>Reliable respiratory technologies supporting diverse clinical environments.</p>
+        <p>Reliable respiratory technologies for diverse healthcare environments.</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="images/laser.jpg" alt="Laser Systems">
+      <img src="laser.jpg">
       <div class="product-content">
         <h3>Medical Laser Systems</h3>
-        <p>Precision laser solutions for surgical and dermatological applications.</p>
+        <p>Precision laser solutions for surgical and dermatological treatments.</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="images/thermage.jpg" alt="Radiofrequency Device">
+      <img src="thermage.jpg">
       <div class="product-content">
-        <h3>Radiofrequency Skin Tightening Platform</h3>
-        <p>Non-invasive RF technology designed to improve skin firmness and contour.</p>
+        <h3>Radiofrequency Skin Tightening</h3>
+        <p>Non-invasive RF technology for skin firming and contour enhancement.</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="images/microneedling.jpg" alt="Microneedling Device">
+      <img src="microneedling.jpg">
       <div class="product-content">
-        <h3>Microneedling Treatment System</h3>
-        <p>Precision microneedling technology supporting collagen induction and rejuvenation.</p>
+        <h3>Microneedling Systems</h3>
+        <p>Precision microneedling devices supporting collagen induction therapy.</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="images/dental.jpg" alt="Dental Equipment">
+      <img src="dental.jpg">
       <div class="product-content">
-        <h3>Digital Dental Treatment Equipment</h3>
-        <p>Intelligent dental devices engineered for modern clinical workflows.</p>
+        <h3>Digital Dental Equipment</h3>
+        <p>Intelligent dental technologies improving workflow and patient comfort.</p>
       </div>
     </div>
   </div>
@@ -263,33 +228,28 @@
 <section class="founder">
   <div class="section-title">
     <h2>Founder & Vision</h2>
-    <p>Leadership grounded in responsibility, clarity, and medical integrity.</p>
+    <p>Leadership rooted in responsibility, clarity, and medical integrity.</p>
   </div>
 
   <div class="founder-container">
-    <div class="founder-images">
-      <img src="images/founder-portrait.jpg" alt="Founder Portrait">
-      <img src="images/founder-portrait-2.jpg" alt="Founder at Work">
+    <div class="founder-main">
+      <img src="images/founder-portrait.jpg">
     </div>
 
     <div class="founder-text">
       <h3>Founder & Chief Executive Officer</h3>
-
       <p>
-        The founder of <span class="founder-highlight">AI Surgeon</span> established the company
-        with a long-term vision focused on responsible medical and aesthetic technology innovation.
+        AI Surgeon was founded to bridge advanced technology with real-world
+        medical and aesthetic practice, emphasizing long-term reliability
+        over short-term trends.
       </p>
-
       <p>
-        Emphasizing <span class="founder-highlight">engineering discipline</span>,
-        regulatory awareness, and sustainable development,
-        AI Surgeon avoids short-term trends in favor of durable clinical value.
+        The company focuses on engineering discipline, regulatory awareness,
+        and sustainable innovation as core principles.
       </p>
-
-      <p>
-        Under this leadership, the company continues to deliver intelligent platforms
-        that support physicians and clinics with trust, precision, and consistency.
-      </p>
+      <div class="founder-sub">
+        <img src="images/founder-portrait-2.jpg">
+      </div>
     </div>
   </div>
 </section>
