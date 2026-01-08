@@ -8,6 +8,7 @@
 <style>
 :root{
   --max-width:1280px;
+  --text-width:760px;
   --primary:#0a2540;
   --gray:#555;
   --light:#f4f6f9;
@@ -26,11 +27,21 @@ body{
   margin:auto;
   padding:120px 20px;
 }
-h1{font-size:56px;color:#fff;margin-bottom:24px}
-h2{font-size:34px;color:var(--primary);margin-bottom:24px}
-p{color:var(--gray);font-size:16px}
+.text-column{
+  max-width:var(--text-width);
+}
+h1{font-size:56px;color:#fff;margin-bottom:22px}
+h2{font-size:34px;color:var(--primary);margin-bottom:18px}
+h3{
+  font-size:14px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#7a8699;
+  margin-bottom:14px;
+}
+p{color:var(--gray);font-size:16px;margin-bottom:18px}
 
-/* ===== NAV (Refined) ===== */
+/* ===== NAV ===== */
 nav{
   position:sticky;
   top:0;
@@ -65,9 +76,7 @@ nav a::after{
   transition:.35s ease;
   transform:translateX(-50%);
 }
-nav a:hover::after{
-  width:100%;
-}
+nav a:hover::after{width:100%}
 
 /* ===== HERO ===== */
 .hero{
@@ -79,10 +88,8 @@ nav a:hover::after{
 }
 .hero video{
   position:absolute;
-  top:50%;
-  left:50%;
-  width:100%;
-  height:100%;
+  top:50%;left:50%;
+  width:100%;height:100%;
   object-fit:cover;
   transform:translate(-50%,-50%);
   z-index:1;
@@ -103,8 +110,8 @@ nav a:hover::after{
 }
 .hero p{
   color:#eaeaea;
-  max-width:640px;
-  font-size:17px;
+  max-width:680px;
+  font-size:18px;
 }
 
 /* ===== BLOCK ===== */
@@ -135,13 +142,23 @@ nav a:hover::after{
   height:230px;
   object-fit:cover;
 }
-.product .info{padding:26px}
-.product h3{
+.product .info{
+  padding:26px;
+}
+.product .tag{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7a8699;
+  margin-bottom:10px;
+}
+.product h4{
   font-size:17px;
   color:var(--primary);
+  margin:0 0 6px 0;
 }
 
-/* ===== FOOTER (Refined Logo) ===== */
+/* ===== FOOTER ===== */
 footer{
   background:#0a2540;
   color:#fff;
@@ -153,10 +170,8 @@ footer{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
-  align-items:flex-start;
 }
 .footer-brand{
-  display:inline-block;
   padding:26px 28px;
   border:1px solid rgba(255,255,255,.15);
   border-radius:18px;
@@ -164,13 +179,11 @@ footer{
 .footer-brand img{
   max-width:180px;
   opacity:.85;
-  display:block;
   margin-bottom:18px;
 }
 .footer-brand p{
   color:#d1d5db;
   font-size:14px;
-  line-height:1.6;
 }
 .footer-map iframe{
   width:100%;
@@ -186,27 +199,18 @@ footer{
   .container{padding:80px 16px}
   .block{grid-template-columns:1fr}
   .products{grid-template-columns:1fr}
-
-  nav ul{
-    gap:22px;
-    flex-wrap:wrap;
-  }
-
   .hero video{display:none}
   .hero{
     background:
       linear-gradient(rgba(10,37,64,.55),rgba(10,37,64,.55)),
       url('hero.jpg') center/cover no-repeat;
   }
-
   .footer-inner{
     grid-template-columns:1fr;
     gap:40px;
     text-align:center;
   }
-  .footer-brand{
-    margin:auto;
-  }
+  .footer-brand{margin:auto}
 }
 </style>
 </head>
@@ -231,36 +235,191 @@ footer{
 <div class="hero-inner">
 <h1>Rejuve Trade Center</h1>
 <p>
-A global medical aesthetics and clinical technology organization delivering
-professionally reviewed, compliant, and execution-driven solutions worldwide.
+A U.S.-based medical aesthetics and clinical technology organization supporting
+professional institutions through structured evaluation, regulatory alignment,
+and long-term operational execution.
 </p>
 </div>
 </section>
 
-<!-- 其余内容结构保持不变（Founder / Products / Clinical / Compliance） -->
+<!-- COMPANY -->
+<section class="container">
+<div class="text-column">
+<h3>Company Overview</h3>
+<h2>Operating at the Intersection of Medicine and Execution</h2>
+<p>
+Rejuve Trade Center operates across medical aesthetics, clinical technology,
+and international trade, providing institutions with systems that are reviewed,
+classified, and deployed within compliant operational frameworks.
+</p>
+</div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="container">
+<div class="block">
+<img src="images/founder-portrait.jpg">
+<div class="text-column">
+<h3>Founder</h3>
+<h2>Professional Background & Operational Foundation</h2>
+<p>
+The founder earned a Bachelor’s degree in Economics from the University of
+California, Berkeley in 2004, establishing a foundation in analytical thinking,
+structured decision-making, and professional communication.
+</p>
+<p>
+Early professional experience at Citibank provided exposure to global financial
+operations, institutional workflows, and disciplined execution environments.
+</p>
+</div>
+</div>
+
+<div class="block" style="margin-top:90px">
+<div class="text-column">
+<p>
+In 2007, the founder joined Shanghai Huayi Group, focusing on project
+coordination, market-oriented execution, and cross-functional collaboration.
+</p>
+<p>
+This experience shaped Rejuve’s long-term approach to risk control, operational
+stability, and cross-border coordination.
+</p>
+</div>
+<img src="images/founder-portrait-2.jpg">
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="container">
+<div class="text-column">
+<h3>Product Portfolio</h3>
+<h2>Structured Medical & Aesthetic Systems</h2>
+</div>
+
+<div class="products">
+<div class="product">
+<img src="thermage.jpg">
+<div class="info">
+<div class="tag">Aesthetic System</div>
+<h4>Radiofrequency Skin Tightening</h4>
+<p>Non-invasive platforms designed for skin tightening applications.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="microneedling.jpg">
+<div class="info">
+<div class="tag">Aesthetic System</div>
+<h4>Microneedling Systems</h4>
+<p>Precision devices supporting collagen stimulation procedures.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="laser.jpg">
+<div class="info">
+<div class="tag">Aesthetic / Clinical</div>
+<h4>Laser Devices</h4>
+<p>Advanced platforms for aesthetic and dermatological treatments.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="body-contouring.jpg">
+<div class="info">
+<div class="tag">Aesthetic System</div>
+<h4>Body Contouring Systems</h4>
+<p>Non-surgical technologies supporting contouring treatments.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="skin-rejuvenation.jpg">
+<div class="info">
+<div class="tag">Aesthetic System</div>
+<h4>Skin Rejuvenation Devices</h4>
+<p>Systems designed to improve tone, texture, and aging signs.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="dental.jpg">
+<div class="info">
+<div class="tag">Clinical Equipment</div>
+<h4>Dental Aesthetic Equipment</h4>
+<p>Professional systems for cosmetic dental procedures.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="diagnostic.jpg">
+<div class="info">
+<div class="tag">Post-Treatment Support</div>
+<h4>Post-Treatment Care Devices</h4>
+<p>Supportive devices designed for recovery environments.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="respiratory.jpg">
+<div class="info">
+<div class="tag">Clinical Support</div>
+<h4>Clinical Support Devices</h4>
+<p>Auxiliary equipment supporting clinical treatment settings.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CLINICAL -->
+<section id="clinical" class="container block">
+<img src="clinical-review.jpg">
+<div class="text-column">
+<h3>Clinical Review</h3>
+<h2>Evaluation Before Deployment</h2>
+<p>
+All systems undergo structured clinical review and technical validation prior to
+market deployment, emphasizing safety, reproducibility, and real-world
+compatibility.
+</p>
+</div>
+</section>
+
+<!-- COMPLIANCE -->
+<section id="compliance" class="container block">
+<div class="text-column">
+<h3>Compliance</h3>
+<h2>Regulatory Alignment</h2>
+<p>
+All products comply with FDA, CE, and applicable international medical
+regulatory standards.
+</p>
+</div>
+<img src="compliance.jpg">
+</section>
 
 <!-- FOOTER -->
 <footer>
 <div class="footer-inner">
 
-  <div class="footer-brand">
-    <img src="images/logo.png" alt="Rejuve Trade Center Logo">
-    <p>
-      Rejuve Trade Center<br>
-      1910 Pacific Ave, Suite 17100<br>
-      Dallas, TX 75201, United States<br><br>
-      Email: mialee5201314@gmail.com<br>
-      Phone: +1 254-214-9136
-    </p>
-  </div>
+<div class="footer-brand">
+<img src="images/logo.png" alt="Rejuve Trade Center Logo">
+<p>
+Rejuve Trade Center<br>
+1910 Pacific Ave, Suite 17100<br>
+Dallas, TX 75201, United States<br><br>
+Email: mialee5201314@gmail.com<br>
+Phone: +1 254-214-9136
+</p>
+</div>
 
-  <div class="footer-map">
-    <iframe
-      src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
+<div class="footer-map">
+<iframe
+src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
 
 </div>
 </footer>
