@@ -207,6 +207,39 @@ nav a:hover::after{width:100%}
   max-width:420px;
 }
 
+/* CONTACT FORM (新增) */
+.contact-form{
+  max-width:600px;
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px 16px;
+  margin-bottom:18px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  font-size:15px;
+  font-family:inherit;
+}
+.contact-form textarea{
+  resize:vertical;
+  min-height:140px;
+}
+.contact-form button{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:14px 28px;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  border-radius:999px;
+  cursor:pointer;
+}
+.contact-form button:hover{
+  opacity:.9;
+}
+
 /* FOOTER */
 footer{
   background:#0c1622;
@@ -276,6 +309,7 @@ footer{
 <li><a href="#clinical">Clinical</a></li>
 <li><a href="#compliance">Compliance</a></li>
 <li><a href="#logistics">Logistics</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
@@ -567,6 +601,33 @@ Our logistics framework emphasizes compliance, traceability, and long-term
 operational reliability across North America, Asia, and select global markets.
 </p>
 </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container">
+<div class="text-column">
+<h3>Contact</h3>
+<h2>Professional Inquiry & Cooperation</h2>
+<p>
+If you are a clinic, medical institution, distributor, or professional partner
+interested in structured cooperation, regulatory-aligned products, or institutional
+medical trade, please leave your contact information below.
+</p>
+<p>
+Our team will review your inquiry and respond accordingly.
+</p>
+
+<form
+class="contact-form"
+action="https://formspree.io/f/YOUR_FORM_ID"
+method="POST">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="phone" placeholder="Phone / WhatsApp (optional)">
+<textarea name="message" placeholder="Your inquiry or message" required></textarea>
+<button type="submit">Submit Inquiry</button>
+</form>
 </div>
 </section>
 
