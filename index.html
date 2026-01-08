@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rejuve Trade Center | Medical & Aesthetic Equipment Import</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -25,25 +25,36 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:22px 8%;
-  background:rgba(0,0,0,.65);
-  backdrop-filter:blur(10px)
+  padding:26px 8%;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(12px)
 }
 .brand{
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:20px;
+}
+.brand img{
+  height:72px;
+}
+.brand-text{
+  display:flex;
+  flex-direction:column;
   color:#fff;
 }
-.brand img{height:56px}
-.brand span{
-  font-size:1.35rem;
-  font-weight:700;
+.brand-text strong{
+  font-size:1.6rem;
+  font-weight:800;
+}
+.brand-text span{
+  font-size:.75rem;
+  color:#d1d5db;
+  text-transform:uppercase;
 }
 nav a{
   color:#fff;
   text-decoration:none;
-  margin-left:32px;
+  margin-left:34px;
   font-size:.95rem
 }
 
@@ -51,7 +62,7 @@ nav a{
 .hero{
   min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.75)),
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
     url('hero.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
@@ -62,27 +73,20 @@ nav a{
   color:#fff
 }
 .hero h1{
-  font-size:3rem;
+  font-size:3.4rem;
+  font-weight:800;
   margin-bottom:18px
 }
 .hero p{
-  font-size:1.15rem;
+  font-size:1.2rem;
   color:#e5e7eb
 }
 
 /* SECTION BASE */
-section{
-  padding:90px 8%;
-}
-.section-title{
-  text-align:center;
-  margin-bottom:50px
-}
+section{padding:90px 8%}
+.section-title{text-align:center;margin-bottom:50px}
 .section-title h2{font-size:2.2rem}
-.section-title p{
-  color:#6b7280;
-  margin-top:8px
-}
+.section-title p{color:#6b7280;margin-top:8px}
 
 /* COMPANY */
 .about{
@@ -111,7 +115,7 @@ section{
   margin-top:26px
 }
 
-/* PRODUCTS (FIXED RESPONSIVE) */
+/* PRODUCTS */
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -129,18 +133,10 @@ section{
   width:100%;
   height:220px;
   object-fit:cover;
-  flex-shrink:0;
 }
 .product-content{
   padding:24px;
   flex:1;
-}
-.product-content h3{
-  margin-bottom:8px;
-}
-.product-content p{
-  color:#6b7280;
-  font-size:.95rem;
 }
 
 /* COMPLIANCE */
@@ -168,11 +164,11 @@ footer{
   font-size:.9rem
 }
 
-/* MOBILE */
 @media(max-width:900px){
   .founder-wrap{grid-template-columns:1fr}
-  .hero h1{font-size:2.3rem}
-  nav{padding:18px 6%}
+  .hero h1{font-size:2.4rem}
+  .brand img{height:56px}
+  .brand-text strong{font-size:1.25rem}
 }
 </style>
 </head>
@@ -181,8 +177,11 @@ footer{
 
 <nav>
   <div class="brand">
-    <img src="images/logo.png">
-    <span>Rejuve Trade Center</span>
+    <img src="images/logo.png" alt="Rejuve Trade Center Logo">
+    <div class="brand-text">
+      <strong>Rejuve Trade Center</strong>
+      <span>Medical & Aesthetic Equipment Import</span>
+    </div>
   </div>
   <div>
     <a href="#company">Company</a>
@@ -194,10 +193,10 @@ footer{
 
 <div class="hero">
   <div class="hero-content">
-    <h1>Medical & Aesthetic Equipment Import Center</h1>
+    <h1>Rejuve Trade Center</h1>
     <p>
-      A U.S.-based trade company connecting compliant global manufacturers
-      with clinics, distributors, and professional buyers.
+      A U.S.-based medical and aesthetic equipment import and distribution center
+      serving clinics, distributors, and professional buyers.
     </p>
   </div>
 </div>
@@ -208,7 +207,7 @@ footer{
   </div>
   <div class="about">
     Rejuve Trade Center is a Dallas-based import and distribution company
-    specializing in medical and aesthetic equipment for the U.S. market.
+    specializing in compliant medical and aesthetic equipment for the U.S. market.
   </div>
 </section>
 
@@ -216,7 +215,6 @@ footer{
   <div class="section-title">
     <h2>Founder</h2>
   </div>
-
   <div class="founder-wrap">
     <img src="images/founder-portrait.jpg">
     <div>
@@ -232,6 +230,36 @@ footer{
   <div class="section-title">
     <h2>Product Portfolio</h2>
   </div>
-
   <div class="products">
-    <div class="product"><img src="diagnostic.jpg"><div class="product-content"><h3>Diagnostic & Monitoring</h3><p>Bl
+    <div class="product"><img src="diagnostic.jpg"><div class="product-content"><h3>Diagnostic & Monitoring</h3><p>Blood pressure monitors, glucose meters, ECG systems, and pulse oximeters.</p></div></div>
+    <div class="product"><img src="respiratory.jpg"><div class="product-content"><h3>Respiratory & Life Support</h3><p>Ventilators and oxygen concentrators.</p></div></div>
+    <div class="product"><img src="laser.jpg"><div class="product-content"><h3>Laser Aesthetic Systems</h3><p>Hair removal and skin rejuvenation devices.</p></div></div>
+    <div class="product"><img src="thermage.jpg"><div class="product-content"><h3>RF Skin Tightening</h3><p>Non-invasive radiofrequency systems.</p></div></div>
+    <div class="product"><img src="microneedling.jpg"><div class="product-content"><h3>Microneedling & PRP</h3><p>Collagen regeneration and skin repair.</p></div></div>
+    <div class="product"><img src="dental.jpg"><div class="product-content"><h3>Dental & Oral Aesthetics</h3><p>Teeth whitening and oral cosmetic equipment.</p></div></div>
+  </div>
+</section>
+
+<section id="compliance" class="compliance">
+  <div class="section-title">
+    <h2>Compliance & Regulatory Awareness</h2>
+    <p>Products are selected with FDA awareness and U.S. market requirements in mind.</p>
+  </div>
+</section>
+
+<section class="logistics">
+  <div class="section-title">
+    <h2>Global Logistics & Operations</h2>
+    <p>Coordinating international sourcing and U.S. distribution from Dallas.</p>
+  </div>
+</section>
+
+<footer>
+Rejuve Trade Center – 回春贸易中心<br>
+1910 Pacific Ave, Suite 2000, Dallas, TX 75201, USA<br>
+Email: mialee5201314@gmail.com · Phone: +1 254-214-9136<br>
+© 2026 Rejuve Trade Center. All rights reserved.
+</footer>
+
+</body>
+</html>
