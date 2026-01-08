@@ -20,7 +20,7 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-  line-height:1.75;
+  line-height:1.8;
   color:#111;
   background:#fff;
 }
@@ -59,12 +59,12 @@ nav{
   gap:42px;
 }
 nav a{
-  position:relative;
   text-decoration:none;
   color:#111;
   font-size:12px;
   letter-spacing:.16em;
   text-transform:uppercase;
+  position:relative;
 }
 nav a::after{
   content:'';
@@ -74,7 +74,7 @@ nav a::after{
   width:0;
   height:1px;
   background:var(--primary);
-  transition:.35s ease;
+  transition:.3s ease;
 }
 nav a:hover::after{width:100%}
 
@@ -109,7 +109,7 @@ nav a:hover::after{width:100%}
 }
 .hero p{
   color:#e5e7eb;
-  max-width:680px;
+  max-width:700px;
   font-size:18px;
 }
 
@@ -133,6 +133,30 @@ nav a:hover::after{width:100%}
 .section-dark h2{color:#fff}
 .section-dark p{color:#cbd5e1}
 
+/* ===== PRODUCTS ===== */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:36px;
+}
+.product{
+  background:var(--light);
+  border-radius:22px;
+  padding:28px;
+}
+.product .tag{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7a8699;
+  margin-bottom:10px;
+}
+.product h4{
+  font-size:18px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
 /* ===== FOOTER ===== */
 footer{
   position:relative;
@@ -141,8 +165,6 @@ footer{
   padding:120px 20px 80px;
   overflow:hidden;
 }
-
-/* LOGO SEAL */
 .footer-seal{
   position:absolute;
   top:50%;
@@ -152,7 +174,6 @@ footer{
   transform:translate(-50%,-50%) rotate(-12deg);
   pointer-events:none;
 }
-
 .footer-inner{
   position:relative;
   z-index:2;
@@ -162,19 +183,10 @@ footer{
   grid-template-columns:1fr 1fr;
   gap:60px;
 }
-
-.footer-info h4{
-  font-size:18px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
 .footer-info p{
   font-size:14px;
   line-height:1.7;
-  color:#cbd5e1;
 }
-
 .footer-map iframe{
   width:100%;
   height:160px;
@@ -200,6 +212,7 @@ footer{
 <nav>
   <div class="nav-inner">
     <a href="#hero">Home</a>
+    <a href="#company">Company</a>
     <a href="#founder">Founder</a>
     <a href="#products">Products</a>
     <a href="#clinical">Clinical</a>
@@ -207,6 +220,7 @@ footer{
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero" class="hero">
 <video autoplay muted loop playsinline>
   <source src="hero-video.mp4" type="video/mp4">
@@ -214,9 +228,139 @@ footer{
 <div class="hero-inner">
   <h1>Rejuve Trade Center</h1>
   <p>
-    A U.S.-based medical aesthetics and clinical technology organization supporting
-    professional institutions through structured evaluation, regulatory alignment,
-    and long-term operational execution.
+    A U.S.-based medical aesthetics and clinical technology organization
+    operating with institutional discipline, regulatory responsibility,
+    and long-term system orientation.
+  </p>
+</div>
+</section>
+
+<!-- COMPANY -->
+<section id="company" class="container">
+<div class="text-column">
+  <h3>Company Overview</h3>
+  <h2>Medical Trade Structured for Long-Term Responsibility</h2>
+
+  <p>
+    Rejuve Trade Center operates across medical aesthetics, clinical technology,
+    and international trade. Rather than pursuing short-cycle distribution,
+    we focus on how medical systems are evaluated, classified, and deployed
+    within real clinical environments.
+  </p>
+
+  <p>
+    Our position is defined by coordination rather than promotion. Products
+    are considered within broader operational systems, accounting for
+    regulatory scope, training requirements, and lifecycle responsibility.
+  </p>
+
+  <p>
+    This approach reflects an institutional orientation designed to support
+    professional partners over time, rather than transactional engagement.
+  </p>
+</div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="container">
+<div class="block">
+  <img src="images/founder-portrait.jpg">
+  <div class="text-column">
+    <h3>Founder</h3>
+    <h2>Execution Discipline as an Organizational Principle</h2>
+
+    <p>
+      The founder’s academic background in economics and early professional
+      experience within institutional finance environments established a
+      structured approach to risk assessment, coordination, and execution.
+    </p>
+
+    <p>
+      This execution-first mindset continues to inform Rejuve’s operational
+      philosophy, emphasizing responsibility, clarity of scope, and
+      sustainable cross-border collaboration.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="container">
+<div class="text-column">
+  <h3>Product Portfolio</h3>
+  <h2>Classification Based on Clinical Context</h2>
+
+  <p>
+    Products are organized according to application environment, regulatory
+    category, and operational compatibility. Market trend alone does not
+    determine inclusion.
+  </p>
+</div>
+
+<div class="products">
+  <div class="product">
+    <div class="tag">Aesthetic Systems</div>
+    <h4>Medical Aesthetic Platforms</h4>
+    <p>
+      Systems designed for non-invasive and minimally invasive procedures,
+      evaluated for clinical setting compatibility.
+    </p>
+  </div>
+
+  <div class="product">
+    <div class="tag">Clinical Equipment</div>
+    <h4>Clinical & Diagnostic Devices</h4>
+    <p>
+      Devices supporting diagnostic, therapeutic, and procedural workflows
+      within regulated environments.
+    </p>
+  </div>
+
+  <div class="product">
+    <div class="tag">Post-Treatment Support</div>
+    <h4>Recovery & Support Devices</h4>
+    <p>
+      Equipment intended for post-procedure care, follow-up, and long-term
+      treatment support.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- CLINICAL -->
+<section id="clinical" class="container section-dark">
+<div class="text-column">
+  <h3>Clinical Review</h3>
+  <h2>Evaluation Is Required Prior to Deployment</h2>
+
+  <p>
+    All systems undergo structured clinical and technical review prior to
+    deployment. Evaluation emphasizes safety, reproducibility, and alignment
+    with real-world practice environments.
+  </p>
+
+  <p>
+    This process ensures consistency with professional standards and
+    regulatory expectations across jurisdictions.
+  </p>
+</div>
+</section>
+
+<!-- COMPLIANCE -->
+<section id="compliance" class="container section-dark">
+<div class="text-column">
+  <h3>Compliance</h3>
+  <h2>Regulatory Alignment as a Foundational Responsibility</h2>
+
+  <p>
+    Compliance is treated as an operational baseline rather than a procedural
+    checkbox. All products align with applicable FDA, CE, and international
+    regulatory standards.
+  </p>
+
+  <p>
+    Regulatory responsibility informs product selection, deployment strategy,
+    and long-term partner collaboration.
   </p>
 </div>
 </section>
@@ -227,13 +371,12 @@ footer{
 
 <div class="footer-inner">
   <div class="footer-info">
-    <h4>Rejuve Trade Center</h4>
     <p>
-      Regulatory & Medical Trade Authority<br><br>
+      Rejuve Trade Center<br>
       1910 Pacific Ave, Suite 17100<br>
       Dallas, TX 75201, United States<br><br>
-      ✉ mialee5201314@gmail.com<br>
-      ☎ +1 254-214-9136
+      Email: mialee5201314@gmail.com<br>
+      Phone: +1 254-214-9136
     </p>
   </div>
 
