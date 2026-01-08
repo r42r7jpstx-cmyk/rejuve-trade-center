@@ -181,37 +181,47 @@ nav a:hover::after{width:100%}
 /* ===== FOOTER ===== */
 footer{
   background:#0c1622;
-  color:#cbd5e1;
-  padding:70px 20px;
+  padding:100px 20px;
 }
+
 .footer-inner{
-  max-width:var(--max-width);
+  max-width:720px;
   margin:auto;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
-  align-items:flex-start;
 }
-.footer-brand{
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  padding:24px;
+
+.footer-card{
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  padding:30px;
+  background:rgba(255,255,255,.02);
 }
-.footer-brand img{
-  max-width:170px;
-  display:block;
-  margin-bottom:18px;
+
+.footer-card h4{
+  margin:0 0 18px;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#9fb3c8;
 }
-.footer-brand p{
-  font-size:13.5px;
-  line-height:1.6;
-  color:#cbd5e1;
-}
+
 .footer-map iframe{
   width:100%;
-  height:180px;
+  height:210px;
   border:0;
-  border-radius:14px;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+
+.footer-contact{
+  font-size:14px;
+  line-height:1.65;
+  color:#cbd5e1;
+}
+
+.footer-contact .company{
+  font-weight:600;
+  color:#ffffff;
+  margin-bottom:6px;
 }
 
 /* ===== MOBILE ===== */
@@ -234,17 +244,14 @@ footer{
       url('hero.jpg') center/cover no-repeat;
   }
 
-  .footer-inner{
-    grid-template-columns:1fr;
-    gap:32px;
-    text-align:center;
+  footer{
+    padding:80px 16px;
   }
-  .footer-brand{
-    margin:auto;
+  .footer-card{
+    padding:22px;
   }
-  .footer-brand img{
-    margin-left:auto;
-    margin-right:auto;
+  .footer-map iframe{
+    height:180px;
   }
 }
 </style>
@@ -286,11 +293,10 @@ and long-term operational execution.
 Rejuve Trade Center operates across medical aesthetics, clinical technology,
 and international trade. We focus on structured product classification,
 regulatory alignment, and operational execution rather than short-term
-distribution or promotional activity.
+distribution.
 </p>
 <p>
-Our role is to support professional institutions by delivering systems that
-have been reviewed, contextualized, and deployed within compliant and
+Our role is to support professional institutions through compliant and
 sustainable operational frameworks.
 </p>
 </div>
@@ -299,35 +305,19 @@ sustainable operational frameworks.
 <!-- FOUNDER -->
 <section id="founder" class="container">
 <div class="block">
-<img src="images/founder-portrait.jpg" alt="Founder Portrait">
+<img src="images/founder-portrait.jpg" alt="Founder">
 <div class="text-column">
 <h3>Founder</h3>
 <h2>Professional Background & Execution Discipline</h2>
 <p>
 The founder earned a Bachelor’s degree in Economics from the University of
-California, Berkeley in 2004, establishing a foundation in analytical thinking,
-structured decision-making, and professional communication.
+California, Berkeley, and developed structured execution experience through
+financial and industrial institutions.
 </p>
 <p>
-Early professional experience at Citibank provided exposure to global financial
-operations, institutional workflows, and disciplined execution environments.
+This background informs Rejuve’s long-term operational discipline.
 </p>
 </div>
-</div>
-
-<div class="block" style="margin-top:90px">
-<div class="text-column">
-<p>
-In 2007, the founder joined Shanghai Huayi Group, focusing on project
-coordination, cross-functional collaboration, and market-oriented execution
-within large organizational structures.
-</p>
-<p>
-This experience continues to shape Rejuve’s operational philosophy, emphasizing
-risk control, long-term coordination, and sustainable cross-border development.
-</p>
-</div>
-<img src="images/founder-portrait-2.jpg" alt="Founder Professional Experience">
 </div>
 </section>
 
@@ -336,39 +326,24 @@ risk control, long-term coordination, and sustainable cross-border development.
 <div class="text-column">
 <h3>Product Portfolio</h3>
 <h2>Classified Medical & Aesthetic Systems</h2>
-<p>
-Our product portfolio is organized by clinical context and system category.
-Each system is evaluated based on application environment, regulatory
-requirements, and operational compatibility.
-</p>
 </div>
 
 <div class="products">
-<div class="product"><img src="thermage.jpg" alt="Radiofrequency System"><div class="info"><div class="tag">Aesthetic System</div><h4>Radiofrequency Skin Tightening</h4><p>Non-invasive platforms designed for professional skin tightening applications.</p></div></div>
-<div class="product"><img src="microneedling.jpg" alt="Microneedling Device"><div class="info"><div class="tag">Aesthetic System</div><h4>Microneedling Systems</h4><p>Precision devices supporting controlled collagen stimulation procedures.</p></div></div>
-<div class="product"><img src="laser.jpg" alt="Laser Device"><div class="info"><div class="tag">Aesthetic / Clinical</div><h4>Laser Devices</h4><p>Advanced platforms for aesthetic and dermatological treatment environments.</p></div></div>
-<div class="product"><img src="body-contouring.jpg" alt="Body Contouring"><div class="info"><div class="tag">Aesthetic System</div><h4>Body Contouring Systems</h4><p>Non-surgical technologies supporting body contouring workflows.</p></div></div>
-<div class="product"><img src="skin-rejuvenation.jpg" alt="Skin Rejuvenation"><div class="info"><div class="tag">Aesthetic System</div><h4>Skin Rejuvenation Devices</h4><p>Systems designed to improve skin tone, texture, and aging signs.</p></div></div>
-<div class="product"><img src="dental.jpg" alt="Dental Equipment"><div class="info"><div class="tag">Clinical Equipment</div><h4>Dental Aesthetic Equipment</h4><p>Professional systems supporting cosmetic dental procedures.</p></div></div>
-<div class="product"><img src="diagnostic.jpg" alt="Post Treatment Care"><div class="info"><div class="tag">Post-Treatment Support</div><h4>Post-Treatment Care Devices</h4><p>Supportive devices designed for recovery and follow-up environments.</p></div></div>
-<div class="product"><img src="respiratory.jpg" alt="Clinical Support"><div class="info"><div class="tag">Clinical Support</div><h4>Clinical Support Devices</h4><p>Auxiliary equipment supporting clinical treatment settings.</p></div></div>
+<div class="product"><img src="thermage.jpg"><div class="info"><div class="tag">Aesthetic</div><h4>Radiofrequency Systems</h4><p>Professional non-invasive tightening platforms.</p></div></div>
+<div class="product"><img src="microneedling.jpg"><div class="info"><div class="tag">Aesthetic</div><h4>Microneedling Devices</h4><p>Precision collagen stimulation systems.</p></div></div>
+<div class="product"><img src="laser.jpg"><div class="info"><div class="tag">Clinical</div><h4>Laser Devices</h4><p>Advanced dermatological platforms.</p></div></div>
 </div>
 </section>
 
 <!-- CLINICAL -->
 <section id="clinical" class="container section-dark">
 <div class="block">
-<img src="clinical-review.jpg" alt="Clinical Review">
+<img src="clinical-review.jpg">
 <div class="text-column">
 <h3>Clinical Review</h3>
 <h2>Evaluation Before Deployment</h2>
 <p>
-All systems undergo structured clinical review and technical validation prior to
-market deployment.
-</p>
-<p>
-This process ensures alignment with professional practice standards and
-regulatory expectations.
+All systems undergo structured clinical review prior to deployment.
 </p>
 </div>
 </div>
@@ -379,41 +354,42 @@ regulatory expectations.
 <div class="block">
 <div class="text-column">
 <h3>Compliance</h3>
-<h2>Regulatory Alignment & Responsibility</h2>
+<h2>Regulatory Alignment</h2>
 <p>
-All products distributed by Rejuve Trade Center comply with FDA, CE, and
-applicable international medical regulatory standards.
-</p>
-<p>
-Compliance is treated as a foundational responsibility.
+Products comply with applicable U.S. and international medical standards.
 </p>
 </div>
-<img src="compliance.jpg" alt="Compliance">
+<img src="compliance.jpg">
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<div class="footer-inner">
-<div class="footer-brand">
-<img src="images/logo1.png" alt="Rejuve Trade Center Logo">
-<p>
-Rejuve Trade Center<br>
-1910 Pacific Ave, Suite 17100<br>
-Dallas, TX 75201, United States<br><br>
-Email: mialee5201314@gmail.com<br>
-Phone: +1 254-214-9136
-</p>
-</div>
+  <div class="footer-inner">
+    <div class="footer-card">
+      <h4>Contact & Location</h4>
 
-<div class="footer-map">
-<iframe
-src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
-</div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="footer-contact">
+        <p class="company">Rejuve Trade Center</p>
+        <p>
+          1910 Pacific Ave, Suite 17100<br>
+          Dallas, TX 75201, United States
+        </p>
+        <p>
+          Email: mialee5201314@gmail.com<br>
+          Phone: +1 254-214-9136
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </body>
