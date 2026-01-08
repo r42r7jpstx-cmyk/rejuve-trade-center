@@ -131,6 +131,14 @@ nav a:hover::after{width:100%}
   border-radius:22px;
 }
 
+/* DARK SECTION */
+.section-dark{
+  background:var(--dark-soft);
+  color:#e5e7eb;
+}
+.section-dark h2{color:#fff}
+.section-dark p{color:#cbd5e1}
+
 /* PRODUCTS */
 .products{
   display:grid;
@@ -143,16 +151,41 @@ nav a:hover::after{width:100%}
   overflow:hidden;
 }
 .product img{
-  max-width:200px;
-  height:auto;
-  margin:40px auto 20px;
-  display:block;
+  width:100%;
+  height:230px;
+  object-fit:cover;
 }
 .product .info{padding:26px}
+.product .tag{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7a8699;
+  margin-bottom:10px;
+}
 .product h4{
   font-size:17px;
   color:var(--primary);
   margin-bottom:8px;
+}
+
+/* COLLABORATIONS */
+.collab-logos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:36px;
+  margin-top:60px;
+}
+.collab-item{
+  background:var(--light);
+  border-radius:22px;
+  padding:40px 26px;
+  text-align:center;
+}
+.collab-item img{
+  height:80px;
+  width:auto;
+  margin-bottom:22px;
 }
 
 /* FOOTER */
@@ -164,12 +197,54 @@ footer{
   max-width:720px;
   margin:auto;
 }
+.footer-card{
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  padding:30px;
+  background:rgba(255,255,255,.02);
+}
+.footer-card h4{
+  margin:0 0 18px;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#9fb3c8;
+}
+.footer-map iframe{
+  width:100%;
+  height:210px;
+  border:0;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+.footer-contact{
+  font-size:14px;
+  line-height:1.65;
+  color:#cbd5e1;
+}
+.footer-contact .company{
+  font-weight:600;
+  color:#fff;
+  margin-bottom:6px;
+}
 
 /* MOBILE */
 @media(max-width:900px){
+  h1{font-size:38px}
+  h2{font-size:28px}
   .container{padding:80px 16px}
   .block{grid-template-columns:1fr}
   .products{grid-template-columns:1fr}
+  nav ul{gap:22px;flex-wrap:wrap}
+  .hero video{display:none}
+  .hero{
+    background:
+      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
+      url('hero.jpg') center/cover no-repeat;
+  }
+  footer{padding:80px 16px}
+  .footer-card{padding:22px}
+  .footer-map iframe{height:180px}
 }
 </style>
 </head>
@@ -190,8 +265,35 @@ footer{
 
 <!-- HERO -->
 <section id="hero" class="hero">
+<video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+  <source src="hero-video.mp4" type="video/mp4">
+</video>
 <div class="hero-inner">
 <h1>Rejuve Trade Center</h1>
+<p>
+A U.S.-based medical aesthetics and clinical technology organization focused on
+long-term institutional cooperation, regulatory alignment, and structured
+cross-border execution rather than short-term distribution or promotional activity.
+</p>
+</div>
+</section>
+
+<!-- COMPANY OVERVIEW -->
+<section class="container">
+<div class="text-column">
+<h3>Company Overview</h3>
+<h2>Structured Medical Trade With Long-Term Orientation</h2>
+<p>
+Rejuve Trade Center operates across medical aesthetics, clinical technology, and
+international medical trade. The organization focuses on structured product
+classification, regulatory pathway alignment, and long-term operational execution
+rather than transactional distribution models.
+</p>
+<p>
+Our work emphasizes institutional compatibility, lifecycle responsibility, and
+sustainable deployment frameworks, supporting professional clinics, hospitals,
+and medical groups operating in regulated environments.
+</p>
 </div>
 </section>
 
@@ -202,37 +304,179 @@ footer{
 <h2>International Professional Engagements</h2>
 <p>
 Rejuve Trade Center has engaged in clinical and professional collaboration with
-internationally recognized medical institutions, reflecting shared standards in
-medical aesthetics and clinical practice.
+internationally recognized medical institutions. These engagements reflect shared
+standards in clinical practice, medical aesthetics, and long-term professional
+exchange.
+</p>
+</div>
+
+<div class="collab-logos">
+  <div class="collab-item">
+    <img src="logo-clinic-1.png" alt="ID Plastic Surgery Hospital">
+    <h4>ID Plastic Surgery Hospital</h4>
+    <p>South Korea</p>
+  </div>
+
+  <div class="collab-item">
+    <img src="logo-clinic-2.png" alt="Obagi Skin Health Institute">
+    <h4>Obagi Skin Health Institute</h4>
+    <p>United States</p>
+  </div>
+
+  <div class="collab-item">
+    <img src="logo-clinic-3.png" alt="The Private Clinic">
+    <h4>The Private Clinic</h4>
+    <p>United Kingdom</p>
+  </div>
+</div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="container">
+<div class="block">
+<img src="images/founder-portrait.jpg" alt="Founder Portrait">
+<div class="text-column">
+<h3>Founder</h3>
+<h2>Professional Foundation & Early Career</h2>
+<p>
+The founder earned a Bachelor’s degree in Economics from the University of
+California, Berkeley in 2004, developing a foundation in analytical reasoning,
+structured decision-making, and institutional communication.
+</p>
+<p>
+Early professional exposure at Citibank provided insight into global financial
+operations, compliance-oriented workflows, and disciplined execution
+environments.
+</p>
+</div>
+</div>
+
+<div class="block" style="margin-top:90px">
+<div class="text-column">
+<h2>Industrial Experience & Operational Perspective</h2>
+<p>
+In 2007, the founder joined Shanghai Huayi Group, participating in large-scale
+industrial and cross-functional project coordination within complex organizational
+structures.
+</p>
+<p>
+This experience shaped Rejuve’s emphasis on risk control, long-term planning,
+and cross-border operational sustainability across regulated industries.
+</p>
+</div>
+<img src="images/founder-portrait-2.jpg" alt="Founder Experience">
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="container">
+<div class="text-column">
+<h3>Product Portfolio</h3>
+<h2>Classified Medical & Aesthetic Systems</h2>
+<p>
+Each product category is evaluated based on clinical application context,
+regulatory requirements, and operational compatibility prior to institutional
+deployment.
 </p>
 </div>
 
 <div class="products">
-  <div class="product">
-    <img src="logo-clinic-1.png" alt="ID Plastic Surgery Hospital">
-    <div class="info">
-      <h4>ID Plastic Surgery Hospital</h4>
-      <p>Clinical engagement with one of Asia’s leading plastic surgery hospitals.</p>
-    </div>
-  </div>
+  <!-- 8 个产品，逐字保留 -->
+  <div class="product"><img src="thermage.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Radiofrequency Skin Tightening</h4><p>Non-invasive RF platforms designed for professional skin tightening procedures.</p></div></div>
+  <div class="product"><img src="microneedling.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Microneedling Systems</h4><p>Precision devices supporting controlled collagen stimulation protocols.</p></div></div>
+  <div class="product"><img src="laser.jpg"><div class="info"><div class="tag">Aesthetic / Clinical</div><h4>Laser Devices</h4><p>Advanced laser platforms for dermatological and aesthetic treatment environments.</p></div></div>
+  <div class="product"><img src="body-contouring.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Body Contouring Systems</h4><p>Non-surgical technologies supporting professional body contouring workflows.</p></div></div>
+  <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><div class="tag">Aesthetic System</div><h4>Skin Rejuvenation Devices</h4><p>Systems designed to improve skin texture, tone, and visible aging indicators.</p></div></div>
+  <div class="product"><img src="dental.jpg"><div class="info"><div class="tag">Clinical Equipment</div><h4>Dental Aesthetic Equipment</h4><p>Professional-grade systems supporting cosmetic dental procedures.</p></div></div>
+  <div class="product"><img src="diagnostic.jpg"><div class="info"><div class="tag">Post-Treatment Support</div><h4>Post-Treatment Care Devices</h4><p>Supportive equipment designed for recovery and post-procedure environments.</p></div></div>
+  <div class="product"><img src="respiratory.jpg"><div class="info"><div class="tag">Clinical Support</div><h4>Clinical Support Devices</h4><p>Auxiliary systems supporting clinical treatment and patient care settings.</p></div></div>
+</div>
+</section>
 
-  <div class="product">
-    <img src="logo-clinic-2.png" alt="Obagi Skin Health Institute">
-    <div class="info">
-      <h4>Obagi Skin Health Institute</h4>
-      <p>Professional exchange with Dr. Zein Obagi’s internationally recognized institute.</p>
-    </div>
-  </div>
+<!-- CLINICAL -->
+<section id="clinical" class="container section-dark">
+<div class="block">
+<img src="clinical-review.jpg" alt="Clinical Review">
+<div class="text-column">
+<h3>Clinical Review</h3>
+<h2>Evaluation Before Deployment</h2>
+<p>
+All systems undergo structured clinical review and technical validation prior to
+deployment, emphasizing safety, reproducibility, and real-world clinical
+compatibility.
+</p>
+<p>
+This process ensures alignment with professional practice standards and applicable
+regulatory expectations across treatment environments.
+</p>
+</div>
+</div>
+</section>
 
-  <div class="product">
-    <img src="logo-clinic-3.png" alt="The Private Clinic">
-    <div class="info">
-      <h4>The Private Clinic</h4>
-      <p>Engagement within the UK’s regulated private medical clinic network.</p>
+<!-- COMPLIANCE -->
+<section id="compliance" class="container section-dark">
+<div class="block">
+<div class="text-column">
+<h3>Compliance</h3>
+<h2>Regulatory Alignment & Responsibility</h2>
+<p>
+All products distributed by Rejuve Trade Center comply with FDA, CE, and applicable
+international medical regulatory standards.
+</p>
+<p>
+Compliance is treated as a foundational responsibility informing product selection,
+deployment pathways, and long-term institutional cooperation.
+</p>
+</div>
+<img src="compliance.jpg" alt="Compliance">
+</div>
+</section>
+
+<!-- LOGISTICS -->
+<section id="logistics" class="container">
+<div class="block">
+<img src="logistics.jpg" alt="Global Logistics">
+<div class="text-column">
+<h3>Global Logistics</h3>
+<h2>Cross-Border Medical Trade & Fulfillment</h2>
+<p>
+Rejuve Trade Center supports international medical trade through structured logistics
+coordination, documentation alignment, and region-specific fulfillment strategies.
+</p>
+<p>
+Our logistics framework emphasizes compliance, traceability, and long-term
+operational reliability across North America, Asia, and select global markets.
+</p>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+  <div class="footer-card">
+    <h4>Contact & Location</h4>
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps?q=1910%20Pacific%20Ave%2C%20Suite%2017100%2C%20Dallas%2C%20TX%2075201&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="footer-contact">
+      <p class="company">Rejuve Trade Center</p>
+      <p>
+        1910 Pacific Ave, Suite 17100<br>
+        Dallas, TX 75201, United States
+      </p>
+      <p>
+        Email: mialee5201314@gmail.com<br>
+        Phone: +1 254-214-9136
+      </p>
     </div>
   </div>
 </div>
-</section>
+</footer>
 
 </body>
 </html>
