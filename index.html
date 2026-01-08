@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Rejuve Trade Center</title>
 
 <style>
@@ -20,7 +20,7 @@ body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
   color:#111;
-  line-height:1.7;
+  line-height:1.75;
 }
 
 /* ===== GLOBAL ===== */
@@ -31,28 +31,22 @@ body{
 }
 
 h1{
-  font-size:54px;
+  font-size:56px;
   font-weight:600;
   letter-spacing:.4px;
-  margin-bottom:28px;
+  margin-bottom:26px;
   color:#fff;
 }
 
 h2{
-  font-size:32px;
+  font-size:34px;
   color:var(--primary);
   margin-bottom:26px;
 }
 
-h3{
-  font-size:17px;
-  color:var(--primary);
-  margin-bottom:10px;
-}
-
 p{
   color:var(--gray);
-  font-size:15.8px;
+  font-size:16px;
   margin-bottom:18px;
 }
 
@@ -70,35 +64,21 @@ nav ul{
   margin:auto;
   display:flex;
   justify-content:center;
-  gap:46px;
+  gap:44px;
   padding:18px 20px;
   list-style:none;
 }
 
 nav a{
-  position:relative;
   text-decoration:none;
   color:#111;
   font-weight:500;
   font-size:14.5px;
 }
 
-nav a::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:2px;
-  background:var(--primary);
-  transition:.3s ease;
-}
-
-nav a:hover::after{width:100%}
-
 /* ===== HERO ===== */
 .hero{
-  min-height:90vh;
+  min-height:92vh;
   display:flex;
   align-items:center;
   background:
@@ -116,48 +96,6 @@ nav a:hover::after{width:100%}
   max-width:640px;
   font-size:17px;
   color:#eaeaea;
-}
-
-/* ===== EXPERIENCE ===== */
-.experience{
-  background:#fafbfc;
-}
-
-.experience-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:46px;
-  margin-top:60px;
-}
-
-.experience-item{
-  padding:36px;
-  background:#fff;
-  border-radius:22px;
-  border:1px solid #eee;
-}
-
-/* ===== MEDICAL ===== */
-.medical-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-  margin-top:60px;
-}
-
-.medical img{
-  width:100%;
-  border-radius:22px;
-}
-
-.medical-points{
-  display:grid;
-  gap:28px;
-}
-
-@media(max-width:900px){
-  .medical-grid{grid-template-columns:1fr}
 }
 
 /* ===== FOUNDER ===== */
@@ -180,14 +118,6 @@ nav a:hover::after{width:100%}
 
 .founder-block.reverse > *{
   direction:ltr;
-}
-
-@media(max-width:900px){
-  .founder-block,
-  .founder-block.reverse{
-    grid-template-columns:1fr;
-    direction:ltr;
-  }
 }
 
 /* ===== PRODUCTS ===== */
@@ -213,6 +143,17 @@ nav a:hover::after{width:100%}
   padding:26px;
 }
 
+.product h3{
+  font-size:17px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.product p{
+  font-size:14.5px;
+  margin-bottom:0;
+}
+
 /* ===== IMAGE SECTIONS ===== */
 .image-section{
   display:grid;
@@ -224,10 +165,6 @@ nav a:hover::after{width:100%}
 .image-section img{
   width:100%;
   border-radius:22px;
-}
-
-@media(max-width:900px){
-  .image-section{grid-template-columns:1fr}
 }
 
 /* ===== FOOTER ===== */
@@ -243,6 +180,7 @@ footer{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
+  align-items:center;
 }
 
 footer img{
@@ -250,9 +188,58 @@ footer img{
   margin-bottom:20px;
 }
 
+footer h3{
+  margin-bottom:14px;
+  font-size:16px;
+}
+
 footer p{
   color:#d1d5db;
   font-size:14px;
+  margin-bottom:8px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  h1{font-size:38px}
+  h2{font-size:28px}
+
+  .container{padding:80px 16px}
+
+  nav ul{
+    gap:22px;
+    flex-wrap:wrap;
+  }
+
+  .founder-block,
+  .founder-block.reverse{
+    grid-template-columns:1fr;
+    direction:ltr;
+    gap:40px;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .image-section{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  footer{
+    padding:70px 20px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  footer img{
+    margin:auto;
+  }
 }
 </style>
 </head>
@@ -263,8 +250,6 @@ footer p{
 <nav>
   <ul>
     <li><a href="#hero">Home</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#medical">Medical</a></li>
     <li><a href="#founder">Founder</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#compliance">Compliance</a></li>
@@ -277,70 +262,66 @@ footer p{
   <div class="hero-inner">
     <h1>Rejuve Trade Center</h1>
     <p>
-      Rejuve Trade Center is a global medical aesthetics and trade-focused
-      organization dedicated to delivering professional aesthetic technologies,
-      supporting clinics and medical institutions with compliant, reliable, and
-      execution-driven solutions across international markets.
+      A global medical aesthetics and trade-focused organization delivering
+      professional aesthetic technologies and compliant execution-driven
+      solutions for clinics and medical institutions worldwide.
     </p>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="container experience">
-  <h2>Advanced Aesthetic Experience</h2>
-  <p>
-    Aesthetic solutions at Rejuve are structured around clinical restraint,
-    procedural comfort, and long-term consistency within professional
-    medical environments.
-  </p>
-
-  <div class="experience-grid">
-    <div class="experience-item"><h3>Personalized Treatment Design</h3><p>Conservative, anatomy-aware treatment structures prioritizing balance.</p></div>
-    <div class="experience-item"><h3>Precision-Controlled Procedures</h3><p>Stable performance supporting accurate delivery.</p></div>
-    <div class="experience-item"><h3>Minimally Invasive Experience</h3><p>Reduced tissue disruption and shortened recovery timelines.</p></div>
-    <div class="experience-item"><h3>Post-Treatment Care & Longevity</h3><p>Recovery quality and long-term maintenance without excess intervention.</p></div>
-  </div>
-</section>
-
-<!-- MEDICAL -->
-<section id="medical" class="container medical">
-  <h2>Medical Advisory & Clinical Framework</h2>
-  <p>
-    Rejuve operates within a structured clinical governance framework, ensuring
-    responsible use, conservative protocols, and patient-centered safety
-    principles.
-  </p>
-
-  <div class="medical-grid">
-    <img src="medical-advisory.jpg" alt="">
-    <div class="medical-points">
-      <div><h3>Medical Advisory Oversight</h3><p>Independent medical advisors provide protocol and safety guidance.</p></div>
-      <div><h3>Clinical Protocol Governance</h3><p>Standardized workflows promoting conservative intervention.</p></div>
-      <div><h3>Patient-Centric Safety Principles</h3><p>Safety priority and responsible clinical integration.</p></div>
-      <div><h3>Continuous Clinical Evaluation</h3><p>Ongoing field feedback supporting responsible refinement.</p></div>
-    </div>
   </div>
 </section>
 
 <!-- FOUNDER -->
 <section id="founder" class="container">
+
   <div class="founder-block">
-    <img src="images/founder-portrait.jpg">
+    <img src="images/founder-portrait.jpg" alt="Founder Portrait">
     <div>
       <h2>Founder & Professional Background</h2>
-      <p>The founder earned a Bachelor’s degree in Economics from the University of California, Berkeley.</p>
-      <p>Professional background includes global finance, project management, and cross-border operations.</p>
+      <p>
+        The founder earned a Bachelor’s degree in Economics from the University
+        of California, Berkeley in 2004, establishing a strong foundation in
+        economic analysis, structured problem-solving, and professional
+        communication.
+      </p>
+      <p>
+        Following graduation, the founder completed an internship at Citibank,
+        gaining hands-on exposure to global financial operations, market
+        analysis, and institutional workflows.
+      </p>
     </div>
   </div>
+
+  <div class="founder-block reverse">
+    <img src="images/founder-portrait-2.jpg" alt="Founder Background">
+    <div>
+      <p>
+        In 2007, the founder returned to Shanghai and joined Shanghai Huayi
+        Group, focusing on project management, market-oriented operations,
+        cross-functional coordination, risk management, and quality assurance.
+      </p>
+      <p>
+        This blend of international education, financial discipline, and
+        execution experience laid the foundation for long-term engagement in
+        international medical trade and global operations.
+      </p>
+    </div>
+  </div>
+
 </section>
 
 <!-- PRODUCTS -->
 <section id="products" class="container">
   <h2>Our Products</h2>
   <div class="products">
-    <div class="product"><img src="thermage.jpg"><div class="info"><h3>Radiofrequency Skin Tightening</h3><p>Non-invasive systems improving skin elasticity.</p></div></div>
+
+    <div class="product"><img src="thermage.jpg"><div class="info"><h3>Radiofrequency Skin Tightening</h3><p>Non-invasive systems improving skin elasticity and firmness.</p></div></div>
     <div class="product"><img src="microneedling.jpg"><div class="info"><h3>Microneedling Systems</h3><p>Precision devices supporting collagen regeneration.</p></div></div>
     <div class="product"><img src="laser.jpg"><div class="info"><h3>Laser Aesthetic Devices</h3><p>Advanced platforms for pigmentation treatment.</p></div></div>
+    <div class="product"><img src="body-contouring.jpg"><div class="info"><h3>Body Contouring Systems</h3><p>Technologies targeting localized fat reduction.</p></div></div>
+    <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><h3>Skin Rejuvenation Devices</h3><p>Solutions improving tone, texture, and aging signs.</p></div></div>
+    <div class="product"><img src="dental.jpg"><div class="info"><h3>Dental Aesthetic Equipment</h3><p>Professional systems for cosmetic dental procedures.</p></div></div>
+    <div class="product"><img src="diagnostic.jpg"><div class="info"><h3>Post-Treatment Care Devices</h3><p>Supportive devices enhancing recovery processes.</p></div></div>
+    <div class="product"><img src="respiratory.jpg"><div class="info"><h3>Clinical Support Devices</h3><p>Auxiliary devices supporting clinical environments.</p></div></div>
+
   </div>
 </section>
 
@@ -349,7 +330,11 @@ footer p{
   <img src="compliance.jpg">
   <div>
     <h2>Compliance</h2>
-    <p>All products comply with FDA, CE, and applicable international standards.</p>
+    <p>
+      All products distributed by Rejuve Trade Center comply with FDA, CE,
+      and applicable international medical regulatory standards, ensuring
+      safety, reliability, and clinical integrity.
+    </p>
   </div>
 </section>
 
@@ -357,7 +342,11 @@ footer p{
 <section id="logistics" class="container image-section">
   <div>
     <h2>Global Logistics</h2>
-    <p>Coordinated supply chains supporting efficient international distribution.</p>
+    <p>
+      Through established logistics partners and coordinated supply chains,
+      we support efficient international distribution, localized delivery,
+      and comprehensive after-sales services worldwide.
+    </p>
   </div>
   <img src="logistics.jpg">
 </section>
@@ -366,11 +355,16 @@ footer p{
 <footer>
   <div class="footer-inner">
     <div>
-      <img src="images/logo.png">
-      <p>Dallas, TX, United States</p>
+      <img src="images/logo.png" alt="Rejuve Logo">
+      <p>
+        1910 Pacific Ave, Suite 17100<br>
+        Dallas, TX 75201, United States
+      </p>
     </div>
     <div>
-      <p>Email: contact@rejuve.com</p>
+      <h3>Contact</h3>
+      <p>Email: mialee5201314@gmail.com</p>
+      <p>Phone: +1 254-214-9136</p>
     </div>
   </div>
 </footer>
