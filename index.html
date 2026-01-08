@@ -42,27 +42,6 @@ h3{
 }
 p{font-size:16px;color:#444;margin-bottom:18px}
 
-/* BLOCK */
-.block{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-}
-
-/* COMPANY LOGO */
-.company-logo{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.company-logo img{
-  width:100%;
-  max-width:420px;   /* 控制放大尺度 */
-  height:auto;
-  opacity:.95;
-}
-
 /* NAV */
 nav{
   position:sticky;
@@ -140,14 +119,132 @@ nav a:hover::after{width:100%}
   font-size:18px;
 }
 
+/* COMPANY OVERVIEW (局部生效，不影响全局) */
+.company-overview{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:60px;
+}
+.company-overview-logo{
+  display:flex;
+  justify-content:center;
+}
+.company-overview-logo img{
+  width:100%;
+  max-width:485px; /* 👈 比上一版大约 5% */
+  height:auto;
+}
+
+/* BLOCK (原有，不改) */
+.block{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.block img{
+  width:100%;
+  border-radius:22px;
+}
+
+/* DARK SECTION */
+.section-dark{
+  background:var(--dark-soft);
+  color:#e5e7eb;
+}
+.section-dark h2{color:#fff}
+.section-dark p{color:#cbd5e1}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:36px;
+}
+.product{
+  background:var(--light);
+  border-radius:22px;
+  overflow:hidden;
+}
+.product img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+.product .info{padding:26px}
+.product .tag{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7a8699;
+  margin-bottom:10px;
+}
+.product h4{
+  font-size:17px;
+  color:var(--primary);
+  margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+  background:#0c1622;
+  padding:100px 20px;
+}
+.footer-inner{
+  max-width:720px;
+  margin:auto;
+}
+.footer-card{
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  padding:30px;
+  background:rgba(255,255,255,.02);
+}
+.footer-card h4{
+  margin:0 0 18px;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#9fb3c8;
+}
+.footer-map iframe{
+  width:100%;
+  height:210px;
+  border:0;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+.footer-contact{
+  font-size:14px;
+  line-height:1.65;
+  color:#cbd5e1;
+}
+.footer-contact .company{
+  font-weight:600;
+  color:#fff;
+  margin-bottom:6px;
+}
+
 /* MOBILE */
 @media(max-width:900px){
   h1{font-size:38px}
   h2{font-size:28px}
   .container{padding:80px 16px}
   .block{grid-template-columns:1fr}
-  .company-logo{margin-top:40px}
-  .company-logo img{max-width:260px}
+  .products{grid-template-columns:1fr}
+  .company-overview{grid-template-columns:1fr}
+  .company-overview-logo{margin-top:40px}
+  nav ul{gap:22px;flex-wrap:wrap}
+  .hero video{display:none}
+  .hero{
+    background:
+      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
+      url('hero.jpg') center/cover no-repeat;
+  }
+  footer{padding:80px 16px}
+  .footer-card{padding:22px}
+  .footer-map iframe{height:180px}
 }
 </style>
 </head>
@@ -182,7 +279,7 @@ cross-border execution rather than short-term distribution or promotional activi
 
 <!-- COMPANY -->
 <section class="container">
-  <div class="block">
+  <div class="company-overview">
     <div class="text-column">
       <h3>Company Overview</h3>
       <h2>Structured Medical Trade With Long-Term Orientation</h2>
@@ -199,8 +296,8 @@ cross-border execution rather than short-term distribution or promotional activi
       </p>
     </div>
 
-    <div class="company-logo">
-      <img src="images/logo-symbol.png" alt="Rejuve Trade Center Logo">
+    <div class="company-overview-logo">
+      <img src="images/logo.png" alt="Rejuve Trade Center Logo">
     </div>
   </div>
 </section>
@@ -353,6 +450,3 @@ operational reliability across North America, Asia, and select global markets.
 
 </body>
 </html>
-
-
-
