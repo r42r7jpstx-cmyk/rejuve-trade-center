@@ -13,7 +13,7 @@ body{
   font-family:'Inter',sans-serif;
   color:#1f2937;
   background:#fff;
-  line-height:1.6;
+  line-height:1.6
 }
 
 /* NAV */
@@ -26,8 +26,20 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:18px 8%;
-  background:rgba(0,0,0,.55);
+  background:rgba(0,0,0,.6);
   backdrop-filter:blur(10px)
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#fff;
+  font-weight:600;
+  font-size:1.05rem;
+}
+.brand img{
+  height:42px;
+  width:auto
 }
 nav a{
   color:#fff;
@@ -40,29 +52,18 @@ nav a{
 .hero{
   min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.75)),
     url('hero.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
-  padding:0 8%;
-  position:relative;
+  padding:0 8%
 }
-.hero-logo{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-60%);
-  opacity:.08;
-}
-.hero-logo img{width:420px}
 .hero-content{
   max-width:760px;
-  color:#fff;
-  position:relative;
-  z-index:2
+  color:#fff
 }
 .hero h1{
-  font-size:3.2rem;
+  font-size:3.1rem;
   margin-bottom:20px
 }
 .hero p{
@@ -94,25 +95,49 @@ section{padding:100px 8%}
 }
 .product div{padding:24px}
 
-/* LOGISTICS */
-.logistics{
-  background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-    url('logistics.jpg') center/cover no-repeat;
-  color:#fff;
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center
 }
 
 /* FOUNDER */
-.founder{background:#f8fafc}
+.founder{
+  background:#f8fafc
+}
 .founder-wrap{
   max-width:1100px;
   margin:auto;
   display:grid;
   grid-template-columns:1fr 1.2fr;
-  gap:70px
+  gap:70px;
+  align-items:flex-start
 }
-.founder-wrap img{width:100%;border-radius:18px}
-.founder-sub{width:260px;margin-top:30px}
+.founder-wrap img{
+  width:100%;
+  border-radius:18px
+}
+.founder-sub{
+  width:260px;
+  margin-top:28px
+}
+
+/* COMPLIANCE */
+.compliance{
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+    url('compliance.jpg') center/cover no-repeat;
+  color:#fff
+}
+
+/* LOGISTICS */
+.logistics{
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url('logistics.jpg') center/cover no-repeat;
+  color:#fff
+}
 
 /* FOOTER */
 footer{
@@ -125,8 +150,7 @@ footer{
 
 @media(max-width:900px){
   .founder-wrap{grid-template-columns:1fr}
-  .hero h1{font-size:2.4rem}
-  .hero-logo img{width:260px}
+  .hero h1{font-size:2.3rem}
 }
 </style>
 </head>
@@ -134,23 +158,24 @@ footer{
 <body>
 
 <nav>
-  <strong style="color:#fff">Rejuve Trade Center</strong>
+  <div class="brand">
+    <img src="images/logo.png" alt="Rejuve Trade Center Logo">
+    <span>Rejuve Trade Center</span>
+  </div>
   <div>
     <a href="#products">Products</a>
-    <a href="#about">About</a>
+    <a href="#about">Company</a>
+    <a href="#compliance">Compliance</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <div class="hero">
-  <div class="hero-logo">
-    <img src="images/logo.png">
-  </div>
   <div class="hero-content">
-    <h1>Rejuve Trade Center</h1>
+    <h1>Medical & Aesthetic Equipment Import Center</h1>
     <p>
-      A U.S.-based medical and aesthetic equipment import center connecting
-      compliant global manufacturers with professional buyers and clinics.
+      A U.S.-based trade company connecting compliant global manufacturers
+      with clinics, distributors, and professional buyers.
     </p>
   </div>
 </div>
@@ -158,33 +183,39 @@ footer{
 <section id="products">
 <div class="section-title">
 <h2>Product Portfolio</h2>
-<p>Medical & aesthetic equipment selected for compliance, reliability, and market demand.</p>
+<p>Selected medical and aesthetic equipment aligned with U.S. market demand.</p>
 </div>
 
 <div class="products">
-<div class="product"><img src="diagnostic.jpg"><div><h3>Diagnostic & Monitoring Devices</h3><p>Blood pressure monitors, glucose meters, ECG systems, and pulse oximeters for clinics and home care.</p></div></div>
+<div class="product"><img src="diagnostic.jpg"><div><h3>Diagnostic & Monitoring Devices</h3><p>Blood pressure monitors, glucose meters, ECG systems, and pulse oximeters.</p></div></div>
 <div class="product"><img src="respiratory.jpg"><div><h3>Respiratory & Life Support</h3><p>Ventilators, oxygen concentrators, and portable oxygen solutions.</p></div></div>
 <div class="product"><img src="laser.jpg"><div><h3>Laser Aesthetic Systems</h3><p>Devices for hair removal, pigmentation treatment, and skin rejuvenation.</p></div></div>
-<div class="product"><img src="thermage.jpg"><div><h3>RF Skin Tightening</h3><p>Radiofrequency systems for non-invasive skin tightening and contouring.</p></div></div>
+<div class="product"><img src="thermage.jpg"><div><h3>RF Skin Tightening</h3><p>Non-invasive radiofrequency systems for skin tightening.</p></div></div>
 <div class="product"><img src="microneedling.jpg"><div><h3>Microneedling & PRP</h3><p>Systems supporting collagen regeneration and skin repair.</p></div></div>
 <div class="product"><img src="dental.jpg"><div><h3>Dental & Oral Aesthetics</h3><p>Teeth whitening and digital oral cosmetic equipment.</p></div></div>
 </div>
 </section>
 
-<section class="logistics">
+<section id="about">
 <div class="section-title">
-<h2>Global Logistics & Operations</h2>
+<h2>Company Overview</h2>
+<p>Trade-focused operations with a long-term compliance mindset.</p>
+</div>
+
+<div class="about">
 <p>
-Based in Dallas, Rejuve Trade Center coordinates international sourcing,
-quality review, and U.S. distribution with logistics partners.
+Rejuve Trade Center is a Dallas-based import and distribution company
+specializing in medical and aesthetic equipment for the U.S. market.
+The company focuses on responsible sourcing, product category selection,
+and long-term partnerships with manufacturers and professional buyers.
 </p>
 </div>
 </section>
 
-<section id="about" class="founder">
+<section class="founder">
 <div class="section-title">
-<h2>Founder Background</h2>
-<p>Trade-driven leadership grounded in financial analysis and global perspective.</p>
+<h2>Founder</h2>
+<p>Financial insight and global trade perspective.</p>
 </div>
 
 <div class="founder-wrap">
@@ -192,22 +223,43 @@ quality review, and U.S. distribution with logistics partners.
 <div>
 <h3>Lee · Beina</h3>
 <p>
-After earning a Bachelor’s degree in Economics from the University of California, Berkeley,
-Lee developed a strong foundation in economic analysis, international markets,
+Lee earned a Bachelor’s degree in Economics from the University of California, Berkeley,
+developing a strong foundation in economic analysis, international markets,
 and strategic decision-making.
 </p>
 <p>
-Following graduation, Lee completed an internship at Citibank, gaining
-hands-on exposure to financial operations, market analysis,
-and cross-border business processes.
+After graduation, Lee completed an internship at Citibank,
+gaining hands-on experience in financial operations,
+market analysis, and cross-border business processes.
 </p>
 <p>
-These early experiences shaped a long-term interest in international trade
+These early experiences shaped a long-term focus on international trade
 and laid the groundwork for sourcing and distributing medical
 and aesthetic equipment in the U.S. market.
 </p>
 <img class="founder-sub" src="images/founder-portrait-2.jpg">
 </div>
+</div>
+</section>
+
+<section id="compliance" class="compliance">
+<div class="section-title">
+<h2>Compliance & Regulatory Awareness</h2>
+<p>
+All products are selected with FDA regulatory awareness in mind,
+emphasizing non-invasive, efficient, and compliant solutions
+suitable for the U.S. healthcare and aesthetic market.
+</p>
+</div>
+</section>
+
+<section class="logistics">
+<div class="section-title">
+<h2>Logistics & Operations</h2>
+<p>
+Based in Dallas, Rejuve Trade Center coordinates international sourcing,
+quality review, and U.S. distribution with logistics partners.
+</p>
 </div>
 </section>
 
