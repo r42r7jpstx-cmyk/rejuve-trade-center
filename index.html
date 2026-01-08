@@ -2,156 +2,183 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rejuve Trade Center | Medical Aesthetic Device Trading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Surgeon | Intelligent Medical & Aesthetic Technology</title>
 
-  <meta name="description" content="Rejuve Trade Center is a US-based international trading company specializing in medical aesthetic devices, focusing on FDA-compliant products and global sourcing.">
-  <meta name="keywords" content="medical aesthetic devices, aesthetic equipment, FDA importer, Rejuve Trade Center">
-  <meta name="author" content="Rejuve Trade Center">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #020617;
-      color: #e5e7eb;
-      letter-spacing: 0.1px;
+      font-family: 'Inter', sans-serif;
+      color: #1f2937;
+      background-color: #ffffff;
+      line-height: 1.6;
     }
 
-    /* NAV */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 10000;
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #ffffff;
+      padding: 40px 10% 110px;
+    }
+
+    .nav {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      padding: 16px 56px;
-      background: rgba(8,12,24,0.85);
-      backdrop-filter: blur(10px);
+      margin-bottom: 80px;
     }
 
-    .nav-logo {
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 0.6px;
-    }
-
-    .nav-links a {
-      margin-left: 22px;
-      text-decoration: none;
-      font-size: 14px;
-      color: #e5e7eb;
-    }
-
-    .nav-links a:hover {
-      color: #60a5fa;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 100vh;
-      background: url('hero.jpg') center/cover no-repeat;
+    .brand {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 14px;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 1;
+    .brand img {
+      height: 42px;
+      width: auto;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
+    .brand span {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    .hero {
       text-align: center;
       max-width: 900px;
-      padding: 0 32px;
+      margin: 0 auto;
     }
 
     .hero h1 {
-      font-size: 52px;
-      font-weight: 800;
-      margin-bottom: 18px;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #d1d5db;
+      font-size: 1.2rem;
+      color: #cbd5e1;
     }
 
     section {
-      max-width: 1200px;
-      margin: 100px auto;
-      padding: 0 32px;
+      padding: 90px 10%;
     }
 
-    h2 {
-      font-size: 34px;
-      margin-bottom: 28px;
-      font-weight: 700;
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
     }
 
-    h3 {
-      font-size: 20px;
-      margin: 18px 0 10px;
-      font-weight: 600;
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #9ca3af;
+    .section-title p {
+      color: #6b7280;
+      max-width: 640px;
+      margin: 0 auto;
     }
 
-    .grid {
+    /* Products */
+    .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
     }
 
-    .card img {
-      width: 100%;
-      border-radius: 12px;
+    .product {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      background: #fff;
+      transition: transform 0.3s ease;
     }
 
-    .split {
+    .product:hover {
+      transform: translateY(-6px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 25px;
+    }
+
+    .product-content h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .product-content p {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    /* Founder */
+    .founder {
+      background-color: #f8fafc;
+    }
+
+    .founder-container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.2fr;
       gap: 60px;
       align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .split img {
+    .founder-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .founder-images img {
       width: 100%;
       border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+    }
+
+    .founder-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .founder-text p {
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .founder-highlight {
+      font-weight: 600;
+      color: #0f172a;
     }
 
     footer {
-      padding: 60px 32px;
+      background: #020617;
+      color: #94a3b8;
       text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: #9ca3af;
+      padding: 40px 10%;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 900px) {
-      .split {
+      .founder-container {
         grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 40px;
+        font-size: 2.3rem;
       }
     }
   </style>
@@ -159,174 +186,116 @@
 
 <body>
 
-<!-- NAV -->
-<nav class="navbar">
-  <div class="nav-logo">Rejuve Trade Center</div>
-  <div class="nav-links">
-    <a href="#founder">Founder</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#logistics">Logistics</a>
-    <a href="#philosophy">Philosophy</a>
-    <a href="#contact">Contact</a>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="AI Surgeon Logo">
+      <span>AI Surgeon</span>
+    </div>
   </div>
-</nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
-    <h1>Rejuve Trade Center</h1>
+  <div class="hero">
+    <h1>Intelligent Medical & Aesthetic Technology</h1>
     <p>
-      Medical Aesthetic Device International Trading<br>
-      FDA Compliance · Global Sourcing · Long-Term Partnerships
+      Advancing precision healthcare through ethical innovation,
+      engineering discipline, and long-term clinical vision.
     </p>
   </div>
 </header>
 
-<!-- FOUNDER -->
-<section id="founder">
-  <h2>Founder & Management</h2>
-  <div class="split">
-    <img src="founder.jpg" alt="Founder">
-    <p>
-      <strong>Lee Beina</strong><br><br>
-      Bachelor of Economics, University of California, Berkeley.<br><br>
-      Early professional experience includes a finance-related internship at
-      Citibank, providing exposure to global banking operations, market analysis,
-      and financial reporting. This background established a strong foundation in
-      international markets and risk-aware commercial execution, later applied to
-      medical aesthetic device trading.
-    </p>
+<section>
+  <div class="section-title">
+    <h2>Our Products</h2>
+    <p>Clinically driven solutions designed for medical, aesthetic, and diagnostic excellence.</p>
+  </div>
+
+  <div class="products">
+    <div class="product">
+      <img src="images/diagnostic.jpg" alt="Diagnostic Systems">
+      <div class="product-content">
+        <h3>Diagnostic Imaging Systems</h3>
+        <p>Advanced diagnostic platforms designed to enhance accuracy and clinical confidence.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/respiratory.jpg" alt="Respiratory Devices">
+      <div class="product-content">
+        <h3>Respiratory Support Devices</h3>
+        <p>Reliable respiratory technologies supporting diverse clinical environments.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/laser.jpg" alt="Laser Systems">
+      <div class="product-content">
+        <h3>Medical Laser Systems</h3>
+        <p>Precision laser solutions for surgical and dermatological applications.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/thermage.jpg" alt="Radiofrequency Device">
+      <div class="product-content">
+        <h3>Radiofrequency Skin Tightening Platform</h3>
+        <p>Non-invasive RF technology designed to improve skin firmness and contour.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/microneedling.jpg" alt="Microneedling Device">
+      <div class="product-content">
+        <h3>Microneedling Treatment System</h3>
+        <p>Precision microneedling technology supporting collagen induction and rejuvenation.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/dental.jpg" alt="Dental Equipment">
+      <div class="product-content">
+        <h3>Digital Dental Treatment Equipment</h3>
+        <p>Intelligent dental devices engineered for modern clinical workflows.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Rejuve Trade Center</h2>
-  <p>
-    Rejuve Trade Center is a United States–based international trading company
-    specializing in the import and distribution of professional medical aesthetic
-    devices. We support aesthetic clinics, distributors, and medical beauty
-    institutions through compliant sourcing, transparent supply chains, and
-    reliable trade execution.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <h2>Product Portfolio</h2>
-
-  <div class="grid">
-
-    <!-- 1 -->
-    <div class="card">
-      <img src="thermage.jpg" alt="Radiofrequency Skin Tightening Systems">
-      <h3>Radiofrequency Skin Tightening Systems</h3>
-      <p>
-        Advanced monopolar radiofrequency systems designed for non-invasive skin
-        tightening and contouring. These devices deliver controlled thermal energy
-        to deeper dermal layers, stimulating collagen remodeling and improving skin
-        firmness.
-      </p>
-    </div>
-
-    <!-- 2 -->
-    <div class="card">
-      <img src="microneedling.jpg" alt="Microneedling Devices">
-      <h3>Microneedling & Regenerative Devices</h3>
-      <p>
-        Microneedling systems and PRP-related devices commonly used for skin
-        rejuvenation, anti-aging treatments, and tissue repair in professional
-        aesthetic clinics.
-      </p>
-    </div>
-
-    <!-- 3 -->
-    <div class="card">
-      <img src="dental.jpg" alt="Dental Aesthetic Equipment">
-      <h3>Dental & Oral Aesthetic Equipment</h3>
-      <p>
-        Dental aesthetic devices including teeth whitening systems and oral cosmetic
-        equipment, serving a specialized segment of the medical aesthetics market.
-      </p>
-    </div>
-
-    <!-- 4 -->
-    <div class="card">
-      <img src="diagnostic.jpg" alt="Aesthetic Diagnostic Systems">
-      <h3>Aesthetic Diagnostic & Skin Analysis Systems</h3>
-      <p>
-        Skin analysis and diagnostic systems designed for aesthetic and dermatology
-        applications, supporting facial assessment, treatment planning, and
-        personalized aesthetic solutions.
-      </p>
-    </div>
-
-    <!-- 5 -->
-    <div class="card">
-      <img src="respiratory.jpg" alt="Post Treatment Recovery Devices">
-      <h3>Post-Treatment Care & Recovery Devices</h3>
-      <p>
-        Supportive devices used for post-treatment care and recovery following
-        non-invasive and minimally invasive aesthetic procedures, including oxygen
-        therapy and comfort-support equipment.
-      </p>
-    </div>
-
-    <!-- 6 -->
-    <div class="card">
-      <img src="laser.jpg" alt="Laser Aesthetic Platforms">
-      <h3>Laser & Energy-Based Aesthetic Platforms</h3>
-      <p>
-        Laser, IPL, and energy-based aesthetic platforms used for hair removal,
-        pigmentation treatment, skin rejuvenation, and vascular applications in
-        professional medical beauty environments.
-      </p>
-    </div>
-
+<section class="founder">
+  <div class="section-title">
+    <h2>Founder & Vision</h2>
+    <p>Leadership grounded in responsibility, clarity, and medical integrity.</p>
   </div>
-</section>
 
-<!-- LOGISTICS -->
-<section id="logistics">
-  <h2>Global Logistics & Trade Operations</h2>
-  <div class="split">
-    <img src="logistics.jpg" alt="Global Logistics">
-    <p>
-      Rejuve Trade Center maintains strong international logistics and trade
-      coordination capabilities, managing cross-border sourcing, shipping, and
-      documentation processes. Our operations emphasize efficiency, compliance,
-      and long-term cooperation with global manufacturing partners.
-    </p>
+  <div class="founder-container">
+    <div class="founder-images">
+      <img src="images/founder-portrait.jpg" alt="Founder Portrait">
+      <img src="images/founder-portrait-2.jpg" alt="Founder at Work">
+    </div>
+
+    <div class="founder-text">
+      <h3>Founder & Chief Executive Officer</h3>
+
+      <p>
+        The founder of <span class="founder-highlight">AI Surgeon</span> established the company
+        with a long-term vision focused on responsible medical and aesthetic technology innovation.
+      </p>
+
+      <p>
+        Emphasizing <span class="founder-highlight">engineering discipline</span>,
+        regulatory awareness, and sustainable development,
+        AI Surgeon avoids short-term trends in favor of durable clinical value.
+      </p>
+
+      <p>
+        Under this leadership, the company continues to deliver intelligent platforms
+        that support physicians and clinics with trust, precision, and consistency.
+      </p>
+    </div>
   </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section id="philosophy">
-  <h2>Our Philosophy</h2>
-  <p>
-    We prioritize safety, regulatory compliance, and long-term value creation.
-    Market demand increasingly favors minimally invasive, non-invasive, and
-    clinically effective aesthetic technologies. Our sourcing strategy aligns with
-    these trends while maintaining strict FDA compliance.
-  </p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Rejuve Trade Center Inc.<br>
-    500 North Akard Street, Suite 2500<br>
-    Dallas, TX 75201<br>
-    United States<br><br>
-    Email: mialee5201314@gmail.com<br>
-    Phone: +1 (254) 214-9136
-  </p>
 </section>
 
 <footer>
-  © 2026 Rejuve Trade Center. All rights reserved.
+  © 2026 AI Surgeon. All rights reserved.
 </footer>
 
 </body>
