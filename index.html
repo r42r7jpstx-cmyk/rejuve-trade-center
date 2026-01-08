@@ -169,32 +169,26 @@ nav a:hover::after{width:100%}
   margin-bottom:8px;
 }
 
-/* COLLABORATIONS (OPTIMIZED) */
-.collab-grid{
+/* COLLABORATIONS (VERTICAL) */
+.collaboration-item{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:42px;
-  margin-top:70px;
+  grid-template-columns:320px 1fr;
+  gap:60px;
+  align-items:flex-start;
+  margin-top:100px;
 }
-.collab-item{
-  background:var(--light);
-  border-radius:26px;
-  padding:50px 36px;
-  text-align:center;
+.collaboration-item img{
+  width:100%;
+  max-width:320px;
 }
-.collab-item img{
-  height:120px;
-  width:auto;
-  margin-bottom:28px;
-}
-.collab-item h4{
-  font-size:18px;
+.collaboration-item h4{
+  font-size:22px;
   color:var(--primary);
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
-.collab-item p{
-  font-size:15px;
-  color:#555;
+.collaboration-item p{
+  font-size:16px;
+  color:#444;
 }
 
 /* FOOTER */
@@ -242,18 +236,10 @@ footer{
   h1{font-size:38px}
   h2{font-size:28px}
   .container{padding:80px 16px}
-  .block{grid-template-columns:1fr}
-  .products{grid-template-columns:1fr}
-  nav ul{gap:22px;flex-wrap:wrap}
-  .hero video{display:none}
-  .hero{
-    background:
-      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
-      url('hero.jpg') center/cover no-repeat;
+  .block,
+  .collaboration-item{
+    grid-template-columns:1fr;
   }
-  footer{padding:80px 16px}
-  .footer-card{padding:22px}
-  .footer-map iframe{height:180px}
 }
 </style>
 </head>
@@ -263,8 +249,8 @@ footer{
 <nav>
 <ul>
 <li><a href="#hero">Home</a></li>
-<li><a href="#collaborations">Collaborations</a></li>
 <li><a href="#founder">Founder</a></li>
+<li><a href="#collaborations">Collaborations</a></li>
 <li><a href="#products">Products</a></li>
 <li><a href="#clinical">Clinical</a></li>
 <li><a href="#compliance">Compliance</a></li>
@@ -274,7 +260,7 @@ footer{
 
 <!-- HERO -->
 <section id="hero" class="hero">
-<video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<video autoplay muted loop playsinline preload="auto">
   <source src="hero-video.mp4" type="video/mp4">
 </video>
 <div class="hero-inner">
@@ -306,61 +292,10 @@ and medical groups operating in regulated environments.
 </div>
 </section>
 
-<!-- COLLABORATIONS -->
-<section id="collaborations" class="container">
-<div class="text-column">
-<h3>Selected Clinical Collaborations</h3>
-<h2>International Professional Engagements</h2>
-<p>
-Rejuve Trade Center has engaged in clinical and professional collaboration with
-internationally recognized medical institutions, reflecting shared standards in
-clinical practice, medical aesthetics, and long-term professional exchange.
-</p>
-</div>
-
-<div class="collab-grid">
-  <div class="collab-item">
-    <img src="logo-clinic-1.png" alt="ID Plastic Surgery Hospital">
-    <h4>ID Plastic Surgery Hospital</h4>
-    <p>
-      One of Asia’s most recognized plastic surgery hospitals, known for
-      large-scale clinical operations, multidisciplinary teams, and structured
-      aesthetic medical practice in South Korea.
-    </p>
-  </div>
-
-  <div class="collab-item">
-    <img src="logo-clinic-2.png" alt="Obagi Skin Health Institute">
-    <h4>Obagi Skin Health Institute</h4>
-    <p>
-      Founded by Dr. Zein Obagi, the institute represents a globally influential
-      authority in skin health, dermatological science, and evidence-based
-      aesthetic treatment philosophy.
-    </p>
-  </div>
-
-  <div class="collab-item">
-    <img src="logo-clinic-3.png" alt="The Private Clinic">
-    <h4>The Private Clinic</h4>
-    <p>
-      A leading private medical and aesthetic clinic group in the United Kingdom,
-      operating within regulated clinical frameworks and emphasizing professional,
-      patient-centered care.
-    </p>
-  </div>
-</div>
-</section>
-
-<!-- 下面 Founder / Products / Clinical / Compliance / Logistics / Footer 完全不变 -->
-<!-- （为节省视觉，这里不重复，但你覆盖时它们都会在） -->
-
-</body>
-</html>
-
-<!-- FOUNDER -->
+<!-- FOUNDER（两段，原样保留） -->
 <section id="founder" class="container">
 <div class="block">
-<img src="images/founder-portrait.jpg" alt="Founder Portrait">
+<img src="images/founder-portrait.jpg">
 <div class="text-column">
 <h3>Founder</h3>
 <h2>Professional Foundation & Early Career</h2>
@@ -371,8 +306,7 @@ structured decision-making, and institutional communication.
 </p>
 <p>
 Early professional exposure at Citibank provided insight into global financial
-operations, compliance-oriented workflows, and disciplined execution
-environments.
+operations, compliance-oriented workflows, and disciplined execution environments.
 </p>
 </div>
 </div>
@@ -390,9 +324,66 @@ This experience shaped Rejuve’s emphasis on risk control, long-term planning,
 and cross-border operational sustainability across regulated industries.
 </p>
 </div>
-<img src="images/founder-portrait-2.jpg" alt="Founder Experience">
+<img src="images/founder-portrait-2.jpg">
 </div>
 </section>
+
+<!-- COLLABORATIONS（现在在 Founder 后） -->
+<section id="collaborations" class="container">
+<div class="text-column">
+<h3>Selected Clinical Collaborations</h3>
+<h2>International Professional Engagements</h2>
+<p>
+Rejuve Trade Center engages in long-term clinical and professional exchange with
+international medical institutions. These collaborations emphasize shared clinical
+standards, structured medical practice, and sustainable professional cooperation.
+</p>
+</div>
+
+<div class="collaboration-item">
+  <img src="logo-clinic-1.png" alt="ID Plastic Surgery Hospital">
+  <div>
+    <h4>ID Plastic Surgery Hospital · South Korea</h4>
+    <p>
+      ID Plastic Surgery Hospital is one of Asia’s most recognized large-scale plastic
+      surgery hospitals, known for its multidisciplinary clinical teams, structured
+      surgical workflows, and high-volume institutional medical operations. The
+      collaboration focuses on clinical exchange, procedural understanding, and
+      institutional-level medical aesthetics practice.
+    </p>
+  </div>
+</div>
+
+<div class="collaboration-item">
+  <img src="logo-clinic-2.png" alt="Obagi Skin Health Institute">
+  <div>
+    <h4>Obagi Skin Health Institute · United States</h4>
+    <p>
+      Founded by Dr. Zein Obagi, the Obagi Skin Health Institute represents a globally
+      influential authority in dermatological science and skin health. Engagements
+      with the institute emphasize evidence-based skin treatment philosophy,
+      dermatological education, and long-term professional dialogue within regulated
+      medical frameworks.
+    </p>
+  </div>
+</div>
+
+<div class="collaboration-item">
+  <img src="logo-clinic-3.png" alt="The Private Clinic">
+  <div>
+    <h4>The Private Clinic · United Kingdom</h4>
+    <p>
+      The Private Clinic is a leading private medical and aesthetic clinic group in
+      the United Kingdom, operating under regulated clinical standards. Professional
+      interaction focuses on private healthcare delivery models, patient-centered
+      clinical management, and compliant aesthetic medical practice in the UK market.
+    </p>
+  </div>
+</div>
+</section>
+
+</body>
+</html>
 
 <!-- PRODUCTS -->
 <section id="products" class="container">
@@ -505,4 +496,5 @@ operational reliability across North America, Asia, and select global markets.
 
 </body>
 </html>
+
 
