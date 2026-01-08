@@ -1,331 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rejuve Trade Center | Medical & Aesthetic Equipment Import</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Medical Aesthetics Group</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --max-width:1280px;
+  --primary:#0a2540;
+  --gray:#555;
+  --light:#f4f6f9;
+}
+
+*{box-sizing:border-box}
+
 body{
-  font-family:'Inter',sans-serif;
-  color:#1f2937;
-  background:#fff;
-  line-height:1.6
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+  color:#111;
+  line-height:1.6;
 }
 
-/* NAV */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px 8%;
-  background:rgba(0,0,0,.7);
-  backdrop-filter:blur(12px)
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-.brand img{height:64px}
-.brand-text{color:#fff}
-.brand-text strong{
-  font-size:1.45rem;
-  font-weight:800;
-}
-.brand-text span{
-  font-size:.72rem;
-  color:#d1d5db;
-  text-transform:uppercase;
-}
-
-/* NAV BUTTONS */
-.nav-links{
-  display:flex;
-  gap:14px;
-}
-.nav-links a{
-  padding:8px 18px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.25);
-  color:#fff;
-  text-decoration:none;
-  font-size:.9rem;
-  transition:all .25s ease;
-  background:rgba(255,255,255,.05);
-}
-.nav-links a:hover{
-  background:rgba(255,255,255,.18);
-  border-color:rgba(255,255,255,.45);
-}
-.nav-links a.active{
-  background:#ffffff;
-  color:#000;
-  border-color:#fff;
-}
-
-/* HERO */
-.hero{
-  min-height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-    url('hero.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  padding:0 8%
-}
-.hero-content{
-  max-width:760px;
-  color:#fff
-}
-.hero h1{
-  font-size:3.4rem;
-  font-weight:800;
-  margin-bottom:18px
-}
-.hero p{
-  font-size:1.2rem;
-  color:#e5e7eb
-}
-
-/* SECTION */
-section{padding:90px 8%}
-.section-title{text-align:center;margin-bottom:50px}
-.section-title h2{font-size:2.2rem}
-.section-title p{color:#6b7280;margin-top:8px}
-
-/* COMPANY */
-.about{
-  max-width:880px;
-  margin:0 auto;
-  text-align:center;
-  font-size:.98rem;
-  color:#4b5563;
-}
-.about p{margin-bottom:14px}
-
-/* FOUNDER */
-.founder{background:#f8fafc}
-.founder-wrap{
-  max-width:1100px;
+/* ===== GLOBAL ===== */
+.container{
+  max-width:var(--max-width);
   margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:70px;
-}
-.founder-wrap img{
-  width:100%;
-  border-radius:18px
-}
-.founder-sub{
-  width:260px;
-  margin-top:26px
-}
-.founder-text p{
-  margin-bottom:14px;
-  color:#374151
+  padding:80px 20px;
 }
 
-/* PRODUCTS */
+h2{
+  font-size:32px;
+  color:var(--primary);
+  margin-bottom:20px;
+}
+
+p{color:var(--gray);font-size:16px}
+
+/* ===== BRAND ===== */
+.brand{
+  text-align:center;
+  padding:110px 20px 60px;
+}
+
+.brand img{
+  max-width:300px;
+  margin-bottom:22px;
+}
+
+.brand h1{
+  font-size:46px;
+  letter-spacing:1px;
+  color:var(--primary);
+  margin:0;
+}
+
+/* ===== NAV ===== */
+nav{
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+
+nav ul{
+  max-width:var(--max-width);
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:38px;
+  padding:18px 20px;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:#111;
+  font-weight:500;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:url('hero.jpg') center/cover no-repeat;
+  height:70vh;
+  min-height:420px;
+  display:flex;
+  align-items:center;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+  position:relative;
+  max-width:var(--max-width);
+  margin:auto;
+  padding:0 20px;
+  color:#fff;
+}
+
+.hero h2{
+  font-size:40px;
+  margin-bottom:14px;
+  color:#fff;
+}
+
+.hero p{
+  max-width:520px;
+  color:#eee;
+}
+
+/* ===== FOUNDER ===== */
+.founder{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.founder img{
+  width:100%;
+  border-radius:14px;
+}
+
+@media(max-width:900px){
+  .founder{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== PRODUCTS ===== */
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
+
 .product{
-  display:flex;
-  flex-direction:column;
+  background:var(--light);
   border-radius:16px;
   overflow:hidden;
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
-  background:#fff;
 }
+
 .product img{
   width:100%;
-  height:220px;
+  height:200px;
   object-fit:cover;
 }
-.product-content{
-  padding:24px;
-  flex:1;
-}
-.product-content h3{margin-bottom:8px}
-.product-content p{
-  font-size:.95rem;
-  color:#6b7280
+
+.product h3{
+  padding:18px;
+  font-size:17px;
+  color:var(--primary);
 }
 
-/* COMPLIANCE */
-.compliance{
-  background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-    url('compliance.jpg') center/cover no-repeat;
-  color:#fff
-}
-
-/* LOGISTICS */
-.logistics{
-  background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-    url('logistics.jpg') center/cover no-repeat;
-  color:#fff
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
-  background:#020617;
-  color:#9ca3af;
+  background:#0a2540;
+  color:#fff;
   text-align:center;
-  padding:50px 8%;
-  font-size:.9rem
-}
-
-/* RESPONSIVE NAV */
-@media(max-width:900px){
-  nav{padding:18px 5%}
-  .brand img{height:48px}
-  .brand-text strong{font-size:1.2rem}
-  .nav-links{
-    gap:8px;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-  }
-  .nav-links a{
-    padding:6px 14px;
-    font-size:.85rem;
-  }
-  .hero h1{font-size:2.4rem}
-  .founder-wrap{grid-template-columns:1fr}
+  padding:40px 20px;
+  margin-top:80px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="brand">
-    <img src="images/logo.png">
-    <div class="brand-text">
-      <strong>Rejuve Trade Center</strong>
-      <span>Medical & Aesthetic Equipment Import</span>
-    </div>
-  </div>
+<!-- BRAND -->
+<section class="brand">
+  <img src="images/logo.png" alt="Company Logo">
+  <h1>Medical Aesthetics Group</h1>
+</section>
 
-  <div class="nav-links">
-    <a href="#company">Company</a>
-    <a href="#founder">Founder</a>
-    <a href="#products">Products</a>
-    <a href="#compliance">Compliance</a>
-  </div>
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="#hero">Vision</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#compliance">Compliance</a></li>
+    <li><a href="#logistics">Logistics</a></li>
+  </ul>
 </nav>
 
-<div class="hero">
+<!-- HERO -->
+<section id="hero" class="hero">
   <div class="hero-content">
-    <h1>Rejuve Trade Center</h1>
+    <h2>Advancing Medical Aesthetics</h2>
     <p>
-      A U.S.-based medical and aesthetic equipment import and distribution center
-      connecting compliant global manufacturers with professional buyers.
-    </p>
-  </div>
-</div>
-
-<section id="company">
-  <div class="section-title">
-    <h2>Company Overview</h2>
-  </div>
-  <div class="about">
-    <p>
-      Rejuve Trade Center is a Dallas-based import and distribution company
-      specializing in medical and aesthetic equipment for the U.S. market.
-    </p>
-    <p>
-      The company focuses on identifying high-demand product categories,
-      evaluating regulatory awareness, and building long-term partnerships
-      with manufacturers and professional buyers.
-    </p>
-    <p>
-      By emphasizing responsible sourcing and market alignment,
-      Rejuve Trade Center serves clinics, distributors,
-      and professional institutions across the United States.
+      We focus on professional aesthetic technologies that deliver
+      safe, effective, and clinically trusted results worldwide.
     </p>
   </div>
 </section>
 
-<section id="founder" class="founder">
-  <div class="section-title">
-    <h2>Founder</h2>
+<!-- FOUNDER -->
+<section id="founder" class="container founder">
+  <div>
+    <img src="images/founder-portrait.jpg" alt="Founder">
+    <img src="images/founder-portrait-2.jpg" alt="Founder" style="margin-top:20px;">
   </div>
-  <div class="founder-wrap">
-    <img src="images/founder-portrait.jpg">
-    <div class="founder-text">
-      <h3>Lee · Beina</h3>
-      <p>
-        Lee earned a Bachelor’s degree in Economics from the University of California, Berkeley,
-        where a strong foundation in economic analysis, market dynamics,
-        and international trade principles was established.
-      </p>
-      <p>
-        Following graduation, Lee completed an internship at Citibank,
-        gaining hands-on exposure to financial operations,
-        market analysis, and cross-border business processes.
-      </p>
-      <p>
-        These experiences contributed to a long-term focus
-        on international commerce and medical equipment trade.
-      </p>
-      <img class="founder-sub" src="images/founder-portrait-2.jpg">
-    </div>
+  <div>
+    <h2>Founder & Vision</h2>
+    <p>
+      The founder brings deep experience in global medical aesthetics,
+      clinic operations, and international market development. The
+      company was built with a long-term vision focused on compliance,
+      quality, and sustainable global growth.
+    </p>
   </div>
 </section>
 
-<section id="products">
-  <div class="section-title">
-    <h2>Product Portfolio</h2>
-    <p>Key product categories selected for clinical relevance and market demand.</p>
-  </div>
+<!-- ABOUT -->
+<section id="about" class="container">
+  <h2>Company Introduction</h2>
+  <p>
+    We are a medical aesthetics group delivering professional devices
+    and solutions across skin rejuvenation, body contouring, laser
+    aesthetics, dental applications, and post-treatment care.
+  </p>
+</section>
 
+<!-- PRODUCTS -->
+<section id="products" class="container">
+  <h2>Our Products</h2>
   <div class="products">
-    <div class="product"><img src="diagnostic.jpg"><div class="product-content"><h3>Diagnostic & Monitoring Devices</h3><p>Blood pressure monitors, glucose meters, ECG systems, and pulse oximeters.</p></div></div>
-    <div class="product"><img src="respiratory.jpg"><div class="product-content"><h3>Respiratory & Life Support Equipment</h3><p>Ventilators, oxygen concentrators, and portable oxygen solutions.</p></div></div>
-    <div class="product"><img src="laser.jpg"><div class="product-content"><h3>Laser Aesthetic Systems</h3><p>Laser devices for hair removal, pigmentation treatment, and skin rejuvenation.</p></div></div>
-    <div class="product"><img src="thermage.jpg"><div class="product-content"><h3>RF Skin Tightening Devices</h3><p>Radiofrequency systems for non-invasive skin tightening and contouring.</p></div></div>
-    <div class="product"><img src="microneedling.jpg"><div class="product-content"><h3>Microneedling & PRP Equipment</h3><p>Microneedling systems and PRP-related devices used for collagen stimulation.</p></div></div>
-    <div class="product"><img src="dental.jpg"><div class="product-content"><h3>Dental & Oral Aesthetic Equipment</h3><p>Teeth whitening devices and digital oral aesthetic equipment.</p></div></div>
+    <div class="product"><img src="thermage.jpg"><h3>Radiofrequency Skin Tightening</h3></div>
+    <div class="product"><img src="microneedling.jpg"><h3>Microneedling Systems</h3></div>
+    <div class="product"><img src="laser.jpg"><h3>Laser Aesthetic Devices</h3></div>
+    <div class="product"><img src="body-contouring.jpg"><h3>Body Contouring Systems</h3></div>
+    <div class="product"><img src="skin-rejuvenation.jpg"><h3>Skin Rejuvenation Devices</h3></div>
+    <div class="product"><img src="dental.jpg"><h3>Dental Aesthetic Equipment</h3></div>
   </div>
 </section>
 
-<section id="compliance" class="compliance">
-  <div class="section-title">
-    <h2>Compliance & Regulatory Awareness</h2>
-    <p>
-      Products are selected with FDA regulatory awareness
-      and U.S. market requirements in mind.
-    </p>
-  </div>
+<!-- COMPLIANCE -->
+<section id="compliance" class="container">
+  <h2>Compliance</h2>
+  <p>
+    All products comply with FDA, CE, and international medical
+    regulatory standards to ensure safety and reliability.
+  </p>
 </section>
 
-<section class="logistics">
-  <div class="section-title">
-    <h2>Global Logistics & Operations</h2>
-    <p>
-      Based in Dallas, Rejuve Trade Center coordinates international sourcing,
-      quality review, and U.S. distribution with logistics partners.
-    </p>
-  </div>
+<!-- LOGISTICS -->
+<section id="logistics" class="container">
+  <h2>Global Logistics</h2>
+  <p>
+    We support global distribution through trusted logistics partners
+    and coordinated international supply chains.
+  </p>
 </section>
 
 <footer>
-Rejuve Trade Center – 回春贸易中心<br>
-1910 Pacific Ave, Suite 2000, Dallas, TX 75201, USA<br>
-Email: mialee5201314@gmail.com · Phone: +1 254-214-9136<br>
-© 2026 Rejuve Trade Center. All rights reserved.
+  © 2026 Medical Aesthetics Group. All rights reserved.
 </footer>
 
 </body>
