@@ -50,7 +50,7 @@ p{
   margin-bottom:18px;
 }
 
-/* ===== NAV (Sticky) ===== */
+/* ===== NAV ===== */
 nav{
   position:sticky;
   top:0;
@@ -90,7 +90,7 @@ nav a::after{
 
 nav a:hover::after{width:100%}
 
-/* ===== HERO (背景图恢复) ===== */
+/* ===== HERO ===== */
 .hero{
   min-height:90vh;
   display:flex;
@@ -112,7 +112,37 @@ nav a:hover::after{width:100%}
   color:#eaeaea;
 }
 
-/* ===== FOUNDER (交叉排版) ===== */
+/* ===== EXPERIENCE ===== */
+.experience{
+  background:#fafbfc;
+}
+
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:46px;
+  margin-top:60px;
+}
+
+.experience-item{
+  padding:36px;
+  background:#fff;
+  border-radius:22px;
+  border:1px solid #eee;
+}
+
+.experience-item h3{
+  font-size:17px;
+  color:var(--primary);
+  margin-bottom:12px;
+}
+
+.experience-item p{
+  font-size:14.8px;
+  margin-bottom:0;
+}
+
+/* ===== FOUNDER ===== */
 .founder-block{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -237,6 +267,7 @@ footer p{
 <nav>
   <ul>
     <li><a href="#hero">Home</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#founder">Founder</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#compliance">Compliance</a></li>
@@ -254,6 +285,55 @@ footer p{
       supporting clinics and medical institutions with compliant, reliable, and
       execution-driven solutions across international markets.
     </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="container experience">
+  <h2>Advanced Aesthetic Experience</h2>
+  <p>
+    At Rejuve, aesthetic solutions are designed around clinical restraint,
+    procedural comfort, and long-term consistency. Every system is developed
+    to support controlled treatment delivery, respect biological boundaries,
+    and integrate seamlessly into professional medical environments.
+  </p>
+
+  <div class="experience-grid">
+    <div class="experience-item">
+      <h3>Personalized Treatment Design</h3>
+      <p>
+        Treatment protocols are structured around individual anatomical
+        considerations, emphasizing natural balance and conservative aesthetic
+        outcomes rather than excessive intervention.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Precision-Controlled Procedures</h3>
+      <p>
+        Devices are engineered to deliver stable and predictable performance,
+        supporting physicians in maintaining procedural accuracy and patient
+        comfort throughout treatment sessions.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Minimally Invasive Experience</h3>
+      <p>
+        Systems are designed to minimize tissue disruption, reduce procedural
+        stress, and shorten recovery periods, allowing treatments to align with
+        modern clinical and lifestyle demands.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Post-Treatment Care & Longevity</h3>
+      <p>
+        Structured post-treatment support focuses on recovery quality, skin
+        resilience, and long-term aesthetic maintenance without compromising
+        medical safety.
+      </p>
+    </div>
   </div>
 </section>
 
