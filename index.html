@@ -76,17 +76,37 @@ nav a{
   font-size:14.5px;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO VIDEO ===== */
 .hero{
+  position:relative;
   min-height:92vh;
+  overflow:hidden;
   display:flex;
   align-items:center;
-  background:
-    linear-gradient(rgba(10,37,64,.55), rgba(10,37,64,.55)),
-    url('hero.jpg') center/cover no-repeat;
+}
+
+.hero video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:translate(-50%,-50%);
+  z-index:1;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(10,37,64,.55);
+  z-index:2;
 }
 
 .hero-inner{
+  position:relative;
+  z-index:3;
   max-width:var(--max-width);
   margin:auto;
   padding:0 20px;
@@ -115,7 +135,6 @@ nav a{
 .founder-block.reverse{
   direction:rtl;
 }
-
 .founder-block.reverse > *{
   direction:ltr;
 }
@@ -218,27 +237,23 @@ footer p{
     gap:40px;
   }
 
-  .products{
-    grid-template-columns:1fr;
-  }
+  .products{grid-template-columns:1fr}
+  .image-section{grid-template-columns:1fr;gap:40px}
 
-  .image-section{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  footer{
-    padding:70px 20px;
-  }
-
+  footer{padding:70px 20px}
   .footer-inner{
     grid-template-columns:1fr;
     gap:40px;
     text-align:center;
   }
+  footer img{margin:auto}
 
-  footer img{
-    margin:auto;
+  /* 手机端不用视频，自动回退图片 */
+  .hero video{display:none}
+  .hero{
+    background:
+      linear-gradient(rgba(10,37,64,.55), rgba(10,37,64,.55)),
+      url('hero.jpg') center/cover no-repeat;
   }
 }
 </style>
@@ -259,11 +274,15 @@ footer p{
 
 <!-- HERO -->
 <section id="hero" class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+
   <div class="hero-inner">
     <h1>Rejuve Trade Center</h1>
     <p>
       A global medical aesthetics and trade-focused organization delivering
-      professional aesthetic technologies and compliant execution-driven
+      compliant, professional aesthetic technologies and execution-driven
       solutions for clinics and medical institutions worldwide.
     </p>
   </div>
@@ -273,35 +292,32 @@ footer p{
 <section id="founder" class="container">
 
   <div class="founder-block">
-    <img src="images/founder-portrait.jpg" alt="Founder Portrait">
+    <img src="images/founder-portrait.jpg">
     <div>
       <h2>Founder & Professional Background</h2>
       <p>
         The founder earned a Bachelor’s degree in Economics from the University
-        of California, Berkeley in 2004, establishing a strong foundation in
-        economic analysis, structured problem-solving, and professional
-        communication.
+        of California, Berkeley in 2004, establishing a foundation in structured
+        analysis and professional execution.
       </p>
       <p>
-        Following graduation, the founder completed an internship at Citibank,
-        gaining hands-on exposure to global financial operations, market
-        analysis, and institutional workflows.
+        Following graduation, professional experience at Citibank provided
+        exposure to global financial operations and institutional workflows.
       </p>
     </div>
   </div>
 
   <div class="founder-block reverse">
-    <img src="images/founder-portrait-2.jpg" alt="Founder Background">
+    <img src="images/founder-portrait-2.jpg">
     <div>
       <p>
-        In 2007, the founder returned to Shanghai and joined Shanghai Huayi
-        Group, focusing on project management, market-oriented operations,
-        cross-functional coordination, risk management, and quality assurance.
+        Subsequent engagement in large-scale group operations focused on
+        project coordination, market execution, risk control, and
+        cross-functional collaboration.
       </p>
       <p>
-        This blend of international education, financial discipline, and
-        execution experience laid the foundation for long-term engagement in
-        international medical trade and global operations.
+        This background supports Rejuve’s disciplined approach to international
+        medical trade and long-term operational stability.
       </p>
     </div>
   </div>
@@ -313,14 +329,14 @@ footer p{
   <h2>Our Products</h2>
   <div class="products">
 
-    <div class="product"><img src="thermage.jpg"><div class="info"><h3>Radiofrequency Skin Tightening</h3><p>Non-invasive systems improving skin elasticity and firmness.</p></div></div>
+    <div class="product"><img src="thermage.jpg"><div class="info"><h3>Radiofrequency Skin Tightening</h3><p>Non-invasive systems improving skin elasticity.</p></div></div>
     <div class="product"><img src="microneedling.jpg"><div class="info"><h3>Microneedling Systems</h3><p>Precision devices supporting collagen regeneration.</p></div></div>
     <div class="product"><img src="laser.jpg"><div class="info"><h3>Laser Aesthetic Devices</h3><p>Advanced platforms for pigmentation treatment.</p></div></div>
-    <div class="product"><img src="body-contouring.jpg"><div class="info"><h3>Body Contouring Systems</h3><p>Technologies targeting localized fat reduction.</p></div></div>
-    <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><h3>Skin Rejuvenation Devices</h3><p>Solutions improving tone, texture, and aging signs.</p></div></div>
-    <div class="product"><img src="dental.jpg"><div class="info"><h3>Dental Aesthetic Equipment</h3><p>Professional systems for cosmetic dental procedures.</p></div></div>
-    <div class="product"><img src="diagnostic.jpg"><div class="info"><h3>Post-Treatment Care Devices</h3><p>Supportive devices enhancing recovery processes.</p></div></div>
-    <div class="product"><img src="respiratory.jpg"><div class="info"><h3>Clinical Support Devices</h3><p>Auxiliary devices supporting clinical environments.</p></div></div>
+    <div class="product"><img src="body-contouring.jpg"><div class="info"><h3>Body Contouring Systems</h3><p>Non-surgical fat reduction technologies.</p></div></div>
+    <div class="product"><img src="skin-rejuvenation.jpg"><div class="info"><h3>Skin Rejuvenation Devices</h3><p>Solutions improving tone and texture.</p></div></div>
+    <div class="product"><img src="dental.jpg"><div class="info"><h3>Dental Aesthetic Equipment</h3><p>Professional cosmetic dental systems.</p></div></div>
+    <div class="product"><img src="diagnostic.jpg"><div class="info"><h3>Post-Treatment Care Devices</h3><p>Supportive recovery equipment.</p></div></div>
+    <div class="product"><img src="respiratory.jpg"><div class="info"><h3>Clinical Support Devices</h3><p>Auxiliary clinical environment devices.</p></div></div>
 
   </div>
 </section>
@@ -331,9 +347,8 @@ footer p{
   <div>
     <h2>Compliance</h2>
     <p>
-      All products distributed by Rejuve Trade Center comply with FDA, CE,
-      and applicable international medical regulatory standards, ensuring
-      safety, reliability, and clinical integrity.
+      All products comply with FDA, CE, and applicable international
+      medical regulatory standards.
     </p>
   </div>
 </section>
@@ -343,9 +358,8 @@ footer p{
   <div>
     <h2>Global Logistics</h2>
     <p>
-      Through established logistics partners and coordinated supply chains,
-      we support efficient international distribution, localized delivery,
-      and comprehensive after-sales services worldwide.
+      Coordinated supply chains and logistics partners support efficient
+      international distribution and after-sales services.
     </p>
   </div>
   <img src="logistics.jpg">
@@ -355,7 +369,7 @@ footer p{
 <footer>
   <div class="footer-inner">
     <div>
-      <img src="images/logo.png" alt="Rejuve Logo">
+      <img src="images/logo.png">
       <p>
         1910 Pacific Ave, Suite 17100<br>
         Dallas, TX 75201, United States
