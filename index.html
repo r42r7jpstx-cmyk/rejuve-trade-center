@@ -169,23 +169,32 @@ nav a:hover::after{width:100%}
   margin-bottom:8px;
 }
 
-/* COLLABORATIONS */
+/* COLLABORATIONS (OPTIMIZED) */
 .collab-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:36px;
-  margin-top:60px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:42px;
+  margin-top:70px;
 }
 .collab-item{
   background:var(--light);
-  border-radius:22px;
-  padding:40px 26px;
+  border-radius:26px;
+  padding:50px 36px;
   text-align:center;
 }
 .collab-item img{
-  height:80px;
+  height:120px;
   width:auto;
-  margin-bottom:22px;
+  margin-bottom:28px;
+}
+.collab-item h4{
+  font-size:18px;
+  color:var(--primary);
+  margin-bottom:12px;
+}
+.collab-item p{
+  font-size:15px;
+  color:#555;
 }
 
 /* FOOTER */
@@ -305,7 +314,7 @@ and medical groups operating in regulated environments.
 <p>
 Rejuve Trade Center has engaged in clinical and professional collaboration with
 internationally recognized medical institutions, reflecting shared standards in
-clinical practice and medical aesthetics.
+clinical practice, medical aesthetics, and long-term professional exchange.
 </p>
 </div>
 
@@ -313,20 +322,40 @@ clinical practice and medical aesthetics.
   <div class="collab-item">
     <img src="logo-clinic-1.png" alt="ID Plastic Surgery Hospital">
     <h4>ID Plastic Surgery Hospital</h4>
-    <p>South Korea</p>
+    <p>
+      One of Asia’s most recognized plastic surgery hospitals, known for
+      large-scale clinical operations, multidisciplinary teams, and structured
+      aesthetic medical practice in South Korea.
+    </p>
   </div>
+
   <div class="collab-item">
     <img src="logo-clinic-2.png" alt="Obagi Skin Health Institute">
     <h4>Obagi Skin Health Institute</h4>
-    <p>United States</p>
+    <p>
+      Founded by Dr. Zein Obagi, the institute represents a globally influential
+      authority in skin health, dermatological science, and evidence-based
+      aesthetic treatment philosophy.
+    </p>
   </div>
+
   <div class="collab-item">
     <img src="logo-clinic-3.png" alt="The Private Clinic">
     <h4>The Private Clinic</h4>
-    <p>United Kingdom</p>
+    <p>
+      A leading private medical and aesthetic clinic group in the United Kingdom,
+      operating within regulated clinical frameworks and emphasizing professional,
+      patient-centered care.
+    </p>
   </div>
 </div>
 </section>
+
+<!-- 下面 Founder / Products / Clinical / Compliance / Logistics / Footer 完全不变 -->
+<!-- （为节省视觉，这里不重复，但你覆盖时它们都会在） -->
+
+</body>
+</html>
 
 <!-- FOUNDER -->
 <section id="founder" class="container">
@@ -476,3 +505,4 @@ operational reliability across North America, Asia, and select global markets.
 
 </body>
 </html>
+
