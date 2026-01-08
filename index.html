@@ -8,135 +8,125 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Inter', sans-serif;
-  color: #1f2937;
-  background: #fff;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Inter',sans-serif;
+  color:#1f2937;
+  background:#fff;
+  line-height:1.6;
 }
 
 /* NAV */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(10px);
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 8%;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(10px)
 }
-nav img {
-  height: 52px;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 32px;
-  font-size: 0.95rem;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:32px;
+  font-size:.95rem
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
+.hero{
+  min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
     url('hero.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  position:relative;
 }
-.hero-content {
-  max-width: 720px;
-  color: #fff;
+.hero-logo{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-60%);
+  opacity:.08;
 }
-.hero h1 {
-  font-size: 3.2rem;
-  margin-bottom: 20px;
+.hero-logo img{width:420px}
+.hero-content{
+  max-width:760px;
+  color:#fff;
+  position:relative;
+  z-index:2
 }
-.hero p {
-  font-size: 1.2rem;
-  color: #e5e7eb;
+.hero h1{
+  font-size:3.2rem;
+  margin-bottom:20px
+}
+.hero p{
+  font-size:1.2rem;
+  color:#e5e7eb
 }
 
 /* SECTION */
-section {
-  padding: 100px 8%;
-}
-.section-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.section-title h2 {
-  font-size: 2.3rem;
-}
-.section-title p {
-  color: #6b7280;
-  margin-top: 10px;
-}
+section{padding:100px 8%}
+.section-title{text-align:center;margin-bottom:60px}
+.section-title h2{font-size:2.3rem}
+.section-title p{color:#6b7280;margin-top:10px}
 
 /* PRODUCTS */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 40px;
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px
 }
-.product {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+.product{
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.08)
 }
-.product img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.product img{
+  width:100%;
+  height:200px;
+  object-fit:cover
 }
-.product div {
-  padding: 24px;
+.product div{padding:24px}
+
+/* LOGISTICS */
+.logistics{
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url('logistics.jpg') center/cover no-repeat;
+  color:#fff;
 }
 
 /* FOUNDER */
-.founder {
-  background: #f8fafc;
+.founder{background:#f8fafc}
+.founder-wrap{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:70px
 }
-.founder-wrap {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 70px;
-}
-.founder-wrap img {
-  width: 100%;
-  border-radius: 18px;
-}
-.founder-sub {
-  width: 260px;
-  margin-top: 30px;
-}
-
-/* COMPLIANCE */
-.compliance {
-  background:
-    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.7)),
-    url('compliance.jpg') center/cover no-repeat;
-  color: #fff;
-}
+.founder-wrap img{width:100%;border-radius:18px}
+.founder-sub{width:260px;margin-top:30px}
 
 /* FOOTER */
-footer {
-  background: #020617;
-  color: #9ca3af;
-  text-align: center;
-  padding: 50px 8%;
-  font-size: 0.9rem;
+footer{
+  background:#020617;
+  color:#9ca3af;
+  text-align:center;
+  padding:50px 8%;
+  font-size:.9rem
 }
 
 @media(max-width:900px){
-  .founder-wrap { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 2.4rem; }
+  .founder-wrap{grid-template-columns:1fr}
+  .hero h1{font-size:2.4rem}
+  .hero-logo img{width:260px}
 }
 </style>
 </head>
@@ -144,16 +134,18 @@ footer {
 <body>
 
 <nav>
-  <img src="images/logo.png">
+  <strong style="color:#fff">Rejuve Trade Center</strong>
   <div>
     <a href="#products">Products</a>
     <a href="#about">About</a>
-    <a href="#compliance">Compliance</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <div class="hero">
+  <div class="hero-logo">
+    <img src="images/logo.png">
+  </div>
   <div class="hero-content">
     <h1>Rejuve Trade Center</h1>
     <p>
@@ -164,56 +156,66 @@ footer {
 </div>
 
 <section id="products">
-  <div class="section-title">
-    <h2>Product Portfolio</h2>
-    <p>Medical & aesthetic equipment selected for U.S. market demand.</p>
-  </div>
+<div class="section-title">
+<h2>Product Portfolio</h2>
+<p>Medical & aesthetic equipment selected for compliance, reliability, and market demand.</p>
+</div>
 
-  <div class="products">
-    <div class="product"><img src="diagnostic.jpg"><div><h3>Diagnostic & Monitoring</h3></div></div>
-    <div class="product"><img src="respiratory.jpg"><div><h3>Respiratory & Life Support</h3></div></div>
-    <div class="product"><img src="laser.jpg"><div><h3>Laser Aesthetic Systems</h3></div></div>
-    <div class="product"><img src="thermage.jpg"><div><h3>RF Skin Tightening</h3></div></div>
-    <div class="product"><img src="microneedling.jpg"><div><h3>Microneedling & PRP</h3></div></div>
-    <div class="product"><img src="dental.jpg"><div><h3>Dental & Oral Aesthetics</h3></div></div>
-  </div>
+<div class="products">
+<div class="product"><img src="diagnostic.jpg"><div><h3>Diagnostic & Monitoring Devices</h3><p>Blood pressure monitors, glucose meters, ECG systems, and pulse oximeters for clinics and home care.</p></div></div>
+<div class="product"><img src="respiratory.jpg"><div><h3>Respiratory & Life Support</h3><p>Ventilators, oxygen concentrators, and portable oxygen solutions.</p></div></div>
+<div class="product"><img src="laser.jpg"><div><h3>Laser Aesthetic Systems</h3><p>Devices for hair removal, pigmentation treatment, and skin rejuvenation.</p></div></div>
+<div class="product"><img src="thermage.jpg"><div><h3>RF Skin Tightening</h3><p>Radiofrequency systems for non-invasive skin tightening and contouring.</p></div></div>
+<div class="product"><img src="microneedling.jpg"><div><h3>Microneedling & PRP</h3><p>Systems supporting collagen regeneration and skin repair.</p></div></div>
+<div class="product"><img src="dental.jpg"><div><h3>Dental & Oral Aesthetics</h3><p>Teeth whitening and digital oral cosmetic equipment.</p></div></div>
+</div>
+</section>
+
+<section class="logistics">
+<div class="section-title">
+<h2>Global Logistics & Operations</h2>
+<p>
+Based in Dallas, Rejuve Trade Center coordinates international sourcing,
+quality review, and U.S. distribution with logistics partners.
+</p>
+</div>
 </section>
 
 <section id="about" class="founder">
-  <div class="section-title">
-    <h2>Management & Operations</h2>
-    <p>Trade-driven leadership with compliance awareness.</p>
-  </div>
+<div class="section-title">
+<h2>Founder Background</h2>
+<p>Trade-driven leadership grounded in financial analysis and global perspective.</p>
+</div>
 
-  <div class="founder-wrap">
-    <img src="images/founder-portrait.jpg">
-    <div>
-      <h3>Lee · Beina</h3>
-      <p>
-        Rejuve Trade Center operates as a Dallas-based trade hub specializing
-        in compliant medical and aesthetic device sourcing.
-      </p>
-      <img class="founder-sub" src="images/founder-portrait-2.jpg">
-    </div>
-  </div>
-</section>
-
-<section id="compliance" class="compliance">
-  <div class="section-title">
-    <h2>Compliance & Market Focus</h2>
-    <p>
-      All imported products are selected with FDA awareness and U.S.
-      regulatory standards in mind, emphasizing non-invasive, efficient,
-      and portable solutions.
-    </p>
-  </div>
+<div class="founder-wrap">
+<img src="images/founder-portrait.jpg">
+<div>
+<h3>Lee · Beina</h3>
+<p>
+After earning a Bachelor’s degree in Economics from the University of California, Berkeley,
+Lee developed a strong foundation in economic analysis, international markets,
+and strategic decision-making.
+</p>
+<p>
+Following graduation, Lee completed an internship at Citibank, gaining
+hands-on exposure to financial operations, market analysis,
+and cross-border business processes.
+</p>
+<p>
+These early experiences shaped a long-term interest in international trade
+and laid the groundwork for sourcing and distributing medical
+and aesthetic equipment in the U.S. market.
+</p>
+<img class="founder-sub" src="images/founder-portrait-2.jpg">
+</div>
+</div>
 </section>
 
 <footer id="contact">
-  Rejuve Trade Center – 回春贸易中心<br>
-  1910 Pacific Ave, Suite 2000, Dallas, TX 75201, USA<br>
-  Email: mialee5201314@gmail.com · Phone: +1 254-214-9136<br><br>
-  © 2026 Rejuve Trade Center. All rights reserved.
+Rejuve Trade Center – 回春贸易中心<br>
+1910 Pacific Ave, Suite 2000, Dallas, TX 75201, USA<br>
+Email: mialee5201314@gmail.com · Phone: +1 254-214-9136<br><br>
+© 2026 Rejuve Trade Center. All rights reserved.
 </footer>
 
 </body>
