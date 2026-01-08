@@ -27,14 +27,13 @@ body{
 .container{
   max-width:var(--max-width);
   margin:auto;
-  padding:110px 20px;
+  padding:120px 20px;
 }
 
 h2{
   font-size:32px;
   color:var(--primary);
   margin-bottom:26px;
-  letter-spacing:.2px;
 }
 
 p{
@@ -43,33 +42,14 @@ p{
   margin-bottom:18px;
 }
 
-/* ===== BRAND（方案二 · 极限版） ===== */
+/* ===== BRAND (方案 A：只保留 Logo) ===== */
 .brand{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:36px;
-  padding:140px 20px 80px;
+  text-align:center;
+  padding:160px 20px 100px;
 }
 
 .brand img{
-  max-width:480px; /* Logo 彻底放大 */
-}
-
-.brand h1{
-  font-size:26px;           /* 公司名彻底弱化 */
-  font-weight:500;
-  letter-spacing:.4px;
-  color:#475569;
-  margin:0;
-  white-space:nowrap;
-}
-
-@media(max-width:900px){
-  .brand{
-    flex-direction:column;
-    gap:20px;
-  }
+  max-width:520px;
 }
 
 /* ===== NAV ===== */
@@ -133,7 +113,6 @@ nav a:hover::after{width:100%}
 .hero h2{
   font-size:44px;
   margin-bottom:20px;
-  color:#fff;
 }
 
 .hero p{
@@ -142,21 +121,29 @@ nav a:hover::after{width:100%}
   color:#eaeaea;
 }
 
-/* ===== FOUNDER ===== */
-.founder{
+/* ===== FOUNDER (交叉排版) ===== */
+.founder-block{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:64px;
-  align-items:flex-start;
+  gap:70px;
+  align-items:center;
+  margin-bottom:120px;
 }
 
-.founder img{
+.founder-block.reverse{
+  grid-template-columns:1fr 1fr;
+}
+
+.founder-block img{
   width:100%;
-  border-radius:18px;
+  border-radius:20px;
 }
 
 @media(max-width:900px){
-  .founder{grid-template-columns:1fr}
+  .founder-block,
+  .founder-block.reverse{
+    grid-template-columns:1fr;
+  }
 }
 
 /* ===== PRODUCTS ===== */
@@ -214,7 +201,7 @@ nav a:hover::after{width:100%}
 footer{
   background:#0a2540;
   color:#fff;
-  padding:70px 20px;
+  padding:80px 20px;
 }
 
 .footer-inner{
@@ -247,7 +234,6 @@ footer p{
 <!-- BRAND -->
 <section class="brand">
   <img src="images/logo.png" alt="Rejuve Trade Center Logo">
-  <h1>Rejuve Trade Center</h1>
 </section>
 
 <!-- NAV -->
@@ -274,45 +260,51 @@ footer p{
 </section>
 
 <!-- FOUNDER -->
-<section id="founder" class="container founder">
-  <div>
+<section id="founder" class="container">
+
+  <!-- Block 1 -->
+  <div class="founder-block">
     <img src="images/founder-portrait.jpg">
-    <img src="images/founder-portrait-2.jpg" style="margin-top:28px;">
+    <div>
+      <h2>Founder & Professional Background</h2>
+      <p>
+        The founder earned a Bachelor’s degree in Economics from the University
+        of California, Berkeley in 2004. During academic studies, a solid
+        foundation was established in economic theory, analytical thinking, and
+        structured problem-solving, supported by active participation in
+        academic and social initiatives.
+      </p>
+      <p>
+        Following graduation, the founder completed an internship at Citibank,
+        gaining first-hand exposure to global financial operations, market
+        analysis, financial reporting, and client-oriented services. This
+        experience provided practical insight into international banking
+        systems and institutional workflows.
+      </p>
+    </div>
   </div>
-  <div>
-    <h2>Founder & Professional Background</h2>
 
-    <p>
-      The founder earned a Bachelor’s degree in Economics from the University of
-      California, Berkeley in 2004. During academic studies, a solid foundation
-      was established in economic theory, analytical thinking, and structured
-      problem-solving, supported by active participation in academic and social
-      initiatives.
-    </p>
-
-    <p>
-      Following graduation, the founder completed an internship at Citibank,
-      gaining first-hand exposure to global financial operations, market
-      analysis, financial reporting, and client-oriented services. This
-      experience provided practical insight into international banking systems
-      and institutional workflows.
-    </p>
-
-    <p>
-      In 2007, the founder returned to Shanghai and joined Shanghai Huayi Group,
-      focusing on project management and market-oriented operations. Key
-      responsibilities included market research, client development, project
-      coordination, progress tracking, cross-functional communication, risk
-      management, documentation control, and quality assurance.
-    </p>
-
-    <p>
-      This combination of international education, financial industry exposure,
-      and hands-on project management experience laid a strong foundation for
-      long-term engagement in international trade, commercial operations, and
-      cross-border business development.
-    </p>
+  <!-- Block 2 -->
+  <div class="founder-block reverse">
+    <div>
+      <p>
+        In 2007, the founder returned to Shanghai and joined Shanghai Huayi
+        Group, focusing on project management and market-oriented operations.
+        Key responsibilities included market research, client development,
+        project coordination, progress tracking, cross-functional
+        communication, risk management, documentation control, and quality
+        assurance.
+      </p>
+      <p>
+        This combination of international education, financial industry
+        exposure, and hands-on project management experience laid a strong
+        foundation for long-term engagement in international trade, commercial
+        operations, and cross-border business development.
+      </p>
+    </div>
+    <img src="images/founder-portrait-2.jpg">
   </div>
+
 </section>
 
 <!-- PRODUCTS -->
