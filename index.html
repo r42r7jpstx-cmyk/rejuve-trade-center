@@ -25,31 +25,50 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:26px 8%;
+  padding:22px 8%;
   background:rgba(0,0,0,.7);
   backdrop-filter:blur(12px)
 }
 .brand{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:18px;
 }
-.brand img{height:72px}
+.brand img{height:64px}
 .brand-text{color:#fff}
 .brand-text strong{
-  font-size:1.6rem;
-  font-weight:800
+  font-size:1.45rem;
+  font-weight:800;
 }
 .brand-text span{
-  font-size:.75rem;
+  font-size:.72rem;
   color:#d1d5db;
-  text-transform:uppercase
+  text-transform:uppercase;
 }
-nav a{
+
+/* NAV BUTTONS */
+.nav-links{
+  display:flex;
+  gap:14px;
+}
+.nav-links a{
+  padding:8px 18px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.25);
   color:#fff;
   text-decoration:none;
-  margin-left:34px;
-  font-size:.95rem
+  font-size:.9rem;
+  transition:all .25s ease;
+  background:rgba(255,255,255,.05);
+}
+.nav-links a:hover{
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.45);
+}
+.nav-links a.active{
+  background:#ffffff;
+  color:#000;
+  border-color:#fff;
 }
 
 /* HERO */
@@ -137,9 +156,7 @@ section{padding:90px 8%}
   padding:24px;
   flex:1;
 }
-.product-content h3{
-  margin-bottom:8px
-}
+.product-content h3{margin-bottom:8px}
 .product-content p{
   font-size:.95rem;
   color:#6b7280
@@ -170,11 +187,22 @@ footer{
   font-size:.9rem
 }
 
+/* RESPONSIVE NAV */
 @media(max-width:900px){
-  .founder-wrap{grid-template-columns:1fr}
+  nav{padding:18px 5%}
+  .brand img{height:48px}
+  .brand-text strong{font-size:1.2rem}
+  .nav-links{
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+  .nav-links a{
+    padding:6px 14px;
+    font-size:.85rem;
+  }
   .hero h1{font-size:2.4rem}
-  .brand img{height:56px}
-  .brand-text strong{font-size:1.25rem}
+  .founder-wrap{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -189,7 +217,8 @@ footer{
       <span>Medical & Aesthetic Equipment Import</span>
     </div>
   </div>
-  <div>
+
+  <div class="nav-links">
     <a href="#company">Company</a>
     <a href="#founder">Founder</a>
     <a href="#products">Products</a>
@@ -233,7 +262,6 @@ footer{
   <div class="section-title">
     <h2>Founder</h2>
   </div>
-
   <div class="founder-wrap">
     <img src="images/founder-portrait.jpg">
     <div class="founder-text">
@@ -249,9 +277,8 @@ footer{
         market analysis, and cross-border business processes.
       </p>
       <p>
-        These early professional experiences contributed to a long-term interest
-        in international commerce and laid the groundwork for building
-        a trade-focused company serving the U.S. medical and aesthetic equipment market.
+        These experiences contributed to a long-term focus
+        on international commerce and medical equipment trade.
       </p>
       <img class="founder-sub" src="images/founder-portrait-2.jpg">
     </div>
@@ -265,76 +292,12 @@ footer{
   </div>
 
   <div class="products">
-    <div class="product">
-      <img src="diagnostic.jpg">
-      <div class="product-content">
-        <h3>Diagnostic & Monitoring Devices</h3>
-        <p>
-          Digital blood pressure monitors, glucose meters,
-          ECG systems, and pulse oximeters widely used
-          in clinics, outpatient settings, and home care.
-        </p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="respiratory.jpg">
-      <div class="product-content">
-        <h3>Respiratory & Life Support Equipment</h3>
-        <p>
-          Ventilators, oxygen concentrators,
-          and portable oxygen solutions designed
-          to support respiratory care in medical environments.
-        </p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="laser.jpg">
-      <div class="product-content">
-        <h3>Laser Aesthetic Systems</h3>
-        <p>
-          Laser devices for hair removal, pigmentation treatment,
-          and skin rejuvenation, commonly adopted by
-          aesthetic clinics and dermatology practices.
-        </p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="thermage.jpg">
-      <div class="product-content">
-        <h3>RF Skin Tightening Devices</h3>
-        <p>
-          Radiofrequency systems supporting non-invasive
-          skin tightening and contouring treatments,
-          aligned with current aesthetic trends.
-        </p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="microneedling.jpg">
-      <div class="product-content">
-        <h3>Microneedling & PRP Equipment</h3>
-        <p>
-          Microneedling systems and PRP-related devices
-          used for collagen stimulation,
-          skin repair, and anti-aging treatments.
-        </p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="dental.jpg">
-      <div class="product-content">
-        <h3>Dental & Oral Aesthetic Equipment</h3>
-        <p>
-          Teeth whitening devices and digital oral aesthetic equipment
-          supporting cosmetic dentistry and dental clinics.
-        </p>
-      </div>
-    </div>
+    <div class="product"><img src="diagnostic.jpg"><div class="product-content"><h3>Diagnostic & Monitoring Devices</h3><p>Blood pressure monitors, glucose meters, ECG systems, and pulse oximeters.</p></div></div>
+    <div class="product"><img src="respiratory.jpg"><div class="product-content"><h3>Respiratory & Life Support Equipment</h3><p>Ventilators, oxygen concentrators, and portable oxygen solutions.</p></div></div>
+    <div class="product"><img src="laser.jpg"><div class="product-content"><h3>Laser Aesthetic Systems</h3><p>Laser devices for hair removal, pigmentation treatment, and skin rejuvenation.</p></div></div>
+    <div class="product"><img src="thermage.jpg"><div class="product-content"><h3>RF Skin Tightening Devices</h3><p>Radiofrequency systems for non-invasive skin tightening and contouring.</p></div></div>
+    <div class="product"><img src="microneedling.jpg"><div class="product-content"><h3>Microneedling & PRP Equipment</h3><p>Microneedling systems and PRP-related devices used for collagen stimulation.</p></div></div>
+    <div class="product"><img src="dental.jpg"><div class="product-content"><h3>Dental & Oral Aesthetic Equipment</h3><p>Teeth whitening devices and digital oral aesthetic equipment.</p></div></div>
   </div>
 </section>
 
@@ -343,9 +306,7 @@ footer{
     <h2>Compliance & Regulatory Awareness</h2>
     <p>
       Products are selected with FDA regulatory awareness
-      and U.S. market requirements in mind,
-      emphasizing non-invasive, efficient,
-      and compliant solutions.
+      and U.S. market requirements in mind.
     </p>
   </div>
 </section>
