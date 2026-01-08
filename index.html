@@ -131,14 +131,6 @@ nav a:hover::after{width:100%}
   border-radius:22px;
 }
 
-/* DARK SECTION */
-.section-dark{
-  background:var(--dark-soft);
-  color:#e5e7eb;
-}
-.section-dark h2{color:#fff}
-.section-dark p{color:#cbd5e1}
-
 /* PRODUCTS */
 .products{
   display:grid;
@@ -151,34 +143,16 @@ nav a:hover::after{width:100%}
   overflow:hidden;
 }
 .product img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
+  max-width:200px;
+  height:auto;
+  margin:40px auto 20px;
+  display:block;
 }
 .product .info{padding:26px}
-.product .tag{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:#7a8699;
-  margin-bottom:10px;
-}
 .product h4{
   font-size:17px;
   color:var(--primary);
   margin-bottom:8px;
-}
-
-/* === Company Overview + Logo（唯一新增） === */
-.overview-block{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:80px;
-  align-items:center;
-}
-.overview-logo img{
-  max-width:320px;
-  width:100%;
 }
 
 /* FOOTER */
@@ -190,55 +164,12 @@ footer{
   max-width:720px;
   margin:auto;
 }
-.footer-card{
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:22px;
-  padding:30px;
-  background:rgba(255,255,255,.02);
-}
-.footer-card h4{
-  margin:0 0 18px;
-  font-size:13px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#9fb3c8;
-}
-.footer-map iframe{
-  width:100%;
-  height:210px;
-  border:0;
-  border-radius:16px;
-  margin-bottom:20px;
-}
-.footer-contact{
-  font-size:14px;
-  line-height:1.65;
-  color:#cbd5e1;
-}
-.footer-contact .company{
-  font-weight:600;
-  color:#fff;
-  margin-bottom:6px;
-}
 
 /* MOBILE */
 @media(max-width:900px){
-  h1{font-size:38px}
-  h2{font-size:28px}
   .container{padding:80px 16px}
-  .block,
-  .overview-block{grid-template-columns:1fr}
+  .block{grid-template-columns:1fr}
   .products{grid-template-columns:1fr}
-  nav ul{gap:22px;flex-wrap:wrap}
-  .hero video{display:none}
-  .hero{
-    background:
-      linear-gradient(rgba(12,22,34,.75),rgba(12,22,34,.9)),
-      url('hero.jpg') center/cover no-repeat;
-  }
-  footer{padding:80px 16px}
-  .footer-card{padding:22px}
-  .footer-map iframe{height:180px}
 }
 </style>
 </head>
@@ -248,6 +179,7 @@ footer{
 <nav>
 <ul>
 <li><a href="#hero">Home</a></li>
+<li><a href="#collaborations">Collaborations</a></li>
 <li><a href="#founder">Founder</a></li>
 <li><a href="#products">Products</a></li>
 <li><a href="#clinical">Clinical</a></li>
@@ -258,87 +190,49 @@ footer{
 
 <!-- HERO -->
 <section id="hero" class="hero">
-<video autoplay muted loop playsinline preload="auto" aria-hidden="true">
-  <source src="hero-video.mp4" type="video/mp4">
-</video>
 <div class="hero-inner">
 <h1>Rejuve Trade Center</h1>
-<p>
-A U.S.-based medical aesthetics and clinical technology organization focused on
-long-term institutional cooperation, regulatory alignment, and structured
-cross-border execution rather than short-term distribution or promotional activity.
-</p>
 </div>
 </section>
 
-<!-- COMPANY -->
-<section class="container">
-  <div class="overview-block">
-    <div class="text-column">
-      <h3>Company Overview</h3>
-      <h2>Structured Medical Trade With Long-Term Orientation</h2>
-      <p>
-      Rejuve Trade Center operates across medical aesthetics, clinical technology, and
-      international medical trade. The organization focuses on structured product
-      classification, regulatory pathway alignment, and long-term operational execution
-      rather than transactional distribution models.
-      </p>
-      <p>
-      Our work emphasizes institutional compatibility, lifecycle responsibility, and
-      sustainable deployment frameworks, supporting professional clinics, hospitals,
-      and medical groups operating in regulated environments.
-      </p>
-    </div>
+<!-- COLLABORATIONS -->
+<section id="collaborations" class="container">
+<div class="text-column">
+<h3>Selected Clinical Collaborations</h3>
+<h2>International Professional Engagements</h2>
+<p>
+Rejuve Trade Center has engaged in clinical and professional collaboration with
+internationally recognized medical institutions, reflecting shared standards in
+medical aesthetics and clinical practice.
+</p>
+</div>
 
-    <!-- 只新增这一行结构 -->
-    <div class="overview-logo">
-      <img src="images/logo-symbol.png" alt="Rejuve Trade Center Logo">
+<div class="products">
+  <div class="product">
+    <img src="logo-clinic-1.png" alt="ID Plastic Surgery Hospital">
+    <div class="info">
+      <h4>ID Plastic Surgery Hospital</h4>
+      <p>Clinical engagement with one of Asia’s leading plastic surgery hospitals.</p>
     </div>
   </div>
-</section>
 
-<!-- 后面内容：Founder / Products / Clinical / Compliance / Logistics / Footer -->
-<!-- 完全未改，与你提供的一致 -->
+  <div class="product">
+    <img src="logo-clinic-2.png" alt="Obagi Skin Health Institute">
+    <div class="info">
+      <h4>Obagi Skin Health Institute</h4>
+      <p>Professional exchange with Dr. Zein Obagi’s internationally recognized institute.</p>
+    </div>
+  </div>
 
-<!-- FOUNDER -->
-<section id="founder" class="container">
-<div class="block">
-<img src="images/founder-portrait.jpg" alt="Founder Portrait">
-<div class="text-column">
-<h3>Founder</h3>
-<h2>Professional Foundation & Early Career</h2>
-<p>
-The founder earned a Bachelor’s degree in Economics from the University of
-California, Berkeley in 2004, developing a foundation in analytical reasoning,
-structured decision-making, and institutional communication.
-</p>
-<p>
-Early professional exposure at Citibank provided insight into global financial
-operations, compliance-oriented workflows, and disciplined execution
-environments.
-</p>
-</div>
-</div>
-
-<div class="block" style="margin-top:90px">
-<div class="text-column">
-<h2>Industrial Experience & Operational Perspective</h2>
-<p>
-In 2007, the founder joined Shanghai Huayi Group, participating in large-scale
-industrial and cross-functional project coordination within complex organizational
-structures.
-</p>
-<p>
-This experience shaped Rejuve’s emphasis on risk control, long-term planning,
-and cross-border operational sustainability across regulated industries.
-</p>
-</div>
-<img src="images/founder-portrait-2.jpg" alt="Founder Experience">
+  <div class="product">
+    <img src="logo-clinic-3.png" alt="The Private Clinic">
+    <div class="info">
+      <h4>The Private Clinic</h4>
+      <p>Engagement within the UK’s regulated private medical clinic network.</p>
+    </div>
+  </div>
 </div>
 </section>
-
-<!-- PRODUCTS / CLINICAL / COMPLIANCE / LOGISTICS / FOOTER -->
-<!-- 与你原文件完全一致，未省略 -->
 
 </body>
 </html>
