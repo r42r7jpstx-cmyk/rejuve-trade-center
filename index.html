@@ -257,6 +257,41 @@ footer{
     grid-template-columns:1fr;
   }
 }
+/* Center Company Overview + Logo */
+.overview-block{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:60px;
+  align-items:center;
+  justify-content:center;
+}
+
+.overview-block .text-column{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.overview-logo{
+  display:flex;
+  justify-content:center;
+}
+
+.overview-logo img{
+  max-width:300px;
+  width:100%;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .overview-block{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .overview-logo{
+    margin-top:20px;
+  }
+}
+
 </style>
 </head>
 
@@ -520,6 +555,7 @@ operational reliability across North America, Asia, and select global markets.
 
 </body>
 </html>
+
 
 
 
