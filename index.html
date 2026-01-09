@@ -298,6 +298,20 @@ footer{
     margin-top:30px;
   }
 }
+  @media(max-width:900px){
+  nav{
+    background:rgba(12,22,34,.92);
+  }
+
+  nav a{
+    color:#ffffff;
+  }
+
+  nav a::after{
+    background:#ffffff;
+  }
+}
+
 /* NAV MOBILE STRUCTURE */
 .nav-inner{
   max-width:var(--max-width);
@@ -314,9 +328,13 @@ footer{
   display:none;
   position:absolute;
   right:20px;
-  font-size:22px;
+  top:26px;              /* 往下移动 */
+  font-size:28px;        /* 更大 */
+  font-weight:600;
+  color:#ffffff;         /* 白色 */
   cursor:pointer;
   user-select:none;
+  z-index:200;
 }
 
 /* MOBILE NAV */
@@ -730,6 +748,7 @@ navToggle.addEventListener('click', () => {
 
 </body>
 </html>
+
 
 
 
