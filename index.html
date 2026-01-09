@@ -298,22 +298,71 @@ footer{
     margin-top:30px;
   }
 }
+/* NAV MOBILE STRUCTURE */
+.nav-inner{
+  max-width:var(--max-width);
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+/* Hamburger */
+.nav-toggle{
+  display:none;
+  position:absolute;
+  right:20px;
+  font-size:22px;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* MOBILE NAV */
+@media(max-width:900px){
+  nav ul{
+    display:none;
+    flex-direction:column;
+    gap:22px;
+    padding:30px 0;
+  }
+
+  nav ul.show{
+    display:flex;
+  }
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .nav-inner{
+    justify-content:flex-start;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#founder">Founder</a></li>
-<li><a href="#collaborations">Collaborations</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#clinical">Clinical</a></li>
-<li><a href="#compliance">Compliance</a></li>
-<li><a href="#logistics">Logistics</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <div class="nav-inner">
+    <div class="nav-toggle" id="navToggle">
+      ☰
+    </div>
+
+    <ul id="navMenu">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#collaborations">Collaborations</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#clinical">Clinical</a></li>
+      <li><a href="#compliance">Compliance</a></li>
+      <li><a href="#logistics">Logistics</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -670,8 +719,18 @@ Phone: +1 254-214-9136
 </div>
 </footer>
 
+<script>
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+</script>
+
 </body>
 </html>
+
 
 
 
